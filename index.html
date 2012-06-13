@@ -1,5 +1,3 @@
-<!doctype html>
-
 <!-- 
 Wirefy by Chris Da Sie
 Version: 1.0
@@ -16,83 +14,622 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 <!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
 <!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
-
 <head>
-<meta charset="utf-8">
 
-<title>Wirefy | The responsive wireframe boilerplate</title>
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Wirefy | The responsive wireframe boilerplate</title>
+	<meta name="description" content="Wirefy: Beautiful Boilerplate for Responsive Wireframe Development">
+	<meta name="author" content="Chris Da Sie">
+	
+	
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
 
-<meta name="description" content="">
-<meta name="author" content="">
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/docs.css">
+	
+	
+	<!-- Browser Specific Javascript
+  ================================================== -->
+	<!--[if (lt IE 9) & (!IEMobile)]>
+	<script src="js/selectivizr-min.js"></script>
+	<![endif]-->
+	<script src="js/modernizr.js"></script>
 
-<!-- http://t.co/dKP3o1e -->
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- For all browsers -->
-<link rel="stylesheet" href="css/style.css">
+	<!-- Favicon
+	================================================== -->
+	<!-- For iPhone 4 -->
+	<!-- <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/h/apple-touch-icon.png"> -->
+	<!-- For iPad 1-->
+	<!-- <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/m/apple-touch-icon.png"> -->
+	<!-- For the new iPad -->
+	<!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/h/apple-touch-icon-144x144-precomposed.png">
+	<!-- For iPhone 3G, iPod Touch and Android -->
+	<!-- <link rel="apple-touch-icon-precomposed" href="img/l/apple-touch-icon-precomposed.png"> -->
+	<!-- For Nokia -->
+	<!-- <link rel="shortcut icon" href="img/l/apple-touch-icon.png"> -->
+	<!-- For everything else -->
+	<link rel="shortcut icon" href="/favicon.ico">
 
+	<!--iOS -->
+	<!-- <meta name="apple-mobile-web-app-capable" content="yes"> -->
+	<!-- <meta name="apple-mobile-web-app-status-bar-style" content="black"> -->
+	<!-- <link rel="apple-touch-startup-image" href="img/splash.png"> -->
 
-<!--[if (lt IE 9) & (!IEMobile)]>
-<script src="js/selectivizr-min.js"></script>
-<![endif]-->
+	<!-- <script>(function(){var p,l,r=window.devicePixelRatio;if(navigator.platform==="iPad"){p=r===2?"img/startup/startup-tablet-portrait-retina.png":"img/startup/startup-tablet-portrait.png";l=r===2?"img/startup/startup-tablet-landscape-retina.png":"img/startup/startup-tablet-landscape.png";document.write('<link rel="apple-touch-startup-image" href="'+l+'" media="screen and (orientation: landscape)" ><link rel="apple-touch-startup-image" href="'+p+'" media="screen and (orientation: portrait)" >');}else{p=r===2?"img/startup/startup-retina.png":"img/startup/startup.png";document.write('<link rel="apple-touch-startup-image" href="'+p+'" >');}})()</script> -->
+	<!--Microsoft -->
 
-<!-- JavaScript -->
-<script src="js/modernizr.js"></script>
+	<!-- Prevents links from opening in mobile Safari -->
+	<!-- <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script> -->
+	
+	<!-- Font Smoothing FF/Windows
+	================================================== -->
+	<meta http-equiv="cleartype" content="on">
 
-<!-- For iPhone 4 -->
-<!-- <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/h/apple-touch-icon.png"> -->
-<!-- For iPad 1-->
-<!-- <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/m/apple-touch-icon.png"> -->
-<!-- For the new iPad -->
-<!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/h/apple-touch-icon-144x144-precomposed.png">
-<!-- For iPhone 3G, iPod Touch and Android -->
-<!-- <link rel="apple-touch-icon-precomposed" href="img/l/apple-touch-icon-precomposed.png"> -->
-<!-- For Nokia -->
-<!-- <link rel="shortcut icon" href="img/l/apple-touch-icon.png"> -->
-<!-- For everything else -->
-<link rel="shortcut icon" href="/favicon.ico">
-
-<!--iOS -->
-<!-- <meta name="apple-mobile-web-app-capable" content="yes"> -->
-<!-- <meta name="apple-mobile-web-app-status-bar-style" content="black"> -->
-<!-- <link rel="apple-touch-startup-image" href="img/splash.png"> -->
-
-<!-- <script>(function(){var p,l,r=window.devicePixelRatio;if(navigator.platform==="iPad"){p=r===2?"img/startup/startup-tablet-portrait-retina.png":"img/startup/startup-tablet-portrait.png";l=r===2?"img/startup/startup-tablet-landscape-retina.png":"img/startup/startup-tablet-landscape.png";document.write('<link rel="apple-touch-startup-image" href="'+l+'" media="screen and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="'+p+'" media="screen and (orientation: portrait)"/>');}else{p=r===2?"img/startup/startup-retina.png":"img/startup/startup.png";document.write('<link rel="apple-touch-startup-image" href="'+p+'"/>');}})()</script> -->
-<!--Microsoft -->
-
-<!-- Prevents links from opening in mobile Safari -->
-<!-- <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script> -->
-<meta http-equiv="cleartype" content="on">
 </head>
+<body>
 
-<body class="clearfix">
+			<div class="container clearfix">
+				<div class="sidebar clearfix">
+					
+						<h3 id="logo">Wirefy</h3>
+						<nav role="navigation">
+						<ul>
+							<li><a href="#whatAndWhy">What &amp; Why</a></li>
+							<li><a href="#grid">Grid</a></li>
+							<li><a href="#images">Images</a></li>
+							<li><a href="#typography">Typography</a></li>
+							<li><a href="#buttons">Buttons</a></li>
+							<li><a href="#tabs">Tabs</a></li>
+							<li><a href="#tables">Tables</a></li>
+							<li><a href="#forms">Forms</a></li>
+							<li><a href="#mediaQueries">Media Queries</a></li>
+							<li><a href="#support">Support</a></li>
+							<li><a href="#examples">Examples</a></li>
+							<li><a href="#download">Download</a></li>
+						</ul>
+						
+					</nav>
+					&nbsp;
+				</div>
+				<div class="content clearfix">
+					<header>
+						<h1>A Rapid Responsive Wireframing Tool To Demonstrate Hierarchy And Functionality</h1>
+						<a href="http://twitter.com/share" class="twitter-share-button" data-text="Wirefy - A Rapid Responsive Wireframing Tool To Demonstrate Hierarchy And Functionality" data-count="horizontal" data-via="chrisdasie">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+					</header>
+					<hr class="large">
+					<section class="doc-section" id="whatAndWhy">
+						<h3>What Is It?</h3>
+						<p>Wirefy is a collection of CSS &amp; JS files to help you rapidly experiment with responsive wireframes. Whether you keep them to yourself or use them to help educate your clients, Wirefy is flexible and here to help. Wirefy has been built from the ground up. Following the philosophy of mobile first, Wirefy will respond to the proper viewport. <strong>Go ahead, resize this page to see how it works.</strong> Wirefy is style agnostic so that clients don't get hung up on colours, fonts, other design elements. It's meant to be another tool for your development kit that provides the most basic styles as a foundation.</p>
+					</section>
+					<hr  >
+					<section class="doc-section clearfix" id="grid">
+						<h3>The Grid</h3>
+						<p>Skeleton's base grid is a variation of the 960 grid system. The syntax is simple and it's effective cross browser, but the awesome part is that it also has the flexibility to go mobile like a champ. <strong>Go ahead, resize the browser and watch as the layout reacts!</strong></p>
+						<div class="example-grid sixteen">
+							<div class="one column alpha">One</div>
+							<div class="fifteen columns omega">Fifteen</div>
+							<div class="two columns alpha">Two</div>
+							<div class="fourteen columns omega">Fourteen</div>
+							<div class="three columns alpha">Three</div>
+							<div class="thirteen columns omega">Thirteen</div>
+							<div class="four columns alpha">Four</div>
+							<div class="twelve columns omega">Twelve</div>
+							<div class="five columns alpha">Five</div>
+							<div class="eleven columns omega">Eleven</div>
+							<div class="six columns alpha">Six</div>
+							<div class="ten columns omega">Ten</div>
+							<div class="seven columns alpha">Seven</div>
+							<div class="nine columns omega">Nine</div>
+							<div class="eight columns alpha">Eight</div>
+							<div class="eight columns omega">Eight</div>
+							<div class="nine columns alpha">Nine</div>
+							<div class="seven columns omega">Seven</div>
+							<div class="ten columns alpha">Ten</div>
+							<div class="six columns omega">Six</div>
+							<div class="eleven columns alpha">Eleven</div>
+							<div class="five column omega">Five</div>
+							<div class="twelve columns alpha">Twelve</div>
+							<div class="four column omega">Four</div>
+							<div class="thirteen columns alpha">Thirteen</div>
+							<div class="three column omega">Three</div>
+							<div class="fourteen columns alpha">Fourteen</div>
+							<div class="two column omega">Two</div>
+							<div class="fifteen columns alpha">Fifteen</div>
+							<div class="one column omega">One</div>
+						</div>
+					</section>
+					<hr>
+					<section class="doc-section clearfix" id="typography">
+						<h3>Typography</h3>
+						<p>The typography of Wirefy is designed to create a strong hierarchy with basic styles for your use. In the styles, we have included rem, em and pixels depending on your needs. Regular paragraphs have been set to 1.4rem base with 2.1rem line height. No wireframe would be complete with a set of icons. Wirefy has opted to use <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.</p>
+						<div class="row clearfix">
+							<div class="seven columns alpha headings">
+								<h1>Heading &lt;h1&gt;</h1>
+								<h2>Heading &lt;h2&gt;</h2>
+								<h3>Heading &lt;h3&gt;</h3>
+								<h4>Heading &lt;h4&gt;</h4>
+								<h5>Heading &lt;h5&gt;</h5>
+								<h6>Heading &lt;h6&gt;</h6>
+							</div>
+							<div class="six columns omega">
+								<blockquote>
+									<p>Designing for users instead of technology is awesome.</p>
+									<cite>Chris Da Sie, UX Designer</cite>
+								</blockquote>
+								
+							</div>
+						</div>
+						<div class="row clearfix">
+							<h3>Icon Fonts</h3>
+							<p>This is only a sample of what icons are available. For a full list, please visit <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.</p>
+							<ul class="four columns alpha">
+								<li class="icon-glass">Icon Glass</li>
+								<li class="icon-music"> Icon Music</li>
+								<li class="icon-search">Icon Search</li>
+								<li class="icon-envelope"> Icon Envelope</li>
+								<li class="icon-heart">Icon Heart</li>
+								<li class="icon-star"> Icon Star</li>
+								<li class="icon-star-empty">Icon Star Empty</li>
+								<li class="icon-user"> Icon User</li>
+								</ul>
+								<ul class="four columns">
+									<li class="icon-film">Icon Film</li>
+									<li class="icon-th-large"> Icon Large Grid</li>
+									<li class="icon-th">Icon Grid</li>
+									<li class="icon-th-list"> Icon List</li>
+									<li class="icon-ok">Icon Ok</li>
+									<li class="icon-remove"> Icon Remove</li>
+									<li class="icon-zoom-in">Icon Zoom In</li>
+									<li class="icon-zoom-out"> Icon Zoom Out</li>
+									</ul>
+									<ul class="four columns omega">
+										<li class="icon-off">Icon Off</li>
+										<li class="icon-signal"> Icon Signal</li>
+										<li class="icon-cog">Icon Cog</li>
+										<li class="icon-trash"> Icon Trash</li>
+										<li class="icon-home">Icon Home</li>
+										<li class="icon-file"> Icon File</li>
+										<li class="icon-time">Icon Time</li>
+										<li class="icon-road"> Icon Road</li>
+										</ul>
+							</div>
+					</section>
+					<hr>
+					<section class="doc-section" id="buttons">
+						<h3>Buttons</h3>
+						<p>Buttons are intended for action and thus should have appropriate weight. The standard button is given that weight with a little bit of depth and a strong hover.</p>
+						<a href="#" class="button">Click Me For Action</a>
+					</section>
+					<hr>
+					<section class="doc-section" id="tabs">
+						<h3>Tabs</h3>
+						<p>Some very simple tabs that have dead simple jQuery that hook them up to their corresponding content.</p>
+						<ul class="tabs">
+							<li><a class="active" href="#simple">Simple</a></li>
+							<li><a href="#lightweight">Lightweight</a></li>
+							<li><a href="#mobileFriendly">Mobile</a></li>
+						</ul>
+						<ul class="tabs-content">
+							<li class="active" id="simple">The tabs are clean and simple unordered-list markup and basic CSS.</li>
+							<li id="lightweight">The tabs are cross-browser, but don't need a ton of hacky CSS or markup.</li>
+							<li id="mobileFriendly">The tabs work like a charm even on mobile devices. If there are too many they will stack (it's not completely awesome, but still retains functionality).</li>
+						</ul>
+					</section>
+					<hr>
+					<section class="doc-section" id="tables">
+						<h3>Tables</h3>
+						<p>Tables can be very useful as a way to display simple data sets to clients.</p>
+						<h3 class="h4">Unclassified table</h3>
 
-<header role="banner" class="clearfix">
-<h1><a href="https://github.com/cjdsie/wirefy">Wirefy</a></h1>
-<a href="#navigation" title="Jump to navigation"><i class="icon-chevron-down"></i></a>
-</header>
+						<table>
 
-<div class="content clearfix">
+						<thead>
+						<tr>
+						<th scope="col">Header</th>
+						<th>Header</th>
+						<th>Header</th>
+						</tr>
+						</thead>
 
-</div><!-- / content -->
+						<tbody>
+						<tr>
+						<th scope="row">Data</th>
+						<td>Data</td>
+						<td>Data</td>
+						</tr>
 
-<nav role="navigation" id="navigation">
-<p>Home</p>
-</nav>
+						<tr>
+						<th scope="row">Data</th>
+						<td>Data</td>
+						<td>Data</td>
+						</tr>
 
-<footer role="contentinfo">
-<small>Wirefy, a flexible &#169; responsive wireframe boilerplate by <a href="http://chrisdasie.com">Chris Da Sie</a>.</small>
-<small>Wirefy wouldn&#8217;t be possible without <a href="http://stuffandnonsense.co.uk/projects/320andup/">320 and Up</a>, <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>, <a href="http://framelessgrid.com/">Frameless grid</a> and <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>. Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>. The Font Awesome webfont, CSS files are licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</small>
-</footer>
+						<tr>
+						<th scope="row">Data</th>
+						<td>Data</td>
+						<td>Data</td>
+						</tr>
+						</tbody>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
+						</table>
 
-<script src="js/plugins.js"></script>
-<script src="js/script.js"></script>
-<script src="js/helper.js"></script>
+						<!-- Next -->
 
-</body>
+						<h2>Condensed table</h2>
+
+						<table class="table-condensed">
+
+						<thead>
+						<tr>
+						<th scope="col">Header</th>
+						<th>Header</th>
+						<th>Header</th>
+						</tr>
+						</thead>
+
+						<tbody>
+						<tr>
+						<th scope="row">Data</th>
+						<td>Data</td>
+						<td>Data</td>
+						</tr>
+
+						<tr>
+						<th scope="row">Data</th>
+						<td>Data</td>
+						<td>Data</td>
+						</tr>
+
+						<tr>
+						<th scope="row">Data</th>
+						<td>Data</td>
+						<td>Data</td>
+						</tr>
+						</tbody>
+
+						</table>
+
+						<!-- Next -->
+
+						<h3 class="h4">Table (table-striped)</h3>
+
+						<table class="table-striped">
+
+						<thead>
+						<tr>
+						<th scope="col">Header</th>
+						<th>Header</th>
+						<th>Header</th>
+						</tr>
+						</thead>
+
+						<tbody>
+						<tr>
+						<th scope="row">Data</th>
+						<td>Data</td>
+						<td>Data</td>
+						</tr>
+
+						<tr>
+						<th scope="row">Data</th>
+						<td>Data</td>
+						<td>Data</td>
+						</tr>
+
+						<tr>
+						<th scope="row">Data</th>
+						<td>Data</td>
+						<td>Data</td>
+						</tr>
+						</tbody>
+
+						</table>
+
+						<!-- Next -->
+
+						<h3 class="h4">Table (table-bordered)</h3>
+
+						<table class="table-bordered">
+
+						<thead>
+						<tr>
+						<th scope="col">Header</th>
+						<th>Header</th>
+						<th>Header</th>
+						</tr>
+						</thead>
+
+						<tbody>
+						<tr>
+						<th scope="row">Data</th>
+						<td>Data</td>
+						<td>Data</td>
+						</tr>
+
+						<tr>
+						<th scope="row">Data</th>
+						<td>Data</td>
+						<td>Data</td>
+						</tr>
+
+						<tr>
+						<th scope="row">Data</th>
+						<td>Data</td>
+						<td>Data</td>
+						</tr>
+						</tbody>
+
+						</table>
+
+						<!-- Next -->
+
+						<h3 class="h4">Table (table-bordered and table-striped)</h3>
+
+						<table class="table-bordered table-striped">
+
+						<thead>
+						<tr>
+						<th scope="col">Header</th>
+						<th>Header</th>
+						<th>Header</th>
+						</tr>
+						</thead>
+
+						<tbody>
+						<tr>
+						<th scope="row">Data</th>
+						<td>Data</td>
+						<td>Data</td>
+						</tr>
+
+						<tr>
+						<th scope="row">Data</th>
+						<td>Data</td>
+						<td>Data</td>
+						</tr>
+
+						<tr>
+						<th scope="row">Data</th>
+						<td>Data</td>
+						<td>Data</td>
+						</tr>
+						</tbody>
+
+						</table>
+						
+					</section>
+					<hr>
+					<section class="doc-section clearfix" id="forms">
+						<h3>Forms</h3>
+						<p>Forms can be one of the biggest pains for clients to understand especially when it comes to the being responsive. So here are some examples you can use to show them.</p>
+						<div class="forms clearfix">
+							<form>
+								<fieldset>
+									<legend>Search</legend>
+									<input name="q" type="search" data-provide="typeahead">
+									  <input type="submit" value="Go">
+									</fieldset>
+									<fieldset>
+										<legend>HTML5 Inputs</legend>
+								<label for="regularInput">Regular Input</label>
+								<input type="text" id="regularInput"  >
+								<label for="regularTextarea">Regular Textarea</label>
+								<textarea id="regularTextarea"></textarea>
+								
+								<label for="email">Email</label>
+								<input type="email" name="email"  >
+								
+								<label for="password">Password</label>
+								<input type="password" name="password"  >
+								
+								<label for="file">File</label>
+								<input type="file" name="file">
+								
+								<label for="url">URL</label>
+								<input type="url" name="url" placeholder="http://chrisdasie.com">
+								</fieldset>
+								<fieldset>
+									<legend>Number Selectors</legend>
+								<label for="n">Select A Number</label>
+								<input name="n" type="number" min="0" max="10" step="1" value="6">
+								<label for="n">Select A Number</label>
+								<input name="n" type="range" min="0" max="10" step="1" value="6">
+								</fieldset>
+								
+								
+								<label for="selectList">Select List</label>
+								<select id="selectList">
+									<option value="Option 1">Option 1</option>
+									<option value="Option 2">Option 2</option>
+									<option value="Option 3">Option 3</option>
+									<option value="Option 4">Option 4</option>
+								</select>
+								<fieldset>
+									<legend>Checkboxes</legend>
+									<label for="regularCheckbox">
+										<input type="checkbox" id="regularCheckbox" value="checkbox 1"  >
+										<span>Regular Checkbox</span>
+									</label>
+									<label for="secondRegularCheckbox">
+										<input type="checkbox" id="secondRegularCheckbox" value="checkbox 2"  >
+										<span>Regular Checkbox</span>
+									</label>
+								</fieldset>
+								<fieldset>
+									<legend>Radio Buttons</legend>
+									<label for="regularRadio">
+										<input type="radio" name="radios" id="regularRadio" value="radio 1"  >
+										<span>Regular Radio</span>
+									</label>
+									<label for="secondRegularRadio">
+										<input type="radio" name="radios" id="secondRegularRadio" value="radio 2"  >
+										<span>Regular Radio</span>
+									</label>
+								</fieldset>
+								<button type="submit">Submit Form</button>
+							</form>
+						</div>
+					</section>
+					<hr  >
+					<section class="doc-section" id="mediaQueries">
+						<h3>Media Queries</h3>
+						<ul class="square">
+							<li><strong>Smaller than 960</strong>: Smaller than the standard base grid</li>
+							<li><strong>Tablet Portrait</strong>: Between 768px and 959px</li>
+							<li><strong>All Mobile Sizes</strong>: Less than 767px</li>
+							<li><strong>Just Mobile Landscape</strong>: Between 480px and 767px</li>
+							<li><strong>Just Mobile Portrait</strong>: Less than 479px</li>
+						</ul>
+						
+					</section>
+					<hr>
+					<section class="doc-section" id="support">
+						<h3>Support for Wirefy</h3>
+						<p>Do you have feedback, questions or ideas about how to make Wirefy better - Send them along to <em><a href="mailto:chris@chrisdasie.com">chris@chrisdasie.com</a></em> and I will get back to you as soon as I can</p>
+						<ul class="tabs">
+							<li><a class="active" href="#browsers">Browsers</a></li>
+							<li><a href="#changelog">Changelog</a></li>
+							<li><a href="#upcoming">Upcoming</a></li>
+						</ul>
+						<ul class="tabs-content">
+							<li class="active" id="browsers">
+								<p>Skeleton has been tested across as many devices and browsers as I could get my hands on:</p>
+								<ul class="square add-bottom">
+									<li>Latest Chrome (Mac/PC)</li>
+									<li>Firefox 4.0, 3.6, 3.5, 3.0 (Mac/PC)</li>
+									<li>Latest Safari</li>
+									<li>IE9, IE8, IE7</li>
+									<li>iPhone (Retina)</li>
+									<li>Droid (Charge/Original)</li>
+									<li>iPad</li>
+								</ul>
+							</li>
+							<li id="changelog">
+								<ul class="square">
+									<li>
+										<strong>V1.0.0</strong> <em>(6/20/2012)</em>: Initial release of Wirefy.
+									</li>
+								</ul>
+							</li>
+							<li id="upcoming">
+								<ul class="square">
+									<li>
+										Responsive Comments
+									</li>
+									<li>
+										Carousels For Image Galleries  
+									</li>
+									<li>
+										Alerts and Notifications  
+									</li>
+									<li>
+										Responsive Menus  
+									</li>
+									
+								</ul>
+								<p><small> If you have any other wireframe features you would like to see, please submit your ideas to <a href="mailto:chris@chrisdasie.com">Chris Da Sie</a></small></p>
+							</li>
+							
+						</ul>
+					</section>
+					<hr>
+					<section class="doc-section" id="examples">
+						<h3>Examples &amp; Extensions</h3>
+						
+					</section>
+					<hr>
+					<section class="doc-section" id="download">
+						<h3>Downloads</h3>
+						<p>The Wirefy download is a zip file (~25kb) containing all the CSS groundwork and JS goodies to help you get start wireframing your next project. </p>
+						<a href="https://github.com/cjdsie/wirefy/" class="remove-bottom button">Download Wirefy 1.0 from Github</a>
+						<div class="post-button-note half-bottom">or <a href="https://github.com/cjdsie/wirefy/">View Source on Github</a></div>
+						
+						<p>The file structure for Wirefy is:</p>
+						<ul class="square">
+							<li><strong>index.html</strong>: The base html page that includes the necessary initial markup</li>
+							<li>
+								<strong>stylesheets</strong> <em>(folder)</em>
+								<ul class="circle">
+									<li><strong>base.css</strong>: Basic styles of Skeleton</li>
+									<li><strong>skeleton.css</strong>: The glorious Skeleton grid</li>
+									<li><strong>layout.css</strong>: File with no specific styles, but a variety of useful media queries</li>
+								</ul>
+							</li>
+							<li>
+								<strong>javascripts</strong> <em>(folder)</em>
+								<ul class="circle">
+									<li><strong>tabs.js</strong>: Contains code for activating tabs and should house your site's JS/jQuery (using Google's CDN to pull in jQuery as well)</li>
+									<li><strong>plugins</strong> <em>(folder)</em>: An empty directory for your jQuery plugins</li>
+								</ul>
+							</li>
+							<li>
+								<strong>images</strong> <em>(folder):</em>
+								<ul class="circle">
+									<li><strong>favicon.ico</strong>: Standard 16x16 favicon</li>
+									<li><strong>apple-touch-icon (x3)</strong>: All three sizes of Apple touch icons for iPhone 3, iPad and iPhone 4 with retina.</li>
+								</ul>
+							</li>
+							<li><strong>robots.txt</strong>: SEO, search-crawler file. Don't need to touch it, just there for your own good</li>
+							<li><strong>404.html</strong>: Placeholder 404 page just to get you started</li>
+
+						</ul>
+						</section>
+					<footer role="contentinfo">
+			<small>Wirefy, a flexible responsive wireframe boilerplate by <a href="http://chrisdasie.com">Chris Da Sie</a>.</small>
+			<small>Wirefy wouldn&#8217;t be possible without <a href="http://getskeleton.com">Skeleton</a>, <a href="http://stuffandnonsense.co.uk/projects/320andup/">320 and Up</a>, <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>, <a href="http://framelessgrid.com/">Frameless grid</a> and <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>. Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>. The Font Awesome webfont, CSS files are licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</small>
+			</footer>
+				</div><!-- content -->
+			</div><!-- container -->
+
+
+
+
+
+
+		<!-- JS
+		================================================== -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
+		<script src="js/bootstrap-typeahead.js"></script>
+		<script src="js/tabs.js"></script>
+		<script src="js/plugins.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/helper.js"></script>
+
+
+		<script>
+			$('.hidden-code').click(function(e) {
+				e.preventDefault();
+				$(this).children('.gist').slideToggle();
+			})
+
+			var originalText;
+			$('.example-grid').children().hover(
+				function() {
+					originalText = $(this).text();
+					$(this).html($(this).width()+'px');
+				},
+				function() {
+					$(this).html(originalText);
+				})
+		</script>
+		
+		<script>
+		var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+		g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+		s.parentNode.insertBefore(g,s)}(document,"script"));
+		</script>
+
+	</body>
 </html>
