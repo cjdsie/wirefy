@@ -1,6 +1,6 @@
 <!-- 
 Wirefy by Chris Da Sie
-Version: 1.0
+Version: 1.1
 URL: https://github.com/cjdsie/wirefy
 Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 -->
@@ -19,7 +19,7 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 	<!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
-	<title>Wirefy | The responsive wireframe boilerplate</title>
+	<title>Wirefy | The Responsive Wireframe Boilerplate</title>
 	<meta name="description" content="Wirefy: Beautiful Boilerplate for Responsive Wireframe Development">
 	<meta name="author" content="Chris Da Sie">
 	
@@ -33,6 +33,7 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 
 	<!-- CSS
   ================================================== -->
+	<link rel="stylesheet" href="css/rwd-nav.css">
 	<link rel="stylesheet" href="css/base.css">
 	<link rel="stylesheet" href="css/docs.css">
 	
@@ -82,10 +83,11 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 				<div class="sidebar clearfix">
 					
 						<h3 id="logo">Wirefy</h3>
-						<nav role="navigation">
+						<nav role="navigation" class="main">
 						<ul>
 							<li><a href="#whatAndWhy">What &amp; Why</a></li>
 							<li><a href="#grid">Grid</a></li>
+							<li><a href="#menu">Menu</a></li>
 							<li><a href="#images">Images</a></li>
 							<li><a href="#typography">Typography</a></li>
 							<li><a href="#buttons">Buttons</a></li>
@@ -147,6 +149,34 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 							<div class="one column omega">One</div>
 						</div>
 					</section>
+					<hr>
+					<section class="doc-section clearfix" id="menu">
+							<h3>Menus</h3>
+							<p>There is a lot you can do for with menus in responsive design. These are a couple of the options that are quite useful. Filament group has put together some excellent examples as well. You can grab those <a href="http://filamentgroup.com/lab/responsive_design_approach_for_navigation/">here</a></p>
+							<h6 class="clearfix">Collapse Menu</h6>
+						<nav role="navigation" class="menu1">
+							<ul>
+								<li><a href="#">Sample Page 1</a></li>
+								<li><a href="#">Sample Page 2</a></li>
+								<li><a href="#">Sample Page 3</a></li>
+								<li><a href="#">Sample Page 4</a></li>
+								<ul>
+							</nav>
+							
+							<!-- Next -->
+							
+							<h6 class="clearfix">Standard Menu</h6>
+							<nav role="navigation" class="menu2">
+								<ul>
+									<li><a href="#">Sample Page 1</a></li>
+									<li><a href="#">Sample Page 2</a></li>
+									<li><a href="#">Sample Page 3</a></li>
+									<li><a href="#">Sample Page 4</a></li>
+									<ul>
+								</nav>
+								
+							
+						</section>
 					<hr>
 					<section class="doc-section clearfix" id="images">
 						<h3>Images</h3>
@@ -529,7 +559,10 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 							<li id="changelog">
 								<ul class="square">
 									<li>
-										<strong>V1.0.0</strong> <em>(6/20/2012)</em>: Initial release of Wirefy.
+										<strong>V1.0.0</strong> <em>(6/10/2012)</em>: Initial release of Wirefy.
+									</li>
+									<li>
+										<strong>V1.1.0</strong> <em>(6/19/2012)</em>: 3 responsive menu options
 									</li>
 								</ul>
 							</li>
@@ -545,9 +578,6 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 										Alerts and Notifications  
 									</li>
 									<li>
-										Responsive Menus  
-									</li>
-									<li>
 										Examples  
 									</li>
 								</ul>
@@ -560,7 +590,7 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 					<section class="doc-section" id="download">
 						<h3>Downloads</h3>
 						<p>The Wirefy download is a zip file (~700Kb) containing all the CSS groundwork and JS goodies to help you get start wireframing your next project. </p>
-						<a href="https://github.com/cjdsie/wirefy/zipball/master" class="remove-bottom button">Download Wirefy 1.0 from Github</a>
+						<a href="https://github.com/cjdsie/wirefy/zipball/master" class="remove-bottom button">Download Wirefy 1.1 from Github</a>
 						<div class="post-button-note half-bottom">or <a href="https://github.com/cjdsie/wirefy/">View Source on Github</a></div>
 						
 						<p>The file structure for Wirefy is:</p>
