@@ -63,6 +63,7 @@ body {
 				position:relative;
 				width:100%;
 				float:right;
+				overflow:hidden;
 			}
 
 	/* Doc nav */
@@ -97,8 +98,6 @@ body {
 	nav ul li a:focus {
 		color: #222; }
 	header h1 {
-		font-size: 52px;
-		line-height: 61px;
 		letter-spacing: -1px;
 		font-weight: normal;
 		font-family: "Georgia", "Times New Roman", Helvetica, Arial, sans-serif; }
