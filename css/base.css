@@ -946,7 +946,7 @@ svg:not(:root) {
 
 .menu1 {
 	float: left;
-	width: 100%;
+	width: 80%;
 }
 
 .menu1 ul {
@@ -964,7 +964,7 @@ svg:not(:root) {
 
 
 .menu2 {
-	width:100%;
+	width:80%;
 	float:left;
 	margin-bottom: 1em;
 }
