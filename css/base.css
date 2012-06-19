@@ -1,7 +1,7 @@
 /* ============================================================
 
 Wirefy by Chris Da Sie
-Version: 1.0
+Version: 1.1
 URL: https://github.com/cjdsie/wirefy
 Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 
@@ -939,7 +939,66 @@ svg:not(:root) {
 	  margin-bottom: 0;
 	  padding-bottom: 0;
 	  border-bottom-width: 0;
-	}	
+	}
+	
+/* #Menus
+================================================== */
+
+.menu1 {
+	float: left;
+	width: 100%;
+}
+
+.menu1 ul {
+	width:100%;
+}
+
+.menu1 li {
+	float:left;
+	margin: 0 2.5%;
+}
+
+.menu1 li:first-child {
+	margin-left:0;
+}
+
+
+.menu2 {
+	width:100%;
+	float:left;
+	margin-bottom: 1em;
+}
+
+.menu2 ul {
+   clear: left;
+   display:block;
+   margin: 0;
+   border: 1px solid #e6e6e6;
+
+}
+.menu2 li {
+   font-size: 1.8em;
+   border-bottom: 1px solid #eee;
+}
+.menu2 li:last-child {
+   border-bottom: 0;
+}
+.menu2 a {
+   display: block;
+   padding: .5em .8em;
+   text-decoration: none;
+   color: #333;
+}
+.menu2 a:hover {
+   background-color: #f8f8f8;
+}
+.menu2 .nav-current {
+   font-weight: bold;
+}
+
+
+
+		
 
 
 /* #Buttons
@@ -1360,6 +1419,23 @@ svg:not(:root) {
 				.sixteen {
 					width: 97.9166667%;
 				}
+				
+				.menu2 li:first-child {
+					margin-left:0;
+				}	
+				
+				.menu2,
+				   .menu2 ul {
+				      float: left;
+				   }
+				   .menu2 ul {
+				      float: left;
+				   }
+				   .menu2 li {
+				      float: left;
+				      font-size: 1.5em;
+				      border-bottom: 0;
+				   }
 		
 		}	
 		
@@ -1369,6 +1445,10 @@ svg:not(:root) {
 		
 		/* @media screen and (min-width: 888px) */
 		@media screen and (min-width: 55.5em) {
+			.menu2 {
+			      float: right;
+			      clear: none;
+			   }
 		}
 		
 		/* @media screen and (min-width: 984px) */
