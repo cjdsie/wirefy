@@ -1,7 +1,7 @@
 /* ============================================================
 
 Wirefy by Chris Da Sie
-Version: 1.1
+Version: 1.2
 URL: https://github.com/cjdsie/wirefy
 Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 
@@ -997,6 +997,158 @@ svg:not(:root) {
 }
 
 
+/* #Breadcrumb
+================================================== */
+
+.breadcrumb {
+padding: 7px 14px;
+margin: 0 0 18px;
+list-style: none;
+}
+
+.breadcrumb li {
+display: inline-block;
+}
+
+.breadcrumb .divider {
+padding: 0 5px;
+color: #999;
+}
+
+
+/* #Pagination
+================================================== */
+
+
+.pagination {
+height: 36px;
+margin: 18px 0;
+}
+
+.pagination ul {
+display: inline-block;
+padding:0;
+margin-bottom: 0;
+margin-left: 0;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+-webkit-box-shadow: 0 1px 2px 
+rgba(0, 0, 0, 0.05);
+-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+box-shadow: 0 1px 2px 
+rgba(0, 0, 0, 0.05);
+}
+
+.pagination li {
+display: inline;
+}
+
+.pagination a {
+float: left;
+padding: 0 10px;
+line-height: 28px;
+text-decoration: none;
+border: 1px solid #DDD;
+border-left-width: 0;
+}
+
+.pagination a:hover,
+.pagination .active a {
+  background-color: #f5f5f5;
+}
+
+.pagination .active a {
+  color: #999999;
+  cursor: default;
+}
+
+.pagination .disabled span,
+.pagination .disabled a,
+.pagination .disabled a:hover {
+  color: #999999;
+  cursor: default;
+  background-color: transparent;
+}
+
+
+.pagination li:first-child a {
+border-left-width: 1px;
+-webkit-border-radius: 3px 0 0 3px;
+-moz-border-radius: 3px 0 0 3px;
+border-radius: 3px 0 0 3px;
+}
+
+.pagination li:last-child a {
+-webkit-border-radius: 0 3px 3px 0;
+-moz-border-radius: 0 3px 3px 0;
+border-radius: 0 3px 3px 0;
+}
+
+.pagination-centered {
+  text-align: center;
+}
+
+.pagination-right {
+  text-align: right;
+}
+
+/* #Pager
+================================================== */
+
+
+.pager {
+	padding:0;
+  margin-bottom: 18px;
+  margin-left: 0;
+  text-align: center;
+  list-style: none;
+  *zoom: 1;
+}
+
+.pager:before,
+.pager:after {
+  display: table;
+  content: "";
+}
+
+.pager:after {
+  clear: both;
+}
+
+.pager li {
+  display: inline;
+}
+
+.pager a {
+  display: inline-block;
+  padding: 5px 14px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 15px;
+     -moz-border-radius: 15px;
+          border-radius: 15px;
+}
+
+.pager a:hover {
+  text-decoration: none;
+  background-color: #f5f5f5;
+}
+
+.pager .next a {
+  float: right;
+}
+
+.pager .previous a {
+  float: left;
+}
+
+.pager .disabled a,
+.pager .disabled a:hover {
+  color: #999999;
+  cursor: default;
+  background-color: #fff;
+}
 
 		
 
