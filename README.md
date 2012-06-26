@@ -1,4 +1,4 @@
-[Wirefy](https://cjdsie.github.com/wirefy)
+[Wirefy](http://cjdsie.github.com/wirefy)
 =================
 
 Wirefy is a responsive wireframe boilerplate. 
@@ -9,5 +9,5 @@ To follow the trend of designing in the browser, Wirefy can be used as part of y
 
 Unlike many of the other boilerplates and frameworks, Wirefy doesn't focus on UI components, but stays focused on the things that matter - the users and how they will experience your site or app on various screens.  
 
-For full documentation, our homepage [here](https://cjdsie.github.com/wirefy). 
+For full documentation, our homepage [here](http://cjdsie.github.com/wirefy). 
 
