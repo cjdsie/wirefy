@@ -39,15 +39,18 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 
 .logo {
 	float:left;
+	position:relative;
 	width:auto;
-	margin: 0 4.2875% 0 0;
+	margin: 0 auto;
 }
 
 nav {
-	float:right;
+	margin-top: .875em;
+	float:none;
 }
 
 nav select {
+	width:100%;
 	display:block;
 }
 
@@ -63,6 +66,10 @@ nav ul li {
 	margin: 0 0 0 3em;
 }
 
+nav ul li:first-of-type {
+	margin-left:0;
+}
+
 
 
 /* #Media Queries
@@ -75,6 +82,19 @@ nav ul li {
 	
 	@media only screen and (min-width: 40em) {
 	  /* 640 =================================================== */
+	
+		.logo {
+			float:left;
+		}
+		
+		.logo h1 {
+			text-align:left;
+		}
+		
+		nav {
+			float:left;
+		}
+	
 		nav select {
 			display:none;
 		}
@@ -102,6 +122,11 @@ nav ul li {
 	    margin: 0 auto;
 	    width: 90%;
 	  }
+		
+		nav {
+			float:right;
+		}
+	
 	}
 	
 	@media screen and (min-width: 55.5em) {

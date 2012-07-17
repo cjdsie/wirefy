@@ -8,7 +8,7 @@ $(document).ready(function(){
      "selected": "selected",
      "value"   : "",
      "text"    : "Go to..."
-  }).appendTo("nav.main select");
+  }).appendTo("nav select");
   
   // Populate dropdown with menu items
   $("nav a").each(function() {
@@ -21,7 +21,7 @@ $(document).ready(function(){
   
    // To make dropdown actually work
    // To make more unobtrusive: http://css-tricks.com/4064-unobtrusive-page-changer/
-  $("nav.main select").change(function() {
+  $("nav select").change(function() {
     window.location = $(this).find("option:selected").val();
   });
 
