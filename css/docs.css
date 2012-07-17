@@ -1,7 +1,7 @@
 /* ============================================================
 
 Wirefy by Chris Da Sie
-Version: 1.2
+Version: 1.2.3
 URL: https://github.com/cjdsie/wirefy
 Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 
@@ -114,8 +114,12 @@ body {
 
 	#typography blockquote {
 		margin-top: 20px; }
+		
+	.hidden-code {
+		margin: 2em 0;
+	}	
 
-	.hidden-code a {
+	.hidden-code p {
 		font-size: 12px;
 		color: #999; }
 	.hidden-code>div {
@@ -170,6 +174,44 @@ body {
 	  display: block;
 	  margin: 0 auto 1.5em;
 	  width: 90%;
+	}
+	
+	pre, code {
+	font-family: monospace, monospace;
+	}
+	
+	
+	pre {
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	border:2px solid rgba(0, 0, 0, .1);
+	text-shadow: none;
+	width: auto;
+	background: #FFFFF7;
+	padding: 20px;
+	margin: 0px 0px;
+	_padding: 0;
+	font-size: 14px;
+	font-size: .875em;
+	font-size:1.4rem;
+	color: #333;
+	_float: left;
+	_width: 100%;
+	white-space: pre-wrap;
+	overflow-x: scroll;
+	}
+	
+	pre::-webkit-scrollbar {
+	-webkit-appearance: none;
+	background-color: rgba(255, 255, 255, .1);
+	width: 8px;
+	height: 8px;
+	}
+	
+	pre::-webkit-scrollbar-thumb {
+	border-radius: 4px;
+	background-color: rgba(255, 255, 255, .5);
 	}
 	
 	
