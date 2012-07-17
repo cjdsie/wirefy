@@ -1,6 +1,6 @@
 <!-- 
 Wirefy by Chris Da Sie
-Version: 1.2.2
+Version: 1.2.3
 URL: https://github.com/cjdsie/wirefy
 Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 -->
@@ -92,6 +92,7 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 							<li><a href="#pagination">Pagination</li>
 							<li><a href="#pager">Pager</li>
 							<li><a href="#images">Images</a></li>
+							<li><a href="#slider">Slideshow</a></li>
 							<li><a href="#typography">Typography</a></li>
 							<li><a href="#buttons">Buttons</a></li>
 							<li><a href="#tabs">Tabs</a></li>
@@ -243,6 +244,38 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 						<img src="http://placehold.it/300x200" class="five columns row">
 						<img src="http://placehold.it/300x200" class="five columns row">
 						
+						</section>
+						<hr>
+						<section class="doc-section clearfix" id="slider">
+							<h3>Slideshow</h3>
+							<p>The use of slideshows and galleries can be very important in creating a solid user experience. With the help of <a href="http://responsive-slides.viljamis.com/">ResponsiveSlide.js</a>, you can create a basic slideshow.</p>
+						
+							<h6>Vertically centered on both sides</h6>
+						    <div class="rslides_container">
+						      <ul class="rslides" id="slider1">
+						        <li><img src="http://placehold.it/1200x400" alt="" /></li>
+						        <li><img src="http://placehold.it/1200x400" alt="" /></li>
+						        <li><img src="http://placehold.it/1200x400" alt="" /></li>
+						      </ul>
+						    </div>
+
+						    <h6>Transparent buttons over the left and right side</h6>
+						    <div class="rslides_container">
+						      <ul class="rslides" id="slider2">
+						        <li><img src="http://placehold.it/1200x400" alt="" /></li>
+						        <li><img src="http://placehold.it/1200x400" alt="" /></li>
+						        <li><img src="http://placehold.it/1200x400" alt="" /></li>
+						      </ul>
+						    </div>
+
+						    <h6>100% height with vertically centered icons</h6>
+						    <div class="rslides_container">
+						      <ul class="rslides" id="slider3">
+						        <li class="slides"><img src="http://placehold.it/1200x400" alt="" /></li>
+						        <li class="slides"><img src="http://placehold.it/1200x400" alt="" /></li>
+						        <li class="slides"><img src="http://placehold.it/1200x400" alt="" /></li>
+						      </ul>
+						    </div>
 						</section>
 						<hr>
 					<section class="doc-section clearfix" id="typography">
@@ -622,15 +655,15 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 									<li>
 										<strong>V1.3.0</strong> <em>(6/27/2012)</em>: Index page and styles revised to work as a better development tool.
 									</li>
+									<li>
+										<strong>V1.4.0</strong> <em>(7/17/2012)</em>: Added three responsive slideshow options.
+									</li>
 								</ul>
 							</li>
 							<li id="upcoming">
 								<ul class="square">
 									<li>
 										Responsive Comments
-									</li>
-									<li>
-										Carousels For Image Galleries  
 									</li>
 									<li>
 										Alerts and Notifications  
@@ -648,7 +681,7 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 					<section class="doc-section clearfix" id="download">
 						<h3>Downloads</h3>
 						<p>The Wirefy download is a zip file (~700Kb) containing all the CSS groundwork and JS goodies to help you get start wireframing your next project. </p>
-						<a href="https://github.com/cjdsie/wirefy/zipball/master" class="remove-bottom button">Download Wirefy 1.3 from Github</a>
+						<a href="https://github.com/cjdsie/wirefy/zipball/master" class="remove-bottom button">Download Wirefy 1.4 from Github</a>
 						<div class="post-button-note half-bottom">or <a href="https://github.com/cjdsie/wirefy/">View Source on Github</a></div>
 						
 						<p>The file structure for Wirefy is:</p>
@@ -672,6 +705,7 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 									<li><strong>selectivizr</strong></li>
 									<li><strong>bootstrap-typeahead</strong></li>
 									<li><strong>responsive_dropdown</strong></li>
+									<li><strong>responsiveslides.min</strong></li>
 									<li><strong>script</strong></li>
 								</ul>
 							</li>
@@ -703,6 +737,7 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
 		<script src="js/bootstrap-typeahead.js"></script>
+		<script src="js/responsiveslides.min.js"></script>
 		<script src="js/tabs.js"></script>
 		<script src="js/plugins.js"></script>
 		<script src="js/script.js"></script>
