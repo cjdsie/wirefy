@@ -82,6 +82,7 @@ body {
 		font-weight: bold; }
 	nav ul {
 		float: left;
+		margin:0;
 		padding:0px;
 		display:none;  }
 	nav ul li {
@@ -255,7 +256,7 @@ body {
 		}
 		nav ul {
 			display:block;
-			margin-bottom: 30px;
+			margin-bottom: 20px;
 		}
 		#logo {
 			float:right;
