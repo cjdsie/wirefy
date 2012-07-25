@@ -32,6 +32,9 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 html {
   background: #ffffff;
   font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+  overflow-y:scroll;
 }
 body {
   margin: 0;
@@ -57,12 +60,12 @@ body {
 		
 		.sidebar {
 			width: 100%;
-			float:left; }
+			float:none; }
 			
 			.content {
 				position:relative;
 				width:100%;
-				float:right;
+				float:none;
 				overflow:hidden;
 			}
 
@@ -70,7 +73,7 @@ body {
 	nav {
 		float:right;
 		width: 60%;
-		margin-top: 10px; }
+		margin-top: 0px; }
 	nav select{display:block;}	
 	#logo {
 		float:left;
@@ -241,6 +244,7 @@ body {
 			
 			
 			.content {
+				float:right;
 				width:75%;
 				margin:0 auto;
 				padding:0 auto;
