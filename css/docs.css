@@ -29,12 +29,13 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 }
 
 /* Page =================================================== */
+
+
 html {
   background: #ffffff;
   font-size: 62.5%;
   margin: 0;
   padding: 0;
-  overflow-y:scroll;
 }
 body {
   margin: 0;

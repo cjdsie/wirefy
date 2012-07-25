@@ -79,6 +79,8 @@ img{border:0;-ms-interpolation-mode:bicubic;}
 .visuallyhidden.focusable:focus{position:static;clip:auto;height:auto;width:auto;margin:0;overflow:visible;}
 /* #Basic Styles
 ================================================== */
+/* apply a natural box layout model to all elements */
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
 html{background:#ffffff;height:100%;font-size:62.5%;-webkit-overflow-scrolling:touch;-webkit-tap-highlight-color:#f3f5f6;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
 body{background-color:transparent;font-family:"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:16px;font-size:1em;font-size:1.6rem;line-height:1.5em;color:#444;-webkit-font-smoothing:antialiased;/* Fix for webkit rendering */
 -webkit-text-size-adjust:100%;}
@@ -597,7 +599,7 @@ legend span{font-weight:normal;font-size:13px;color:#444;}
 .thirteen{width:79.1666667%;}
 .fourteen{width:85.4166667%;}
 .fifteen{width:91.6666667%;}
-.sixteen{width:97.9166667%;}
+.sixteen{width:100%;}
 .menu2 li:first-child{margin-left:0;}
 .menu2,
 .menu2 ul{float:left;}
