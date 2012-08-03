@@ -1,7 +1,7 @@
 <!doctype html>
 <!-- 
 Wirefy by Chris Da Sie
-Version: 1.2.3
+Version: 1.2.4
 URL: https://github.com/cjdsie/wirefy
 Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 -->
@@ -34,7 +34,6 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 
 	<!-- CSS
   ================================================== -->
-	<link rel="stylesheet" href="css/rwd-nav.css">
 	<link rel="stylesheet" href="css/base.css">
 	<link rel="stylesheet" href="css/docs.css">
 	
@@ -50,22 +49,22 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 	<!-- Favicon
 	================================================== -->
 	<!-- For iPhone 4 -->
-	<!-- <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/h/apple-touch-icon.png"> -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/h/apple-touch-icon.png">
 	<!-- For iPad 1-->
-	<!-- <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/m/apple-touch-icon.png"> -->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/m/apple-touch-icon.png">
 	<!-- For the new iPad -->
-	<!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/h/apple-touch-icon-144x144-precomposed.png">-->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/h/apple-touch-icon-144x144-precomposed.png">
 	<!-- For iPhone 3G, iPod Touch and Android -->
-	<!-- <link rel="apple-touch-icon-precomposed" href="img/l/apple-touch-icon-precomposed.png"> -->
+	 <link rel="apple-touch-icon-precomposed" href="img/l/apple-touch-icon-precomposed.png">
 	<!-- For Nokia -->
-	<!-- <link rel="shortcut icon" href="img/l/apple-touch-icon.png"> -->
+	<link rel="shortcut icon" href="img/l/apple-touch-icon.png"> 
 	<!-- For everything else -->
 	<link rel="shortcut icon" href="/favicon.ico">
 
 	<!--iOS -->
-	<!-- <meta name="apple-mobile-web-app-capable" content="yes"> -->
-	<!-- <meta name="apple-mobile-web-app-status-bar-style" content="black"> -->
-	<!-- <link rel="apple-touch-startup-image" href="img/splash.png"> -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="apple-touch-startup-image" href="img/splash.png">
 
 	<!-- <script>(function(){var p,l,r=window.devicePixelRatio;if(navigator.platform==="iPad"){p=r===2?"img/startup/startup-tablet-portrait-retina.png":"img/startup/startup-tablet-portrait.png";l=r===2?"img/startup/startup-tablet-landscape-retina.png":"img/startup/startup-tablet-landscape.png";document.write('<link rel="apple-touch-startup-image" href="'+l+'" media="screen and (orientation: landscape)" ><link rel="apple-touch-startup-image" href="'+p+'" media="screen and (orientation: portrait)" >');}else{p=r===2?"img/startup/startup-retina.png":"img/startup/startup.png";document.write('<link rel="apple-touch-startup-image" href="'+p+'" >');}})()</script> -->
 	<!--Microsoft -->
@@ -305,7 +304,7 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 						<hr>
 						<section class="doc-section clearfix" id="slider">
 							<h3>Slideshow</h3>
-							<p>The use of slideshows and galleries can be very important in creating a solid user experience. With the help of <a href="http://responsive-slides.viljamis.com/">ResponsiveSlide.js</a>, you can create a basic slideshow.</p>
+							<p>The use of slideshows and galleries can be very important in creating a solid user experience. With the help of <a href="http://responsive-slides.viljamis.com/">ResponsiveSlide.js</a>, you can create a basic slideshow. To use please review responsive_slideshow.js and select one of the slider id's listed there.</p>
 						
 							<h6>Vertically centered on both sides</h6>
 						    <div class="rslides_container">
@@ -338,7 +337,7 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 						</section>
 						<div class="hidden-code clearfix">
 						<p>Code Example</p>
-							<pre><code>&lt;ul class="rslides"&gt;
+							<pre><code>&lt;ul class="rslides" id="slider#"&gt;
   &lt;li&gt;&lt;img src="1.jpg" alt="" /&gt;&lt;/li&gt;
   &lt;li&gt;&lt;img src="2.jpg" alt="" /&gt;&lt;/li&gt;
   &lt;li&gt;&lt;img src="3.jpg" alt="" /&gt;&lt;/li&gt;
