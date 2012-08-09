@@ -1,7 +1,7 @@
-<!doctype html>
+<!DOCTYPE html>
 <!-- 
 Wirefy by Chris Da Sie
-Version: 1.2.4
+Version: 1.2.5
 URL: https://github.com/cjdsie/wirefy
 Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 -->
@@ -94,7 +94,7 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 				<div class="sidebar clearfix">
 					
 						<h3 id="logo">Wirefy</h3>
-						<nav role="navigation" class="main">
+						<nav class="main" id="nav">
 						<ul>
 							<li><a href="#whatAndWhy">What &amp; Why</a></li>
 							<li><a href="#grid">Grid</a></li>
@@ -174,7 +174,7 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 							<h3>Menus</h3>
 							<p>There is a lot you can do for with menus in responsive design. These are a couple of the options that are quite useful. Filament group has put together some excellent examples as well. You can grab those <a href="http://filamentgroup.com/lab/responsive_design_approach_for_navigation/">here</a></p>
 							<h6 class="clearfix">Collapse Menu</h6>
-						<nav role="navigation" class="menu1">
+						<nav class="menu1">
 							<ul>
 								<li><a href="#">Sample Page 1</a></li>
 								<li><a href="#">Sample Page 2</a></li>
@@ -186,7 +186,7 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 							<!-- Next -->
 							
 							<h6 class="clearfix">Standard Menu</h6>
-							<nav role="navigation" class="menu2">
+							<nav class="menu2">
 								<ul>
 									<li><a href="#">Sample Page 1</a></li>
 									<li><a href="#">Sample Page 2</a></li>
@@ -194,6 +194,22 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 									<li><a href="#">Sample Page 4</a></li>
 									<ul>
 								</nav>
+								
+								
+								<!-- Next -->
+
+								<h6 class="clearfix">Toggle Menu</h6>
+								<div class='menu-button'></div>
+								<nav role="navigation">
+									<ul>
+										<li class="top-level"><a href="#">Sample Page 1</a></li>
+										<li class="top-level"><a href="#">Sample Page 2</a></li>
+										<li class="top-level"><a href="#">Sample Page 3</a></li>
+										<li class="top-level"><a href="#">Sample Page 4</a></li>
+										<ul>
+									</nav>
+								
+								
 								
 							
 						</section>
@@ -783,6 +799,9 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 									<li>
 										<strong>V1.4.1</strong> <em>(8/2/2012)</em>: Bug fixes.
 									</li>
+									<li>
+										<strong>V1.4.4</strong> <em>(8/9/2012)</em>: Modernizr updated to most recent version. New toggle navigation added.
+									</li>
 								</ul>
 							</li>
 							<li id="upcoming">
@@ -806,7 +825,7 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 					<section class="doc-section clearfix" id="download">
 						<h3>Downloads</h3>
 						<p>The Wirefy download is a zip file (~700Kb) containing all the CSS groundwork and JS goodies to help you get start wireframing your next project. </p>
-						<a href="https://github.com/cjdsie/wirefy/zipball/master" class="remove-bottom button">Download Wirefy 1.4 from Github</a>
+						<a href="https://github.com/cjdsie/wirefy/zipball/master" class="remove-bottom button">Download Wirefy 1.4.4 from Github</a>
 						<div class="post-button-note half-bottom">or <a href="https://github.com/cjdsie/wirefy/">View Source on Github</a></div>
 						
 						<p>The file structure for Wirefy is:</p>
@@ -831,6 +850,10 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 									<li><strong>bootstrap-typeahead</strong></li>
 									<li><strong>responsive_dropdown</strong></li>
 									<li><strong>responsiveslides.min</strong></li>
+									<li><strong>jquery.flexnav-min</strong></li>
+									<li><strong>responsive_select_element</strong></li>
+									<li><strong>respond</strong></li>
+									<li><strong>responsive_slideshow</strong></li>
 									<li><strong>script</strong></li>
 								</ul>
 							</li>
@@ -861,8 +884,10 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 		================================================== -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
+		<script src="js/respond.js"></script>
 		<script src="js/bootstrap-typeahead.js"></script>
 		<script src="js/responsiveslides.min.js"></script>
+		<script src="js/jquery.flexnav-min.js"></script>
 		<script src="js/tabs.js"></script>
 		<script src="js/plugins.js"></script>
 		<script src="js/script.js"></script>

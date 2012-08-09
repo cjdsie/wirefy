@@ -54,6 +54,8 @@ $("<select />").appendTo("nav.menu1");
   });
 
 
+$("[role='navigation']").flexNav();
+
 
 
 /* Anchor Link Scroll */
