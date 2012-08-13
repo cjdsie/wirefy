@@ -1,6 +1,6 @@
 /* ============================================================
 Wirefy by Chris Da Sie
-Version:1.4.4
+Version:1.4.5
 URL:https://github.com/cjdsie/wirefy
 Apache License:v2.0. http://www.apache.org/licenses/LICENSE-2.0
 /* Table of Content
@@ -221,7 +221,7 @@ readers do not read off random characters that represent icons */
 .icon-inbox:before{content:"\f01c";}
 .icon-play-circle:before{content:"\f01d";}
 .icon-repeat:before{content:"\f01e";}
-/* \f020 is not a valid unicode character. all shifted one down */
+/* \f020 doesn't work in Safari. all shifted one down */
 .icon-refresh:before{content:"\f021";}
 .icon-list-alt:before{content:"\f022";}
 .icon-lock:before{content:"\f023";}
@@ -332,6 +332,77 @@ readers do not read off random characters that represent icons */
 .icon-github-sign:before{content:"\f092";}
 .icon-upload-alt:before{content:"\f093";}
 .icon-lemon:before{content:"\f094";}
+.icon-phone:before{content:"\f095";}
+.icon-check-empty:before{content:"\f096";}
+.icon-bookmark-empty:before{content:"\f097";}
+.icon-phone-sign:before{content:"\f098";}
+.icon-twitter:before{content:"\f099";}
+.icon-facebook:before{content:"\f09a";}
+.icon-github:before{content:"\f09b";}
+.icon-unlock:before{content:"\f09c";}
+.icon-credit-card:before{content:"\f09d";}
+.icon-rss:before{content:"\f09e";}
+.icon-hdd:before{content:"\f0a0";}
+.icon-bullhorn:before{content:"\f0a1";}
+.icon-bell:before{content:"\f0a2";}
+.icon-certificate:before{content:"\f0a3";}
+.icon-hand-right:before{content:"\f0a4";}
+.icon-hand-left:before{content:"\f0a5";}
+.icon-hand-up:before{content:"\f0a6";}
+.icon-hand-down:before{content:"\f0a7";}
+.icon-circle-arrow-left:before{content:"\f0a8";}
+.icon-circle-arrow-right:before{content:"\f0a9";}
+.icon-circle-arrow-up:before{content:"\f0aa";}
+.icon-circle-arrow-down:before{content:"\f0ab";}
+.icon-globe:before{content:"\f0ac";}
+.icon-wrench:before{content:"\f0ad";}
+.icon-tasks:before{content:"\f0ae";}
+.icon-filter:before{content:"\f0b0";}
+.icon-briefcase:before{content:"\f0b1";}
+.icon-fullscreen:before{content:"\f0b2";}
+.icon-group:before{content:"\f0c0";}
+.icon-link:before{content:"\f0c1";}
+.icon-cloud:before{content:"\f0c2";}
+.icon-beaker:before{content:"\f0c3";}
+.icon-cut:before{content:"\f0c4";}
+.icon-copy:before{content:"\f0c5";}
+.icon-paper-clip:before{content:"\f0c6";}
+.icon-save:before{content:"\f0c7";}
+.icon-sign-blank:before{content:"\f0c8";}
+.icon-reorder:before{content:"\f0c9";}
+.icon-list-ul:before{content:"\f0ca";}
+.icon-list-ol:before{content:"\f0cb";}
+.icon-strikethrough:before{content:"\f0cc";}
+.icon-underline:before{content:"\f0cd";}
+.icon-table:before{content:"\f0ce";}
+.icon-magic:before{content:"\f0d0";}
+.icon-truck:before{content:"\f0d1";}
+.icon-pinterest:before{content:"\f0d2";}
+.icon-pinterest-sign:before{content:"\f0d3";}
+.icon-google-plus-sign:before{content:"\f0d4";}
+.icon-google-plus:before{content:"\f0d5";}
+.icon-money:before{content:"\f0d6";}
+.icon-caret-down:before{content:"\f0d7";}
+.icon-caret-up:before{content:"\f0d8";}
+.icon-caret-left:before{content:"\f0d9";}
+.icon-caret-right:before{content:"\f0da";}
+.icon-columns:before{content:"\f0db";}
+.icon-sort:before{content:"\f0dc";}
+.icon-sort-down:before{content:"\f0dd";}
+.icon-sort-up:before{content:"\f0de";}
+.icon-envelope-alt:before{content:"\f0e0";}
+.icon-linkedin:before{content:"\f0e1";}
+.icon-undo:before{content:"\f0e2";}
+.icon-legal:before{content:"\f0e3";}
+.icon-dashboard:before{content:"\f0e4";}
+.icon-comment-alt:before{content:"\f0e5";}
+.icon-comments-alt:before{content:"\f0e6";}
+.icon-bolt:before{content:"\f0e7";}
+.icon-sitemap:before{content:"\f0e8";}
+.icon-umbrella:before{content:"\f0e9";}
+.icon-paste:before{content:"\f0ea";}
+.icon-user-md:before{content:"\f200";}
+
 /* #Links
 ================================================== */
 a,a:visited{color:#333;text-decoration:underline;outline:0;}
@@ -412,10 +483,10 @@ a.skip {position:absolute;left:-999em;}
 [role='navigation']{margin:0 auto;width:100%;background-color:#333;float:right;}
 .flexNav-touch [role='navigation'],
 .flexNav-no-touch [role='navigation']{display:none;}
-.menu-button{float:right;display:block;width:25px;height:25px;padding:1em 0;background:transparent;color:#333;background-image:url('../img/nav-icon.png');background-repeat:no-repeat;background-position:93% 10px;cursor:pointer;}
+.menu-button{float:left;display:block;width:25px;height:25px;padding:1em 0;background:transparent;color:#333;background-image:url('../img/nav-icon.png');background-repeat:no-repeat;background-position:93% 10px;cursor:pointer;}
 [role='navigation']:after{/* clearfix */
 visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
-[role='navigation'] ul{padding:0;}
+[role='navigation'] ul{padding:0; display:block;}
 [role='navigation'] li{position:relative;list-style:none;display:block;background-color:#333;width:100%;}
 [role='navigation'] li.item-with-ul{background-color:#222;}
 [role='navigation'] li a{/*margin-right:20%;*/
@@ -627,9 +698,9 @@ legend span{font-weight:normal;font-size:13px;color:#444;}
 @media screen and (min-width:45em){
 .flexNav-touch [role='navigation'],
 .flexNav-no-touch [role='navigation']{display:block!important;}
-[role='navigation']{float:right;display:block;position:relative;width:auto;background:none;z-index:0;}
+[role='navigation']{float:left;display:block;position:relative;width:auto;background:none;z-index:0;}
 .menu-button{display:none;}
-[role='navigation'] li{position:relative;list-style:none;float:left;display:block;background:none;color:#333;width:20%;padding:0px 0px 0px 20px;margin:0em;text-transform:uppercase;}
+[role='navigation'] li{position:relative;list-style:none;float:left;display:block;background:none;color:#333;width:25%;padding:0px 20px 0px 0px;margin:0em;text-transform:uppercase;}
 .flexNav-no-touch .item-with-ul:hover > ul{opacity:1;top:3.1em;position:absolute;}
 [role="navigation"] .top-level a{background:none;color:#333;padding:0;}
 [role='navigation'] li a{border-left:none;border-bottom:none;}
