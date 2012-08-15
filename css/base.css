@@ -700,7 +700,7 @@ legend span{font-weight:normal;font-size:13px;color:#444;}
 .flexNav-no-touch [role='navigation']{display:block!important;}
 [role='navigation']{float:right;display:block;position:relative;width:auto;background:none;z-index:0;}
 .menu-button{display:none;}
-[role='navigation'] li{position:relative;list-style:none;float:left;display:block;background:none;color:#333;width:20%;padding:0px 0px 0px 20px;margin:0em;text-transform:uppercase;}
+[role='navigation'] li{position:relative;list-style:none;float:left;display:block;background:none;color:#333;width:auto;padding:0px 0px 0px 20px;margin:0em;text-transform:uppercase;}
 .flexNav-no-touch .item-with-ul:hover > ul{opacity:1;top:3.1em;position:absolute;}
 [role="navigation"] .top-level a{background:none;color:#333;padding:0;}
 [role='navigation'] li a{border-left:none;border-bottom:none;}
