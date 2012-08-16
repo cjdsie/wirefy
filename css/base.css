@@ -81,8 +81,8 @@ img{border:0;-ms-interpolation-mode:bicubic;}
 ================================================== */
 /* apply a natural box layout model to all elements */
 *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
-html{background:#ffffff;height:100%;font-size:62.5%;-webkit-overflow-scrolling:touch;-webkit-tap-highlight-color:#f3f5f6;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
-body{background-color:transparent;font-family:"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:16px;font-size:1em;font-size:1.6rem;line-height:1.5em;color:#444;-webkit-font-smoothing:antialiased;/* Fix for webkit rendering */
+html{background:#ffffff;margin:0;padding:0;height:100%;font-size:62.5%;-webkit-overflow-scrolling:touch;-webkit-tap-highlight-color:#f3f5f6;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
+body{background-color:transparent;margin:0;padding:0;font-family:"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:16px;font-size:1em;font-size:1.6rem;line-height:1.5em;color:#444;-webkit-font-smoothing:antialiased;/* Fix for webkit rendering */
 -webkit-text-size-adjust:100%;}
 /* #Grid
 ================================================== */
