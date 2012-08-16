@@ -122,14 +122,14 @@ body {
 		margin-top: 20px; }
 		
 	.hidden-code {
-		margin: 2em 0;
+		margin: 2em 0 1em;
 	}	
 
 	.hidden-code p {
 		font-size: 12px;
 		color: #999; }
 	.hidden-code>div {
-		display: none; }
+		display: block; }
 		
 		.bsarocks, #bsap_aplink, .bsap {
 		display:none;
