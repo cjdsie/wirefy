@@ -9,5 +9,7 @@ To follow the trend of designing in the browser, Wirefy can be used as part of y
 
 Unlike many of the other boilerplates and frameworks, Wirefy doesn't focus on fancy UI components, but instead stays focused on the things that matter - the users and how they will experience your site or app on various screens. Get the basic story right and then the design will become that much easier.  
 
+If you've been using Wirefy, we want to hear from you. We want to make Wirefy even better as an efficient tool in your process. Please send us along any feedback you have to [Chris](mailto:chris@chrisdasie.com).
+
 For full documentation, our homepage [here](http://cjdsie.github.com/wirefy). 
 
