@@ -26,6 +26,8 @@ Clone the git repo - `git clone git://github.com/cjdsie/wirefy.git` - or [downlo
 * Standard typography and the use of Font Awesome for icons
 * Framework includes all base styles in one place
 
+If you've been using Wirefy, we want to hear from you. We want to make Wirefy even better as an efficient tool in your process. Please send us along any feedback you have to [Chris](mailto:chris@chrisdasie.com).
+
 For full documentation, our homepage [here](http://cjdsie.github.com/wirefy). 
 
 
