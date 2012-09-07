@@ -15,7 +15,6 @@ Unlike many of the other boilerplates and frameworks, Wirefy doesn't focus on fa
 Clone the git repo - `git clone git://github.com/cjdsie/wirefy.git` - or [download it](https://github.com/cjdsie/wirefy/zipball/master)  
 
 
-
 ## Features
 
 * Percentage based grid system
