@@ -77,6 +77,8 @@ img{border:0;-ms-interpolation-mode:bicubic;}
 .clearfix:after{clear:both;}
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus{position:static;clip:auto;height:auto;width:auto;margin:0;overflow:visible;}
+*:first-child+html .row,
+*:first-child+html .clearfix{zoom: 1;} /* IE7 */
 /* #Basic Styles
 ================================================== */
 /* apply a natural box layout model to all elements */
@@ -86,7 +88,7 @@ body{background-color:transparent;margin:0;padding:0;font-family:"HelveticaNeue"
 -webkit-text-size-adjust:100%;}
 /* #Grid
 ================================================== */
-.row{width:100%;margin-bottom:1.25em;}
+.row{width:100%;margin-bottom:1.25em;zoom: 1;}
 .alpha{margin-left:0;}
 .omega{margin-right:0;}
 .one,.two,.three,.four,.five,.six,.seven,.eight,.nine,.ten,.eleven,.twelve,.thirteen,.fourteen,.fifteen,.sixteen{width:100%;}
