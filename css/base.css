@@ -1,6 +1,6 @@
 /* ============================================================
 Wirefy by Chris Da Sie
-Version:1.4.6
+Version:1.4.8
 URL:https://github.com/cjdsie/wirefy
 Apache License:v2.0. http://www.apache.org/licenses/LICENSE-2.0
 /* Table of Content
@@ -393,7 +393,6 @@ readers do not read off random characters that represent icons */
 .icon-umbrella:before{content:"\f0e9";}
 .icon-paste:before{content:"\f0ea";}
 .icon-user-md:before{content:"\f200";}
-
 /* #Links
 ================================================== */
 a,a:visited{color:#333;text-decoration:underline;outline:0;}
@@ -470,14 +469,14 @@ opacity:0;filter:alpha(opacity=1);width:48%;text-indent:-9999px;overflow:hidden;
 .menu2 a{display:block;padding:.5em .8em;text-decoration:none;color:#333;}
 .menu2 a:hover{background-color:#f8f8f8;}
 .menu2 .nav-current{font-weight:bold;}
-a.skip {position:absolute;left:-999em;}
+a.skip{position:absolute;left:-999em;}
 [role='navigation']{margin:0 auto;width:100%;background-color:#333;float:right;}
 .flexNav-touch [role='navigation'],
 .flexNav-no-touch [role='navigation']{display:none;}
 .menu-button{float:right;display:block;width:1.5625em;height:1.5625em;padding:1em 0;background:transparent;color:#333;background-image:url('../img/nav-icon.png');background-repeat:no-repeat;background-position:93% .625em;cursor:pointer;}
 [role='navigation']:after{/* clearfix */
 visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
-[role='navigation'] ul{padding:0; display:block;}
+[role='navigation'] ul{padding:0;display:block;}
 [role='navigation'] li{position:relative;list-style:none;display:block;background-color:#333;width:100%;}
 [role='navigation'] li.item-with-ul{background-color:#222;}
 [role='navigation'] li a{/*margin-right:20%;*/
@@ -654,34 +653,29 @@ legend span{font-weight:normal;font-size:13px;font-size:.8125em;font-size:1.3rem
 /* #Media Queries
 ================================================== */
 /* @media screen and (min-width:480px) */
-@media screen and (min-width: 30em){
-[role='navigation']{float:left;}
+@media screen and (min-width:30em){[role='navigation']{float:left;}
 }
 /* @media screen and (min-width:640px) */
-@media screen and (min-width:40em){
-	/* RESET MARGINS */
-
-.column,.columns{float:left;margin-left: 2%;}
-.row{width:100%;margin-bottom:1.25em;}
-.alpha{margin-left:0;}
-.omega{margin-right:0;}
-.column:first-child,.columns:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
-.one						{ width: 4.375%; }
-.two 						{ width: 10.75%; }
-.three 						{ width: 17.125%; }
-.four						{ width: 23.5%; }
-.five						{ width: 29.875%; }
-.six 						{ width: 36.25%; }
-.seven						{ width: 42.625%; }
-.eight 						{ width: 49.0%; }
-.nine 						{ width: 55.375%; }
-.ten 						{ width: 61.75%; }
-.eleven 						{ width: 68.125%; }
-.twelve 						{ width: 74.5%; }
-.thirteen 						{ width: 80.875%; }
-.fourteen						{ width: 87.25%; }
-.fifteen 						{ width: 93.625%; }
-.sixteen 						{ width: 100%; }
+@media screen and (min-width:40em){/* RESET MARGINS */
+.column,.columns{float:left;margin-left:2%;}
+.column:first-child,.columns:first-child{margin-left:0;}
+/* all browsers except IE6 and lower */
+.one{width:4.375%;}
+.two{width:10.75%;}
+.three{width:17.125%;}
+.four{width:23.5%;}
+.five{width:29.875%;}
+.six{width:36.25%;}
+.seven{width:42.625%;}
+.eight{width:49.0%;}
+.nine{width:55.375%;}
+.ten{width:61.75%;}
+.eleven{width:68.125%;}
+.twelve{width:74.5%;}
+.thirteen{width:80.875%;}
+.fourteen{width:87.25%;}
+.fifteen{width:93.625%;}
+.sixteen{width:100%;}
 .menu2 li:first-child{margin-left:0;}
 .menu2,
 .menu2 ul{float:left;}
@@ -689,8 +683,7 @@ legend span{font-weight:normal;font-size:13px;font-size:.8125em;font-size:1.3rem
 .menu2 li{float:left;font-size:1.5em;border-bottom:0;}
 }
 /* @media screen and (min-width:71.25em) */
-@media screen and (min-width:45em){
-.flexNav-touch [role='navigation'],
+@media screen and (min-width:45em){.flexNav-touch [role='navigation'],
 .flexNav-no-touch [role='navigation']{display:block!important;}
 [role='navigation']{float:right;display:block;position:relative;width:auto;background:none;z-index:0;}
 .menu-button{display:none;}
@@ -704,8 +697,7 @@ legend span{font-weight:normal;font-size:13px;font-size:.8125em;font-size:1.3rem
 .flexNav-no-touch .item-with-ul:hover > ul{visibility:visible;opacity:1;height:auto;display:block;border-right:1px solid #000;border-bottom:1px solid #000;}
 }
 /* @media screen and (min-width:888px) */
-@media screen and (min-width:55.5em){
-.menu2{float:right;clear:none;}
+@media screen and (min-width:55.5em){.menu2{float:right;clear:none;}
 }
 /* @media screen and (min-width:984px) */
 @media screen and (min-width:61.5em){}
