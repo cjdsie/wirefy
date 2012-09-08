@@ -661,6 +661,7 @@ legend span{font-weight:normal;font-size:13px;font-size:.8125em;font-size:1.3rem
 @media screen and (min-width:40em){/* RESET MARGINS */
 .column,.columns{float:left;margin-left:2%;}
 .column:first-child,.columns:first-child{margin-left:0;}
+.alt-spacing {margin-left: 4.5%;}
 /* all browsers except IE6 and lower */
 .one{width:4.375%;}
 .two{width:10.75%;}
