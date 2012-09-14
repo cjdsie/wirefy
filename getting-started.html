@@ -84,7 +84,7 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
  <meta http-equiv="cleartype" content="on">
 
 </head>
-<body>
+<body class="getting-started" id="top">
 	<!-- AdPacks.com Ad Code -->
 	<script type="text/javascript">
 	(function(){
@@ -100,7 +100,7 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
   <!-- This is the header information. You can add things like logos and navigation here. -->
     <header role="banner" class="clearfix">
 	<div class="logo ten columns">
-		<a href="/">
+		<a href="index.html">
 	<h2>Wirefy</h2>
 	</a>
 	</div>
@@ -108,100 +108,90 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 	  <a href="#main" class="skip">Skip navigation</a>
 	  <nav role="navigation" id="nav">
 	    <ul>
-		  <li class="top-level"><a href="getting-started.html">Getting Started</a></li>
+		  <li class="top-level active"><a href="getting-started.html">Getting Started</a></li>
 		  <li class="top-level"><a href="features.html">Features</a></li>
 		  <li class="top-level"><a href="base-css.html">Base CSS</a></li>
 		  <li class="top-level"><a href="ask-a-question.html">Ask A Question</a></li>
 	    </ul>	
       </nav>
     </header>
-		  </div><!-- container -->	
-
-			<section class="doc-section grid-background row">
-				<div class="homepage clearfix">
-				<div class="heading">
-					<h1 class="float-up">Everything You Need To Create Functional Wireframes</h1>
-				  </div>
-				<div class="downloadables row">
-					<a href="https://github.com/cjdsie/wirefy/zipball/master" class="remove-bottom button large">Download Wirefy from Github</a>
-					<div class="post-button-note half-bottom">or <a href="https://github.com/cjdsie/wirefy/">View Source on Github</a></div>
-					<iframe src="http://ghbtns.com/github-btn.html?user=cjdsie&repo=wirefy&type=watch&count=true"
-					  allowtransparency="true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe>
-					<iframe src="http://ghbtns.com/github-btn.html?user=cjdsie&repo=wirefy&type=fork&count=true"
-					  allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
-					<a href="http://twitter.com/share" class="twitter-share-button" data-text="Rapidly develop functional responsive wireframes while focusing on content rather than styles" data-count="horizontal" data-via="wirefy">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-					<a href="https://twitter.com/wirefy" class="twitter-follow-button" data-show-count="false">Follow @wirefy</a>
-					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-				</div>
-			</div>
-		 	  </section>
-    <div role="main" class="content clearfix">
-	  <section class="doc-section summary row clearfix">
-		<div class="row">
-		<div class="callout five columns">
-		<h3>What is it?</h3>
-		<p>Wirefy is a browser based responsive wireframe tool, which allows you to create functional wireframes using standard elements. Think of it as the foundation for your content to be built on. This allows you to focus on the content rather than the design to get faster sign off. Wirefy is not a one-solution answer.</p>
+		  </div><!-- container -->
+			
+		<section class="doc-section grid-background row">
+			<div class="homepage clearfix">
+			<div class="heading">
+				<h1 class="float-up">Getting Started</h1>
+				<h3 class="float-up">Get up and running faster</h3>
+			  </div>
 		</div>
-			<div class="callout five columns alt-spacing">
-			<h3>Who is for?</h3>
-			<p>For anyone who is concerned with designing with content first as the base for their responsive design. If you are new to responsive design, this tool will help you get up and running faster. Start building flexible wireframes without the headache of working through countless calculations. Instead focus on the content and flow.</p>
-			</div>
-				<div class="callout five columns alt-spacing">
-				<h3>Why use it?</h3>
-				<p>Creating static wireframes can be great but sometimes clients just don't understand how they function or change based on various devices. Building functional wireframes will help you communicate with clients better and work as a foundation for your fluid designs without losing sight of the importance of the content.</p>
-				</div>
+	 	  </section>
+		
+			
+    <div role="main" class="content row clearfix">
+		<div class="four columns" id="sidebar">
+		  	<ul>
+			    <li><a href="#download">Download <i class="icon-chevron-right alignright"></i></a></li>
+			    <li><a href="#file-structure">File Structure <i class="icon-chevron-right alignright"></i></a></li>
+				<li><a href="#html-template">HTML Template <i class="icon-chevron-right alignright"></i></a></li>
+				<li><a href="#extend">Extend <i class="icon-chevron-right alignright"></i></a></li>
+			</ul>
+		</div>
+	<section class="information eleven columns alt-spacing">
+		<section class="doc-section" id="download">
+		<h3>Download</h3>
+		<p>Before you download the latest version of Wirefy, make sure you have a code editor available. We recommend TextMate or Coda2. You will also need some working knowledge of HTML and CSS. Ok now that we have that settled let's get started. We've strived to keep Wirefy as compact as possible and continue to work on techniques to better our compression. Currently the entire document is just under ~700Kb.</p>
+			<a href="https://github.com/cjdsie/wirefy/zipball/master" class="remove-bottom button large">Download Wirefy from Github</a>
+			<div class="post-button-note half-bottom">or <a href="https://github.com/cjdsie/wirefy/">View Source on Github</a>
 		</div>
 		</section>
-		<section class="doc-section how-it-works row clearfix">
-			<h2>How does it work?</h2>
-			<p>Here is a brief look at the process to create your wireframes.</p>
-			<div class="row">
-			<div class="nine columns">
-				<img src="img/structure.png" alt="Structure">
-				</div>
-			<ul class="seven columns">
-				<li class="plan"><h4>Plan</h4><p>Architect structure through sketches &amp; organize your content quickly. This is a great way to quickly test out ideas and build a strategy that will focus your wireframes.</p></li>
-				<li class="structure"><h4>Structure</h4><p>Build specific layout designs &amp; guidelines for your content. Functionality can sometimes break the flow of a site. Some ideas are better in static form but don't work in the real world. Get through these iterations faster.</p></li>
-				<li class="communicate"><h4>Communicate</h4><p>Discuss foundation and functionality of wireframes with clients by showing them working examples of how the site will work. Drive conversations towards more productive collaboration with clients.</p></li>
-				<li class="deliver"><h4>Deliver</h4><p>Get approval on your wireframes faster. Once these have been approved you can use your wireframe builds to design on top of. Cut down your timelines and be happy that your clients will have a better understanding about the final product.</p></li>
-				</ul>
-				</divf>
-			</section>
-			<!--<section class="doc-section examples row clearfix">
-				<h2>Built with Wirefy</h2>
-				<ul class="row clearfix">
-					<li class="five columns"><img src="img/ENIXUS-Design.png" alt="ENIXUS Design"></li>
-					<li class="five columns alt-spacing"><img src="img/Sensei-Marketing.png" alt="Sensei Marketing"></li>
-					<li class="five columns alt-spacing"><img src="img/Bannerman-Park-Wireframe.png" alt="Bannerman Park Wireframe"></li>
-				</ul>
-				</section>-->	
-				    </div><!-- content -->
-      	<footer role="contentinfo">
-	<section class="container row clearfix">
-<div class="ads four columns">
-	<!-- AdPacks.com Zone Code -->
-	<div id="bsap_1277196" class="bsarocks bsap_991a376ef1e7767477b39694cfa817c9 clearfix"></div>
-	<!-- End AdPacks.com Zone Code -->
-	<a href="http://adpacks.com" id="bsap_aplink">via Ad Packs</a>
+		<section class="doc-section" id="file-structure">
+		<h3>File Structure</h3>
+		<p>With the downloaded folder, you'll find the following file structure, contents and logically grouping common assets. You'll get everything from JavaScript files to the CSS and startup placeholder images. Includes are both compiled and minified versions of most JavaScript files. Wirefy has been built in a way to get your wireframes up and running faster. Please note that all JavaScript plugins require jQuery to be included.
+			
+			</p>
+		<script src="https://gist.github.com/3718592.js"> </script>
+		</section>
+		<section class="doc-section" id="html-template">
+		<h3>HTML Template</h3>
+		<p> Now that you are familiar with the file structure of Wirefy, we can focus on getting you up and running. We'll open the HTML file included in our download. Let's take a look at what you will see when you open this file. We don't want you to waste time adding CSS files or JavaScript files. These have all been included for you out of the gate. 	
+		</p>
+		<script src="https://gist.github.com/3718714.js"> </script>
+		</section>
+		<section class="doc-section" id="extend">
+		<h3>Extend</h3>
+		<p>We've shown you what is included in Wirefy and how to easy it is to get started. But sometimes you want to do more than what has been included. Wirefy is flexible enough to work with other frameworks. You can add additional JS files to the js folder included then just call them into your basic HTML file. Please note that if you add a new framework that we haven't tested we won't be able to offer proper support if you run into issues.</p>
+		</section>
+		<p class="top"><a href="#top"><i class="icon-hand-up"></i> Top</a></p>
+		</section>
+ 		
+			</div><!-- content -->	
+      		<footer role="contentinfo">
+		<section class="container row clearfix">
+	<div class="ads four columns">
+		<!-- AdPacks.com Zone Code -->
+		<div id="bsap_1277196" class="bsarocks bsap_991a376ef1e7767477b39694cfa817c9 clearfix"></div>
+		<!-- End AdPacks.com Zone Code -->
+		<a href="http://adpacks.com" id="bsap_aplink">via Ad Packs</a>
 
-</div>
-	<div class="eight columns alt-spacing">
-<p>Wirefy is maintained by <a href="http://chrisdasie.com">Chris Da Sie</a>. Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License</a>, Version 2.0. The Font Awesome web font, CSS files and JS files are licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
-<p>Copyright © 2012 Wirefy. Hosted by GitHub. Branding by Chris Da Sie. Built on Wirefy</p>
-	<a href="https://twitter.com/chrisdasie" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @chrisdasie</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 	</div>
-	<div class="html two columns alt-spacing alignright">
-		<a href="http://www.w3.org/html/logo/">
-		<img src="http://www.w3.org/html/logo/badge/html5-badge-h-solo.png" width="63" height="64" alt="HTML5 Powered" title="HTML5 Powered">
-		</a>
+		<div class="eight columns alt-spacing">
+			<p>Wirefy is maintained by <a href="http://chrisdasie.com">Chris Da Sie</a>. Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License</a>, Version 2.0. The Font Awesome web font, CSS files and JS files are licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+			<p>Copyright © 2012 Wirefy. Hosted by GitHub. Branding by Chris Da Sie. Built on Wirefy</p>
+		<a href="https://twitter.com/chrisdasie" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @chrisdasie</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 		</div>
-	</section>
-</footer>
+		<div class="html two columns alt-spacing alignright">
+			<a href="http://www.w3.org/html/logo/">
+			<img src="http://www.w3.org/html/logo/badge/html5-badge-h-solo.png" width="63" height="64" alt="HTML5 Powered" title="HTML5 Powered">
+			</a>
+			</div>
+		</section>
+	</footer>
+    
 
   <!-- JS - Add or remove any of the scripts to suit the functionality you wish to display. 
   ================================================== -->
- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
   <script src="js/respond.js"></script>
   <script src="js/mediaCheck-min.js"></script>
@@ -216,6 +206,21 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
   <script src="js/plugins.js"></script>
   <script src="js/script.js"></script>
   <script src="js/helper.js"></script>
+	<script>
+	$('.hidden-code').click(function(e) {
+		e.preventDefault();
+		$(this).children('.gist').slideToggle();
+	})
+		var originalText;
+		$('.example-grid').children().hover(
+			function() {
+				originalText = $(this).text();
+				$(this).html($(this).width()+'px');
+			},
+			function() {
+				$(this).html(originalText);
+			})
+	</script>
   
   
   <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.

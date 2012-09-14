@@ -1,66 +1,24 @@
-$(document).ready(function(){
-   
-  // Create the dropdown base
-  $("<select />").appendTo("nav.main");
+$(function() {
+  var $test = $('#sidebar');
   
-  // Create default option "Go to..."
-  $("<option />", {
-     "selected": "selected",
-     "value"   : "",
-     "text"    : "Go to..."
-  }).appendTo("nav.main select");
-  
-  // Populate dropdown with menu items
-  $("nav.main a").each(function() {
-   var el = $(this);
-   $("<option />", {
-       "value"   : el.attr("href"),
-       "text"    : el.text()
-   }).appendTo("nav.main select");
-  });
-  
-   // To make dropdown actually work
-   // To make more unobtrusive: http://css-tricks.com/4064-unobtrusive-page-changer/
-  $("nav.main select").change(function() {
-    window.location = $(this).find("option:selected").val();
-  });
+  mediaCheck({
+    media: '(min-width: 45em)',
+    entry: function() {
+      	var offset = $("#sidebar").offset();
+	      var topPadding = 15;
+	      $(window).scroll(function() {
+	          if ($(window).scrollTop() > offset.top) {
+	              $("#sidebar").stop().animate({
+	                  marginTop: $(window).scrollTop() - offset.top + topPadding
+	              });
+	          } else {
+	              $("#sidebar").stop().animate({marginTop: 0});
+	          };
+	      });
+    }
+});
 
-
-
-
-
-$("<select />").appendTo("nav.menu1");
-
-  // Create default option "Go to..."
-  $("<option />", {
-     "selected": "selected",
-     "value"   : "",
-     "text"    : "Go to..."
-  }).appendTo("nav.menu1 select");
-
-  // Populate dropdown with menu items
-  $("nav.menu1 a").each(function() {
-   var el = $(this);
-   $("<option />", {
-       "value"   : el.attr("href"),
-       "text"    : el.text()
-   }).appendTo("nav.menu1 select");
-  });
-
-   // To make dropdown actually work
-   // To make more unobtrusive: http://css-tricks.com/4064-unobtrusive-page-changer/
-  $("nav.menu1 select").change(function() {
-    window.location = $(this).find("option:selected").val();
-  });
-
-
-$("[role='navigation']").flexNav();
-
-
-
-/* Anchor Link Scroll */
-
- function filterPath(string) {
+function filterPath(string) {
   return string
     .replace(/^\//,'')
     .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
@@ -69,7 +27,7 @@ $("[role='navigation']").flexNav();
   var locationPath = filterPath(location.pathname);
   var scrollElem = scrollableElement('html', 'body');
 
-  $('.main a[href*=#]').each(function() {
+  $('.content a[href*=#]').each(function() {
     var thisPath = filterPath(this.pathname) || locationPath;
     if (  locationPath == thisPath
     && (location.hostname == this.hostname || !this.hostname)
@@ -106,35 +64,27 @@ $("[role='navigation']").flexNav();
     return [];
   }
 
+});
+
+$(".logo h2").lettering();
+$("h1.float-up").fitText(1.1, {minFontSize: '36px', maxFontSize: '52px'});
+
+/* Authentic Jobs */
+$(function() {
+  
+  // Remove "uk." for listings from http://authenticjobs.com
+  $.get("http://authenticjobs.com/js/jobs_r_single_v2.js", function(data) {  
+    
+    // Tailor the markup being assembled here to suit your site requirements / semantic preferences
+    var listing = "<em>" + data.company + "</em> needs a <a href='" + data.url + "'>" + data.title  + "</a>";
+    
+    // Replace ".job-listing" with a selector for the container into which the listing will be inserted
+    // Append will append the listing into the end of the container element.
+    $(".job-listings").append(listing);
+    
+  }, "jsonp");
+  
+});
 
 
-	// Slideshow 1
-    $("#slider1").responsiveSlides({
-      auto: false,
-      pager: true,
-      nav: true,
-      speed: 500,
-      namespace: "centered-btns"
-    });
 
-    // Slideshow 2
-    $("#slider2").responsiveSlides({
-      auto: false,
-      pager: true,
-      nav: true,
-      speed: 500,
-      namespace: "transparent-btns"
-    });
-
-    // Slideshow 3
-    $("#slider3").responsiveSlides({
-      auto: false,
-      pager: false,
-      nav: true,
-      speed: 500,
-      namespace: "large-btns"
-    });
-
-
- 
- });
