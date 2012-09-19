@@ -216,6 +216,7 @@ h1 span {
 	font-size: 5.2rem;
 	text-transform:uppercase;
 	font-weight: 100;
+	margin:0;
 	
 }
 
@@ -551,9 +552,6 @@ footer[role="contentinfo"] p a, footer[role="contentinfo"] p a:visited {
 		font-size: 40px;
 		font-size:2.25em;
 		font-size: 4.0rem;
-		line-height:48px;
-		line-height:3em;
-		line-height:4.8rem;
 	}
 	
 	.callout {
@@ -597,9 +595,6 @@ footer[role="contentinfo"] p a, footer[role="contentinfo"] p a:visited {
 	#sidebar {float:left;}
 	
 	.heading h1 {
-		line-height: 62px;
-		line-height: 3.875em;
-		line-height: 6.2rem;
 
 	}
 
