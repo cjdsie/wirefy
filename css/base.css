@@ -126,7 +126,7 @@ b,
 strong{font-weight:bold;}
 dfn{font-style:italic;}
 ins{background-color:#f3f5f6;color:#000000;text-decoration:none;}
-mark{background-color:#f3f5f6;color:#000000;font-style:italic;font-weight:bold;}
+mark{background-color:#f3f5f6;color:#000000;font-style:italic;font-weight:bold;padding:0 .25em;}
 pre,
 code,
 kbd,
@@ -136,12 +136,14 @@ sub,
 sup{position:relative;font-size:12px;font-size:.75em;font-size:1.2rem;line-height:0;vertical-align:baselineheight;}
 sup{top:-0.5em;}
 sub{bottom:-0.25em;}
-p{margin:0 0 1.25em 0;}
+p{margin:0 0 1.25em 0;word-spacing:0.125em; hyphenate: auto; hyphenate-lines: 3;}
 p img{margin:0;}
 p.lead{font-size:21px;font-size:1.3125em;font-size:2.1rem;line-height:1.6875em;color:#777;}
+p+p.no-indent{text-indent: 0;}
 em{font-style:italic;}
 strong{font-weight:bold;color:#333;}
 small{font-size:80%;}
+del{text-decoration: line-through;}
 /* Blockquotes */
 blockquote,blockquote p{font-size:17px;font-size:1.0625em;font-size:1.7rem;line-height:1.5em;color:#777;font-style:italic;}
 blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd;}
@@ -536,6 +538,7 @@ rgba(0,0,0,0.05);}
 .pager .disabled a:hover{color:#999999;cursor:default;background-color:#fff;}
 /* #Buttons
 ================================================== */
+input, select, button, .button{cursor: pointer;}
 .button,
 button,
 input[type="submit"],
