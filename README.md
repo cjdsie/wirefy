@@ -29,6 +29,8 @@ For full documentation, our homepage [here](http://cjdsie.github.com/wirefy).
 
 ## Changelog
 
+
+*   v2.0.3 Reduced Image sizes for increased compression overall
 *	v2.0.2 Added SASS support
 *	v2.0.1 Committed v2.0.1 
 
