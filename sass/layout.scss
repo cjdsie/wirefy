@@ -13,55 +13,81 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 	#Page Styles
 	#Media Queries
 	*/
+
 /* #Site Styles
 ================================================== */
+
 .container {
   margin: 0 auto;
   padding: 0 auto;
   max-width: 1200px;
   width: 80%;
-  padding-top: 20px; }
+  padding-top: 20px;
+}
 
 .content {
   position: relative;
   width: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 /* #Page Styles
 ================================================== */
+
 /* Header 
 --------------------------------------------------*/
+
 header[role="banner"] {
   width: 100%;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 .logo {
   float: left;
   position: relative;
   width: 50%;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 /* #Media Queries
 ================================================== */
+
 @media only screen and (min-width: 30em) {
-  /* 480 =================================================== */ }
+  /* 480 =================================================== */
+}
+
 @media only screen and (min-width: 40em) {
   /* 640 =================================================== */
   .logo {
     float: left;
-    width: auto; }
-    .logo h1 {
-      text-align: left; } }
+    width: auto;
+    h1 {
+      text-align: left;
+    }
+  }
+}
+
 @media only screen and (min-width: 45em) {
-  /* 720 =================================================== */ }
+  /* 720 =================================================== */
+}
+
 @media screen and (min-width: 55.5em) {
-  /* 888 =================================================== */ }
+  /* 888 =================================================== */
+}
+
 @media only screen and (min-width: 61.5em) {
-  /* 984 =================================================== */ }
+  /* 984 =================================================== */
+}
+
 @media only screen and (min-width: 75em) {
-  /* 1200 =================================================== */ }
+  /* 1200 =================================================== */
+}
+
 @media only screen and (min-width: 87em) {
-  /* 1392 =================================================== */ }
+  /* 1392 =================================================== */
+}
+
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-  /* 2x =================================================== */ }
+  /* 2x =================================================== */
+}

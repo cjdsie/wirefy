@@ -27,6 +27,11 @@ Clone the git repo - `git clone git://github.com/cjdsie/wirefy.git` - or [downlo
 
 For full documentation, our homepage [here](http://cjdsie.github.com/wirefy). 
 
+## Changelog
+
+*	v2.0.2 Added SASS support
+*	v2.0.1 Committed v2.0.1 
+
 
 ## Project information
 
