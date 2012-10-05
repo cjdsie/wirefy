@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <!-- 
 Wirefy by Chris Da Sie
-Version: 2.0.3
-URL: https://github.com/cjdsie/wirefy
+Version: 2.0.4
+URL: https://getwirefy.com
 Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 -->
 
@@ -21,8 +21,8 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 ================================================= -->
  <meta charset="utf-8">
  <title>Wirefy | The Responsive Wireframe Boilerplate</title>
- <meta name="description" content="Wirefy: Beautiful Boilerplate for Responsive Wireframe Development">
- <meta name="author" content="Chris Da Sie">
+ <meta name="description" content="">
+ <meta name="author" content="">
  
  
  <!-- Mobile Specific Metas
@@ -151,7 +151,6 @@ will help you write and rewrite the SCSS files.
   <script>window.jQuery || document.write('<script src="js/jquery-1.8.2.min.js"><\/script>')</script>
   <script src="js/respond.js"></script>
   <script src="js/jquery.flexnav-min.js"></script>
-  <script src="js/bootstrap-typeahead.js"></script>
   <script src="js/tabs.js"></script>
   <script src="js/responsiveslides.min.js"></script>
   <script src="js/responsive_dropdown.js"></script>
@@ -159,6 +158,13 @@ will help you write and rewrite the SCSS files.
   <script src="js/plugins.js"></script>
   <script src="js/script.js"></script>
   <script src="js/helper.js"></script>
+  <script>
+    yepnope({
+      test : Modernizr.mq('@media only screen and (width)'),
+      yep  : '',
+      nope : 'js/css3-mediaqueries.js',
+    });
+  </script>
   
   
   <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
