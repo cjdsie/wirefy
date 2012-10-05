@@ -39,12 +39,15 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
  <link rel="stylesheet" href="css/layout.css">
  
  
+ <script src="js/modernizr.js"></script>
+
  <!-- Browser Specific Javascript
 ================================================= -->
  <!--[if (lt IE 9) & (!IEMobile)]>
  <script src="js/selectivizr-min.js"></script>
+<script src="js/css3-mediaqueries.js"></script>
  <![endif]-->
- <script src="js/modernizr.js"></script>
+
 
 
  <!-- Favicon
@@ -200,13 +203,6 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 				$(this).html(originalText);
 			})
 	</script>
-	<script>
-    yepnope({
-      test : Modernizr.mq('@media only screen and (width)'),
-      yep  : '',
-      nope : 'js/css3-mediaqueries.js',
-    });
-  </script>
   
   
   <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
