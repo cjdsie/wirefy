@@ -1,7 +1,7 @@
 /* ============================================================
 
 Wirefy by Chris Da Sie
-Version: 2.0.4
+Version: 2.0.5
 URL: https://github.com/cjdsie/wirefy
 Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 
@@ -9,7 +9,7 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 /* Table of Content
 ==================================================
 	#Site Styles
-	 #Documentation
+	#Documentation
 	#Page Styles
 	#Media Queries
 	*/
@@ -18,14 +18,14 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 .container {
   margin: 0 auto;
   padding: 0 auto;
-  max-width: 1200px;
+  max-width: 100%;
   width: 80%;
-  padding-top: 20px; }
+  padding-top: 2%; }
 
 .content {
   position: relative;
   width: 100%;
-  overflow: hidden; }
+  margin-top: 5%; }
 
 /* #Page Styles
 ================================================== */
@@ -39,7 +39,7 @@ header[role="banner"] {
 .logo {
   float: left;
   position: relative;
-  width: 50%;
+  width: auto;
   margin: 0 auto; }
 
 /* #Media Queries

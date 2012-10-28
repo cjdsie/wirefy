@@ -1,6 +1,7 @@
 /* ============================================================
-Wirefy by Chris Da Sie
-Version: 2.0.4
+Wirefy 
+Author: Chris Da Sie [http://chrisdasie.com]
+Version: 2.0.5
 URL:https://github.com/cjdsie/wirefy
 Apache License:v2.0. http://www.apache.org/licenses/LICENSE-2.0
 /* Table of Content
@@ -8,16 +9,20 @@ Apache License:v2.0. http://www.apache.org/licenses/LICENSE-2.0
 #Reset & Basics
 #Basic Styles
 #Site Styles
-#Typography
-#Font Awesome
-#Links
-#Lists
-#Images
-#Buttons
-#Tabs
-#Tables
-#Forms
-#Misc */
+	#Grid
+	#Typography
+	#Font Awesome
+	#Links
+	#Lists
+	#Images
+	#Buttons
+	#Tabs
+	#Tables
+	#Forms
+	#Gallery
+	#Misc
+#Media Queries 
+*/
 /* #Reset
 ================================================== */
 /*
@@ -123,9 +128,17 @@ figure {
 }
 
 img {
+  max-width: 100%;
+  height:auto;
   border: 0;
   -ms-interpolation-mode: bicubic;
 }
+
+object, embed, video, iframe, picture {
+    max-width: 100%;
+	height:auto;
+    display: block;
+  }
 
 /* Variables 
 =================================================== */
@@ -165,6 +178,11 @@ img {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  &:after, &:before{
+ -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 }
 
 /* IE7 */
@@ -206,6 +224,15 @@ body {
   width: 100%;
   margin-bottom: 1.25em;
   zoom: 1;
+  &:after {
+    /* Or @extend clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .column, .columns{
+	margin-bottom: 2%;
+	}
 }
 
 .alpha {
@@ -1454,6 +1481,8 @@ p a {
 ================================================== */
 
 ul, ol {
+  margin:0;
+  padding:0;
   margin-bottom: 1.25em;
 }
 
@@ -2444,9 +2473,6 @@ label, input, button, select, textarea {
   font-size: 1.4rem;
   font-weight: normal;
   line-height: 1.25em;
-}
-
-input, button, select, textarea {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
@@ -2503,10 +2529,11 @@ input {
 }
 
 input, textarea, .uneditable-input {
-  width: 12.875em;
+  width: auto
 }
 
 textarea {
+  width:100%;
   height: auto;
   background-color: #fff;
   border: 1px solid #ccc;
@@ -2671,30 +2698,9 @@ input:-moz-placeholder, textarea:-moz-placeholder, input:-ms-input-placeholder, 
   margin-left: .625em;
 }
 
-.input-mini {
-  width: 3.75em;
+.input-mini, .input-small, .input-medium, .input-large, .input-xlarge, .input-xxlarge {
+  width: 100%;
 }
-
-.input-small {
-  width: 5.625em;
-}
-
-.input-medium {
-  width: 9.375em;
-}
-
-.input-large {
-  width: 13.125em;
-}
-
-.input-xlarge {
-  width: 16.875em;
-}
-
-.input-xxlarge {
-  width: 33.125em;
-}
-
 input[class*="span"], select[class*="span"], textarea[class*="span"], .uneditable-input[class*="span"] {
   float: none;
   margin-left: 0;
@@ -3119,7 +3125,7 @@ legend + .control-group {
 }
 
 .form-horizontal {
-  width: 80%;
+  width: 90%;
   .control-group {
     margin-bottom: 1.25em;
     *zoom: 1;
@@ -3161,8 +3167,66 @@ legend + .control-group {
   }
 }
 
+/* #Gallery
+================================================ */
+
+.gallery {
+	.one{
+	&:nth-child(16n+1){
+		margin-left:0;
+		}
+	}
+	.two{
+	&:nth-child(8n+1){
+		margin-left:0;
+		}
+	}
+	.three{
+	&:nth-child(5n+1){
+		margin-left:0;
+		}
+	}
+	.four{
+	&:nth-child(4n+1){
+		margin-left:0;
+		}
+	}
+	.five{
+	&:nth-child(3n+1){
+		margin-left:0;
+		}
+	}
+	.six, .seven, .eight{
+	&:nth-child(2n+1){
+		margin-left:0;
+		}
+	}
+	.nine, .ten, .eleven, .twelve, .thirteen, .fourteen, .fifteen, .sixteen {
+	&:nth-child(n+1){
+		margin-left:0;
+		}
+	}
+}
+
+
 /* #Misc
 ================================================== */
+.callout{
+	background:#ddd;
+	padding:3%;
+	width:100%;
+}
+.link-list{
+	width:100%;
+	li{
+	width:auto;
+	float:left;
+	margin: 0 10% 0 0;
+	&:last-child{
+	margin:0;
+	}
+	}
+}
 
 .remove-bottom {
   margin-bottom: 0 !important;
@@ -3187,6 +3251,14 @@ legend + .control-group {
 
 /* @media screen and (min-width:640px) */
 @media screen and (min-width: 40em) {
+  .alignleft {
+	float:left;
+	margin: 0% 2% 2% 0;
+  }
+  .alignright {
+	float:right;
+	margin:0% 0 2% 2%;
+  }
   .column, .columns {
     float: left;
     margin-left: 2%;
@@ -3260,6 +3332,29 @@ legend + .control-group {
       border-bottom: 0;
     }
   }
+.input-mini {
+  width: 10%;
+}
+
+.input-small {
+  width: 20%;
+}
+
+.input-medium {
+  width: 40%;
+}
+
+.input-large {
+  width: 60%;
+}
+
+.input-xlarge {
+  width: 80%;
+}
+
+.input-xxlarge {
+  width: 100%;
+}
 }
 
 /* @media screen and (min-width:71.25em) */

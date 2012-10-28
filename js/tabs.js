@@ -1,5 +1,3 @@
-
-
 (function ($) {
   // hash change handler
   function hashchange () {

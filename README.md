@@ -29,7 +29,7 @@ For full documentation, our homepage [here](http://getwirefy.com).
 
 ## Changelog
 
-
+*   v2.0.5 Several fixes to the Grid and base.css. As well as a new class for Galleries. Added Templates for faster builds. 
 *   v2.0.3 Reduced Image sizes for increased compression overall
 *	v2.0.2 Added SASS support
 *	v2.0.1 Committed v2.0.1 
