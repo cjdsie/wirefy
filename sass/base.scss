@@ -134,7 +134,7 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 
-object, embed, video, iframe, picture {
+object, embed, video, picture {
     max-width: 100%;
 	height:auto;
     display: block;
@@ -3211,11 +3211,11 @@ legend + .control-group {
 
 /* #Misc
 ================================================== */
-.callout{
+/*.callout{
 	background:#ddd;
 	padding:3%;
 	width:100%;
-}
+}*/
 .link-list{
 	width:100%;
 	li{
