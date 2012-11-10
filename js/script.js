@@ -69,6 +69,36 @@ function filterPath(string) {
 $(".logo h2").lettering();
 $("h1.float-up").fitText(1.1, {minFontSize: '36px', maxFontSize: '52px'});
 
+
+/* Slideshows */
+		// Slideshow 1
+		$("#slider1").responsiveSlides({
+		  auto: false,
+		  pager: true,
+		  nav: true,
+		  speed: 500,
+		  namespace: "centered-btns"
+		});
+		
+		// Slideshow 2
+		$("#slider2").responsiveSlides({
+		  auto: false,
+		  pager: true,
+		  nav: true,
+		  speed: 500,
+		  namespace: "transparent-btns"
+		});
+		
+		// Slideshow 3
+		$("#slider3").responsiveSlides({
+		  auto: false,
+		  pager: false,
+		  nav: true,
+		  speed: 500,
+		  namespace: "large-btns"
+		});
+
+
 /* Authentic Jobs */
 $(function() {
   
@@ -85,6 +115,3 @@ $(function() {
   }, "jsonp");
   
 });
-
-
-

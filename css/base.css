@@ -1,7 +1,7 @@
 /* ============================================================
 Wirefy 
 Author: Chris Da Sie [http://chrisdasie.com]
-Version: 2.0.5
+Version: 2.0.6
 URL:https://github.com/cjdsie/wirefy
 Apache License:v2.0. http://www.apache.org/licenses/LICENSE-2.0
 /* Table of Content
@@ -15,6 +15,7 @@ Apache License:v2.0. http://www.apache.org/licenses/LICENSE-2.0
 	#Links
 	#Lists
 	#Images
+	#Media
 	#Buttons
 	#Tabs
 	#Tables
@@ -1334,6 +1335,19 @@ figure {
 .large-btns3_on {
   margin-bottom: 0; }
 
+/* #Videos and Other Media
+================================================== */
+video {
+  width: 100%; }
+
+.vendor {
+  padding: 2%;
+  background: #d1eed1;
+  margin-bottom: 2em; }
+
+.unsupported {
+  background: #fddfde; }
+
 /* #Menus
 ================================================== */
 .menu1 {
@@ -2493,11 +2507,11 @@ legend + .control-group {
 
 /* #Misc
 ================================================== */
-/*.callout{
-	background:#ddd;
-	padding:3%;
-	width:100%;
-}*/
+.callout {
+  background: #ddd;
+  padding: 3%;
+  width: 100%; }
+
 .link-list {
   width: 100%; }
   .link-list li {
