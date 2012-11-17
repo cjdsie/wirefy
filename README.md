@@ -37,7 +37,7 @@ For full documentation, our homepage [here](http://getwirefy.com).
 
 ##Contributing
 
-Anyone and everyone is welcome to [contribute](/cjdsie/wirefy/master/CONTRIBUTING.md). Help make Wirefy the best responsive wireframe tool.
+Anyone and everyone is welcome to [contribute](/cjdsie/wirefy/blob/master/CONTRIBUTING.md). Help make Wirefy the best responsive wireframe tool.
 
 
 ## Project information

@@ -96,7 +96,7 @@ Please follow this process; it's the best way to get your work included in the p
 
 ## Examples and Tutorial
 
-If you've been working with Wirefy and would like to share your work with the world, we want to hear from you. We will feature you as an example. [Get in touch →](mailto:chris@chrisdasie.com?subject=I'm%20using%20Wirefy) with the subject line of _I'm using Wirefy_.
+If you've been working with Wirefy and would like to share your work with the world, we want to hear from you. We will feature you as an example. [Get in touch](mailto:chris@chrisdasie.com?subject=I'm%20using%20Wirefy) with the subject line of _I'm using Wirefy_.
 
 You can also help others with Wirefy by writing tutorials or articles about the ways you use the code. We will then compile that list and forward new users to your site.
 
