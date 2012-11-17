@@ -29,10 +29,15 @@ For full documentation, our homepage [here](http://getwirefy.com).
 
 ## Changelog
 
+*	v2.0.6 Reorganized and consolidated JS files into the plugin.js
 *   v2.0.5 Several fixes to the Grid and base.css. As well as a new class for Galleries. Added Templates for faster builds. 
 *   v2.0.3 Reduced Image sizes for increased compression overall
 *	v2.0.2 Added SASS support
 *	v2.0.1 Committed v2.0.1 
+
+##Contributing
+
+Anyone and everyone is welcome to [contribute](/cjdsie/wirefy/master/CONTRIBUTING.md). Help make Wirefy the best responsive wireframe tool.
 
 
 ## Project information
