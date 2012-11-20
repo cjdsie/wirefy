@@ -2520,6 +2520,13 @@ legend + .control-group {
     .link-list li:last-child {
       margin: 0; }
 
+.large {
+  padding: 14px 24px;
+  font-size: 18px;
+  font-size: 1.125em;
+  font-size: 1.8rem;
+  text-align: center; }
+
 .remove-bottom {
   margin-bottom: 0 !important; }
 
