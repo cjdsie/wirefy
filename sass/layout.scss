@@ -265,6 +265,20 @@ h1 span {
   margin-bottom: 2em;
 }
 
+.callout{
+	border:1px solid #ccc;
+	background: #fdfdfd;
+	border-radius:.4em;
+	padding: 2%;
+}
+.ads .bsap .one .bsa_it_ad .bsa_it_d {
+color: #434343;
+}
+
+.ads .bsap .one .bsa_it_ad .bsa_it_t {
+color: #434343;
+}
+
 .how-it-works {
   position: relative;
   ul {
@@ -627,7 +641,6 @@ body {
     font-size: 10px;
     font-size: .625em;
     font-size: 1rem;
-    margin: -1.5em 0 0;
     text-align: left;
     float: right;
     color: #ccc;
@@ -636,7 +649,6 @@ body {
       font-size: 10px;
       font-size: .625em;
       font-size: 1rem;
-      margin: -1.5em 0 0;
       text-align: left;
       float: right;
       color: #ccc;
