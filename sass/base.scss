@@ -1,7 +1,7 @@
 /* ============================================================
 Wirefy 
 Author: Chris Da Sie [http://chrisdasie.com]
-Version: 2.0.6
+Version: 2.0.7
 URL:https://github.com/cjdsie/wirefy
 Apache License:v2.0. http://www.apache.org/licenses/LICENSE-2.0
 /* Table of Content
@@ -15,7 +15,6 @@ Apache License:v2.0. http://www.apache.org/licenses/LICENSE-2.0
 	#Links
 	#Lists
 	#Images
-	#Media
 	#Buttons
 	#Tabs
 	#Tables
@@ -1784,7 +1783,7 @@ video{
       color: #333;
     }
     &:hover {
-      background-color: #f8f8f8;
+      background-color: #666;
       > a {
         color: #ccc;
       }
@@ -1800,32 +1799,28 @@ a.skip {
   left: -999em;
 }
 
-[role='navigation'] {
+.toggle {
   margin: 0 auto;
   width: 100%;
-  background-color: #333;
-  float: right;
+  background-color: transparent;
 }
 
-.flexNav-touch [role='navigation'], .flexNav-no-touch [role='navigation'] {
+.flexNav-touch .toggle, .flexNav-no-touch .toggle {
   display: none;
 }
 
 .menu-button {
-  float: right;
   display: block;
-  width: 1.5625em;
-  height: 1.5625em;
-  padding: 1em 0;
-  background: transparent;
-  color: #333;
-  background-image: url('../img/nav-icon.png');
+  padding: 1em;
+  background: #000;
+  color: #fff;
+  background-image: url('../img/arrow-down.png');
   background-repeat: no-repeat;
-  background-position: 93% .625em;
+  background-position: 93% 18px;
   cursor: pointer;
 }
 
-[role='navigation'] {
+.toggle {
   &:after {
     /* clearfix */
     visibility: hidden;
@@ -1835,58 +1830,47 @@ a.skip {
     clear: both;
     height: 0;
   }
-  ul {
-    padding: 0;
-    display: block;
-    margin-bottom: 0;
-  }
   li {
     position: relative;
     list-style: none;
     display: block;
-    background-color: #333;
+    background-color: transparent;
     width: 100%;
-    &:last-of-type {
-      margin-bottom: 0;
-    }
     &.item-with-ul {
-      background-color: #222;
+      background-color: transparent;
     }
     a {
-      /*margin-right:20%;*/
+      margin-right: 20%;
       display: block;
-      color: #ddd;
-      border-bottom: 1px solid #111;
+      color: #888;
       &.link-with-ul {
-        border-right: 1px solid #222;
+        border-right: none;
       }
     }
   }
   .top-level a {
     position: relative;
     display: block;
-    background-color: #333;
-    padding: .5em 1em 1.4em 1em;
+    background-color: transparent;
+    padding: 1em;
     z-index: 2;
   }
   li ul {
     width: 100%;
+    position: relative;
     li {
       float: none;
       width: 100%;
       a {
         display: block;
-        background-color: #333;
+        background-color: transparent;
       }
     }
-    position: relative;
-    border-top: 1px solid #333;
-    border-bottom: 1px solid #333;
   }
   .item-with-ul {
-    background-image: url('../images/arrow-down.png');
+    background-image: url('../img/arrow-down.png');
     background-repeat: no-repeat;
-    background-position: 93% 1.125em;
+    background-position: 93% 18px;
   }
 }
 
@@ -3228,7 +3212,7 @@ legend + .control-group {
 ================================================== */
 .callout{
 	background:#ddd;
-	padding:3%;
+	padding:2%;
 	width:100%;
 }
 .link-list{
@@ -3243,6 +3227,14 @@ legend + .control-group {
 	}
 }
 
+.large {
+	padding: 14px 24px;
+	font-size: 18px;
+	font-size: 1.125em;
+	font-size: 1.8rem;
+	text-align:center;
+}
+
 .remove-bottom {
   margin-bottom: 0 !important;
 }
@@ -3255,13 +3247,20 @@ legend + .control-group {
   margin-bottom: 1.25em !important;
 }
 
+.two-cols, .thre-cols, .four-cols, .five-cols{
+-moz-column-count: 1;
+-webkit-column-count: 1;
+column-count: 1;
+}
+
+.spaced-out {
+ margin: 2% 0;
+}
+
 /* #Media Queries
 ================================================== */
 /* @media screen and (min-width:480px) */
 @media screen and (min-width: 30em) {
-  [role='navigation'] {
-    float: left;
-  }
 }
 
 /* @media screen and (min-width:640px) */
@@ -3340,7 +3339,6 @@ legend + .control-group {
     float: left;
     ul {
       float: left;
-      float: left;
     }
     li {
       float: left;
@@ -3370,77 +3368,115 @@ legend + .control-group {
 .input-xxlarge {
   width: 100%;
 }
+
+.two-cols{
+-moz-column-count: 2;
+-moz-column-gap: 20px;
+-webkit-column-count: 2;
+-webkit-column-gap: 20px;
+column-count: 2;
+column-gap: 20px;
+}
+
+.three-cols{
+-moz-column-count: 3;
+-moz-column-gap: 20px;
+-webkit-column-count: 3;
+-webkit-column-gap: 20px;
+column-count: 3;
+column-gap: 20px;
+}
+
+.four-cols{
+-moz-column-count: 4;
+-moz-column-gap: 20px;
+-webkit-column-count: 4;
+-webkit-column-gap: 20px;
+column-count: 4;
+column-gap: 20px;
+}
+
+.five-cols {
+-moz-column-count: 5;
+-moz-column-gap: 20px;
+-webkit-column-count: 5;
+-webkit-column-gap: 20px;
+column-count: 5;
+column-gap: 20px;
+}
+
+
 }
 
 /* @media screen and (min-width:71.25em) */
 @media screen and (min-width: 45em) {
-  .flexNav-touch [role='navigation'], .flexNav-no-touch [role='navigation'] {
-    display: block!important;
-  }
-  [role='navigation'] {
-    float: right;
-    display: block;
-    position: relative;
-    width: auto;
-    background: none;
-    z-index: 0;
-  }
-  .menu-button {
-    display: none;
-  }
-  [role='navigation'] li {
-    position: relative;
-    list-style: none;
-    float: left;
-    display: block;
-    background: none;
-    color: #333;
-    width: auto;
-    padding: 0 0 0 1.25em;
-    margin: 0em;
-    text-transform: normal;
-  }
-  .flexNav-no-touch .item-with-ul:hover > ul {
-    opacity: 1;
-    top: 3.1em;
-    position: absolute;
-  }
-  [role="navigation"] .top-level a {
-    background: none;
-    color: #333;
-    padding: 0;
-  }
-  [role='navigation'] li a {
-    border-left: none;
-    border-bottom: none;
-  }
-  .flexNav-no-touch [role='navigation'] li ul {
-    position: absolute;
-    top: auto;
-    left: 0;
-    opacity: 0;
-    visibility: hidden;
-    height: 1px;
-    z-index: 1;
-  }
-  [role='navigation'] li ul li a {
-    border-bottom: none;
-  }
-  .flexNav-touch [role='navigation'] li ul.sub-menu {
-    position: absolute;
-    top: auto;
-    left: 0;
-    display: none;
-    z-index: 1;
-  }
-  .flexNav-no-touch .item-with-ul:hover > ul {
-    visibility: visible;
-    opacity: 1;
-    height: auto;
-    display: block;
-    border-right: 1px solid #000;
-    border-bottom: 1px solid #000;
-  }
+.flexNav-touch .toggle, .flexNav-no-touch .toggle {
+  display: block;
+  margin:0;
+  width:100%;
+}
+
+.menu-button {
+  display: none;
+}
+
+.toggle li {
+  position: relative;
+  list-style: none;
+  float: left;
+  text-align:center;
+  display: inline-block;
+  width:23%;
+}
+
+.flexNav-no-touch .item-with-ul:hover > ul {
+  opacity: 1;
+  top: 3.1em;
+  position: absolute;
+  background-color: #333;
+}
+
+.toggle li a {
+  border-bottom: none;
+}
+
+.flexNav-no-touch .toggle li ul {
+  position: absolute;
+  top: auto;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  height: 1px;
+  z-index: 1000;
+}
+
+.toggle li ul li {
+ text-align:left;
+}
+
+.toggle li.top-level ul li a {
+  border-bottom: none;
+  padding-right:0;
+  margin-right:0;
+  line-height:1.3em;
+}
+
+.flexNav-touch .toggle li ul.sub-menu {
+  position: absolute;
+  top: auto;
+  left: 0;
+  display: none;
+  z-index: 1;
+}
+
+.flexNav-no-touch .item-with-ul:hover > ul {
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+  display: block;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
 }
 
 /* @media screen and (min-width:888px) */

@@ -1,7 +1,7 @@
 /* ============================================================
 Wirefy 
 Author: Chris Da Sie [http://chrisdasie.com]
-Version: 2.0.6
+Version: 2.0.7
 URL:https://github.com/cjdsie/wirefy
 Apache License:v2.0. http://www.apache.org/licenses/LICENSE-2.0
 /* Table of Content
@@ -15,7 +15,6 @@ Apache License:v2.0. http://www.apache.org/licenses/LICENSE-2.0
 	#Links
 	#Lists
 	#Images
-	#Media
 	#Buttons
 	#Tabs
 	#Tables
@@ -1383,7 +1382,7 @@ video {
       text-decoration: none;
       color: #333; }
     .menu2 li:hover {
-      background-color: #f8f8f8; }
+      background-color: #666; }
       .menu2 li:hover > a {
         color: #ccc; }
   .menu2 .nav-current {
@@ -1393,29 +1392,25 @@ a.skip {
   position: absolute;
   left: -999em; }
 
-[role='navigation'] {
+.toggle {
   margin: 0 auto;
   width: 100%;
-  background-color: #333;
-  float: right; }
+  background-color: transparent; }
 
-.flexNav-touch [role='navigation'], .flexNav-no-touch [role='navigation'] {
+.flexNav-touch .toggle, .flexNav-no-touch .toggle {
   display: none; }
 
 .menu-button {
-  float: right;
   display: block;
-  width: 1.5625em;
-  height: 1.5625em;
-  padding: 1em 0;
-  background: transparent;
-  color: #333;
-  background-image: url("../img/nav-icon.png");
+  padding: 1em;
+  background: #000;
+  color: #fff;
+  background-image: url("../img/arrow-down.png");
   background-repeat: no-repeat;
-  background-position: 93% .625em;
+  background-position: 93% 18px;
   cursor: pointer; }
 
-[role='navigation']:after {
+.toggle:after {
   /* clearfix */
   visibility: hidden;
   display: block;
@@ -1423,48 +1418,39 @@ a.skip {
   content: " ";
   clear: both;
   height: 0; }
-[role='navigation'] ul {
-  padding: 0;
-  display: block;
-  margin-bottom: 0; }
-[role='navigation'] li {
+.toggle li {
   position: relative;
   list-style: none;
   display: block;
-  background-color: #333;
+  background-color: transparent;
   width: 100%; }
-  [role='navigation'] li:last-of-type {
-    margin-bottom: 0; }
-  [role='navigation'] li.item-with-ul {
-    background-color: #222; }
-  [role='navigation'] li a {
-    /*margin-right:20%;*/
+  .toggle li.item-with-ul {
+    background-color: transparent; }
+  .toggle li a {
+    margin-right: 20%;
     display: block;
-    color: #ddd;
-    border-bottom: 1px solid #111; }
-    [role='navigation'] li a.link-with-ul {
-      border-right: 1px solid #222; }
-[role='navigation'] .top-level a {
+    color: #888; }
+    .toggle li a.link-with-ul {
+      border-right: none; }
+.toggle .top-level a {
   position: relative;
   display: block;
-  background-color: #333;
-  padding: .5em 1em 1.4em 1em;
+  background-color: transparent;
+  padding: 1em;
   z-index: 2; }
-[role='navigation'] li ul {
+.toggle li ul {
   width: 100%;
-  position: relative;
-  border-top: 1px solid #333;
-  border-bottom: 1px solid #333; }
-  [role='navigation'] li ul li {
+  position: relative; }
+  .toggle li ul li {
     float: none;
     width: 100%; }
-    [role='navigation'] li ul li a {
+    .toggle li ul li a {
       display: block;
-      background-color: #333; }
-[role='navigation'] .item-with-ul {
-  background-image: url("../images/arrow-down.png");
+      background-color: transparent; }
+.toggle .item-with-ul {
+  background-image: url("../img/arrow-down.png");
   background-repeat: no-repeat;
-  background-position: 93% 1.125em; }
+  background-position: 93% 18px; }
 
 .sub-menu {
   display: none; }
@@ -2509,7 +2495,7 @@ legend + .control-group {
 ================================================== */
 .callout {
   background: #ddd;
-  padding: 3%;
+  padding: 2%;
   width: 100%; }
 
 .link-list {
@@ -2521,6 +2507,13 @@ legend + .control-group {
     .link-list li:last-child {
       margin: 0; }
 
+.large {
+  padding: 14px 24px;
+  font-size: 18px;
+  font-size: 1.125em;
+  font-size: 1.8rem;
+  text-align: center; }
+
 .remove-bottom {
   margin-bottom: 0 !important; }
 
@@ -2530,12 +2523,17 @@ legend + .control-group {
 .add-bottom {
   margin-bottom: 1.25em !important; }
 
+.two-cols, .thre-cols, .four-cols, .five-cols {
+  -moz-column-count: 1;
+  -webkit-column-count: 1;
+  column-count: 1; }
+
+.spaced-out {
+  margin: 2% 0; }
+
 /* #Media Queries
 ================================================== */
 /* @media screen and (min-width:480px) */
-@media screen and (min-width: 30em) {
-  [role='navigation'] {
-    float: left; } }
 /* @media screen and (min-width:640px) */
 @media screen and (min-width: 40em) {
   .alignleft {
@@ -2610,7 +2608,6 @@ legend + .control-group {
     .menu2 li:first-child {
       margin-left: 0; }
     .menu2 ul {
-      float: left;
       float: left; }
     .menu2 li {
       float: left;
@@ -2632,62 +2629,85 @@ legend + .control-group {
     width: 80%; }
 
   .input-xxlarge {
-    width: 100%; } }
+    width: 100%; }
+
+  .two-cols {
+    -moz-column-count: 2;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 20px;
+    column-count: 2;
+    column-gap: 20px; }
+
+  .three-cols {
+    -moz-column-count: 3;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 20px;
+    column-count: 3;
+    column-gap: 20px; }
+
+  .four-cols {
+    -moz-column-count: 4;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 4;
+    -webkit-column-gap: 20px;
+    column-count: 4;
+    column-gap: 20px; }
+
+  .five-cols {
+    -moz-column-count: 5;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 5;
+    -webkit-column-gap: 20px;
+    column-count: 5;
+    column-gap: 20px; } }
 /* @media screen and (min-width:71.25em) */
 @media screen and (min-width: 45em) {
-  .flexNav-touch [role='navigation'], .flexNav-no-touch [role='navigation'] {
-    display: block!important; }
-
-  [role='navigation'] {
-    float: right;
+  .flexNav-touch .toggle, .flexNav-no-touch .toggle {
     display: block;
-    position: relative;
-    width: auto;
-    background: none;
-    z-index: 0; }
+    margin: 0;
+    width: 100%; }
 
   .menu-button {
     display: none; }
 
-  [role='navigation'] li {
+  .toggle li {
     position: relative;
     list-style: none;
     float: left;
-    display: block;
-    background: none;
-    color: #333;
-    width: auto;
-    padding: 0 0 0 1.25em;
-    margin: 0em;
-    text-transform: normal; }
+    text-align: center;
+    display: inline-block;
+    width: 23%; }
 
   .flexNav-no-touch .item-with-ul:hover > ul {
     opacity: 1;
     top: 3.1em;
-    position: absolute; }
+    position: absolute;
+    background-color: #333; }
 
-  [role="navigation"] .top-level a {
-    background: none;
-    color: #333;
-    padding: 0; }
-
-  [role='navigation'] li a {
-    border-left: none;
+  .toggle li a {
     border-bottom: none; }
 
-  .flexNav-no-touch [role='navigation'] li ul {
+  .flexNav-no-touch .toggle li ul {
     position: absolute;
     top: auto;
     left: 0;
     opacity: 0;
     visibility: hidden;
     height: 1px;
-    z-index: 1; }
+    z-index: 1000; }
 
-  [role='navigation'] li ul li a {
-    border-bottom: none; }
+  .toggle li ul li {
+    text-align: left; }
 
-  .flexNav-touch [role='navigation'] li ul.sub-menu {
+  .toggle li.top-level ul li a {
+    border-bottom: none;
+    padding-right: 0;
+    margin-right: 0;
+    line-height: 1.3em; }
+
+  .flexNav-touch .toggle li ul.sub-menu {
     position: absolute;
     top: auto;
     left: 0;

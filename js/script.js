@@ -98,20 +98,7 @@ $("h1.float-up").fitText(1.1, {minFontSize: '36px', maxFontSize: '52px'});
 		  namespace: "large-btns"
 		});
 
+		/* Simple line of code to create a collapsed menu in smaller screen sizes. Originally developed by Jason Weaver http://jasonweaver.name/lab/flexiblenavigation/, FlexNav offers the ability to add submenus to your top-level information for more complex, deeper navigation.*/
+		$(".toggle").flexNav();
 
-/* Authentic Jobs */
-$(function() {
-  
-  // Remove "uk." for listings from http://authenticjobs.com
-  $.get("http://authenticjobs.com/js/jobs_r_single_v2.js", function(data) {  
-    
-    // Tailor the markup being assembled here to suit your site requirements / semantic preferences
-    var listing = "<em>" + data.company + "</em> needs a <a href='" + data.url + "'>" + data.title  + "</a>";
-    
-    // Replace ".job-listing" with a selector for the container into which the listing will be inserted
-    // Append will append the listing into the end of the container element.
-    $(".job-listings").append(listing);
-    
-  }, "jsonp");
-  
-});
+

@@ -105,7 +105,7 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 	<h2>Wirefy</h2>
 	</a>
 	</div>
-	  <div class='menu-button'></div>
+	  <div class="menu-button">Menu</div>
 	  <a href="#main" class="skip">Skip navigation</a>
 	  <nav role="navigation" id="nav">
 	    <ul>
@@ -314,8 +314,8 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 				<!-- Next -->
 				<div class="row clearfix">
 				<h6>Toggle Menu</h6>
-				<div class='menu-button'></div>
-				<nav role="navigation" class="menu3">
+				<div class="menu-button">Menu</div>
+				<nav class="toggle">
 					<ul>
 						<li class="top-level"><a href="#">Menu Item 1</a></li>
 						<li class="top-level"><a href="#">Menu Item 2</a></li>
@@ -940,6 +940,10 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 			function() {
 				$(this).html(originalText);
 			})
+	</script>
+	
+	<script>
+	$("[role='navigation']").flexNav();
 	</script>
   
   <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
