@@ -1223,13 +1223,29 @@ figure {
 ================================================== */
 /* Modified from http://responsiveslides.com v1.32 by @viljamis */
 .rslides {
-  margin: 0 auto;
-  padding: 0; }
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0; }
   .rslides li {
-    margin-bottom: 0; }
-  .rslides img {
+    position: absolute;
+    display: none;
     width: 100%;
-    height: auto; }
+    margin: 0;
+    left: 0;
+    top: 0; }
+    .rslides li:first-child {
+      position: relative;
+      display: block;
+      float: left; }
+  .rslides img {
+    display: block;
+    height: auto;
+    float: left;
+    width: 100%;
+    border: 0; }
 
 .rslides_container {
   margin-bottom: 1.125em;
