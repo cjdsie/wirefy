@@ -41,14 +41,16 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 header[role="banner"] {
   width: 100%;
   position: relative;
-  overflow: hidden;
 }
 
 .logo {
-  float: left;
   position: relative;
   width: auto;
   margin: 0 auto;
+}
+
+.menu-button{
+	width:100%;
 }
 
 /* #Media Queries
@@ -61,7 +63,6 @@ header[role="banner"] {
 @media only screen and (min-width: 40em) {
   /* 640 =================================================== */
   .logo {
-    float: left;
     width: auto;
     h1 {
       text-align: left;
@@ -79,6 +80,12 @@ header[role="banner"] {
 
 @media only screen and (min-width: 61.5em) {
   /* 984 =================================================== */
+  .logo {
+	float:left;
+	}
+	nav{
+	float:right;
+	}
 }
 
 @media only screen and (min-width: 75em) {
