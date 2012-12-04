@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- 
 Wirefy by Chris Da Sie
-Version: 2.0.6
+Version: 2.0.7
 URL: https://getwirefy.com
 Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 -->
@@ -39,41 +39,21 @@ will help you write and rewrite the SCSS files.
  <link rel="stylesheet" href="css/base.css"> <!-- Compressed and compiled from base.scss -->
  <link rel="stylesheet" href="css/layout.css"> <!-- Compiled from layout.scss -->
  
- <script src="js/modernizr.js"></script>
+ <script src="js/vendor/modernizr.js"></script>
  
  <!-- Browser Specific Javascript
 ================================================= -->
  <!--[if (lt IE 9) & (!IEMobile)]>
- <script src="js/selectivizr-min.js"></script>
+ <script src="js/vendor/selectivizr-min.js"></script>
  <![endif]-->
 
-
+<!-- Prevents links from opening in mobile Safari -->
+ <!-- <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script> -->
 
  <!-- Favicon
  ================================================== -->
- <!-- For iPhone 4 -->
- <!-- <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/h/apple-touch-icon.png"> -->
- <!-- For iPad 1-->
- <!-- <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/m/apple-touch-icon.png"> -->
- <!-- For the new iPad -->
- <!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/h/apple-touch-icon-144x144-precomposed.png">-->
- <!-- For iPhone 3G, iPod Touch and Android -->
- <!-- <link rel="apple-touch-icon-precomposed" href="img/l/apple-touch-icon-precomposed.png"> -->
- <!-- For Nokia -->
- <!-- <link rel="shortcut icon" href="img/l/apple-touch-icon.png"> -->
  <!-- For everything else -->
  <link rel="shortcut icon" href="img/startup/favicon.ico">
-
- <!--iOS -->
- <!-- <meta name="apple-mobile-web-app-capable" content="yes"> -->
- <!-- <meta name="apple-mobile-web-app-status-bar-style" content="black"> -->
- <!-- <link rel="apple-touch-startup-image" href="img/splash.png"> -->
-
- <!-- <script>(function(){var p,l,r=window.devicePixelRatio;if(navigator.platform==="iPad"){p=r===2?"img/startup/startup-tablet-portrait-retina.png":"img/startup/startup-tablet-portrait.png";l=r===2?"img/startup/startup-tablet-landscape-retina.png":"img/startup/startup-tablet-landscape.png";document.write('<link rel="apple-touch-startup-image" href="'+l+'" media="screen and (orientation: landscape)" ><link rel="apple-touch-startup-image" href="'+p+'" media="screen and (orientation: portrait)" >');}else{p=r===2?"img/startup/startup-retina.png":"img/startup/startup.png";document.write('<link rel="apple-touch-startup-image" href="'+p+'" >');}})()</script> -->
- <!--Microsoft -->
-
- <!-- Prevents links from opening in mobile Safari -->
- <!-- <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script> -->
  
  <!-- Font Smoothing FF/Windows
  ================================================== -->
@@ -177,7 +157,7 @@ will help you write and rewrite the SCSS files.
   <!-- JS - Add or remove any of the scripts to suit the functionality you wish to display. 
   ================================================== -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/jquery-1.8.2.min.js"><\/script>')</script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
   <script src="js/plugins.js"></script>
   <script src="js/script.js"></script>
   <script src="js/helper.js"></script>
