@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- 
 Wirefy by Chris Da Sie
-Version: 2.0.7
+Version: 2.0.8
 URL: https://getwirefy.com
 Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 -->
@@ -24,9 +24,6 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
  <title>Wirefy | The Responsive Wireframe Boilerplate</title>
  <meta name="description" content="">
  <meta name="author" content="">
-
-
- 
  
  <!-- Mobile Specific Metas
 ================================================= -->
@@ -36,16 +33,15 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
  
  
  <!-- CSS - These are your main CSS files. All base styles can be found in the base.css and any additional styles 
- or overwrites should be used in the layout.css. We have now added support for SASS. Using CodeKit or a similar preprocessor
-will help you write and rewrite the SCSS files.  
+ or overwrites should be used in the layout.css. We have now added support for SCSS. Using CodeKit or a similar preprocessor will help you write and rewrite the SCSS files.  
 ================================================= -->
  <link rel="stylesheet" href="css/base.css"> <!-- Compressed and compiled from base.scss -->
  <link rel="stylesheet" href="css/layout.css"> <!-- Compiled from layout.scss -->
  
- <script src="js/vendor/modernizr.js"></script>
- 
  <!-- Browser Specific Javascript
 ================================================= -->
+ <script src="js/vendor/modernizr.js"></script>
+
  <!--[if (lt IE 9) & (!IEMobile)]>
  <script src="js/vendor/selectivizr-min.js"></script>
  <![endif]-->
@@ -53,9 +49,8 @@ will help you write and rewrite the SCSS files.
 <!-- Prevents links from opening in mobile Safari -->
  <!-- <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script> -->
 
- <!-- Favicon
+ <!-- Favicon and apple-touch-icon.png in the img folder. Include the ones you need.
  ================================================== -->
- <!-- For everything else -->
  <link rel="shortcut icon" href="img/startup/favicon.ico">
  
  <!-- Font Smoothing FF/Windows
@@ -63,105 +58,30 @@ will help you write and rewrite the SCSS files.
  <meta http-equiv="cleartype" content="on">
 
 </head>
+
 <body>
-	<!--[if lt IE 7]>
-        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-    <![endif]-->
+  <!--[if lt IE 7]>
+  <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+  <![endif]-->
 	
-	
-  <!-- Remove any content below that is not needed. Begin adding your site or application content here -->
-  <div class="container clearfix">
+  <!-- Begin adding your site or application content here -->
+
   <!-- This is the header information. You can add things like logos and navigation here. -->
-    <header role="banner" class="clearfix">
-	  <div class="logo">
-	    <h1>Wirefy</h1>
-	  </div>
-	  <div class="menu-button">Menu</div>
-	  <a href="#main" class="skip">Skip navigation</a>
-	  <nav role="navigation" id="nav" class="toggle">
-	    <ul>
-		  <li class="top-level item-with-ul"><a href="" class="link-with-ul">Sample 1</a>
-			<ul class="sub-menu">
-				<li><a href="">Submenu item 1</a></li>
-				<li><a href="">Submenu item 2</a></li>
-				<li><a href="">Submenu item 3</a></li>
-				<li><a href="">Submenu item 4</a></li>
-			</ul>
-		</li>
-		  <li class="top-level"><a href="">Sample 2</a></li>
-		  <li class="top-level"><a href="">Sample 3</a></li>
-		  <li class="top-level"><a href="">Sample 4</a></li>
-		  <li class="top-level"><a href="">Sample 5</a></li>
-	    </ul>	
-      </nav>
-    </header>
+  <header role="banner" class="row">
+    <nav role="navigation" id="nav" class="toggle">
+    </nav>
+  </header>
 			
-	<!-- The Main content area can be used to create lots of different block areas.
-	As Jeffery Zeldman once said, "Content precedes design. Design in the absence of
-	content is not design, it's decoration." -->
+  <!-- The Main content area can be used to create lots of different block areas. 
+  As Jeffery Zeldman once said, "Content precedes design. Design in the absence 
+  of content is not design, it's decoration." -->
 			
-    <div role="main" class="content clearfix">
- 	  <hr class="large">
- 	  <section class="doc-section row clearfix">
+  <div role="main" class="content">
+  </div>
 	
-	<!-- Tabs Sample Code 
-		<ul class="tabs">
-		  <li><a class="active" href="#tab1">Tab 1</a></li>
-		  <li><a href="#tab2">Tab 2</a></li>
-		  <li><a href="#tab3">Tab 3</a></li>
-		</ul>
-		<ul class="tabs-content">
-		  <li class="active" id="tab1">Lorem ipsum dolor sit amet.</li>
-		  <li id="tab2">Aliquam tincidunt mauris eu risus.</li>
-		  <li id="tab3">Vestibulum auctor dapibus neque.</li>
-		</ul> -->
-
-	
- 	  <!-- Slider
-	  For use of the slider, please review responsive_slideshow.js and select the id for 
-      which slide show you would like. You may need to modify this if you do not want it to fill 
-      the 960 grid. 
- 	  For Example:
- 		<div class="rslides_container">
- 	      <ul class="rslides" id="slider1">
- 	        <li><img src="http://placehold.it/1200x300" alt="" /></li>
- 	        <li><img src="http://placehold.it/1200x300" alt="" /></li>
- 	        <li><img src="http://placehold.it/1200x300" alt="" /></li>
- 	      </ul> 
-		</div>-->
-
-		<!-- Columns 
-		The columns have changed. You can now use them in a much more fluid way. In case you need 
-		a bit of extra spacing we've included a class called alt-spacing. 
-		
-		Example 1:
-		<section class="row">
-		<div class="ten columns"></div>
-		<div class="six columns"></div>
-		</section> 
-		
-		Example 2:
-		<section class="row">
-		<div class="five columns"></div>
-		<div class="five columns alt-spacing"></div>
-		<div class="five columns alt-spacing"></div>
-		</section>
-		
-		Example 3:
-		<section class="gallery row">
-		<div class="four columns"></div>
-		<div class="four columns"></div>
-		<div class="four columns"></div>
-		</section>
-		
-		-->
-
- 	  </section>
-				
-      <footer role="contentinfo" class="clearfix">
-      </footer>
-    </div><!-- content -->
-  </div><!-- container -->
+  <!-- This is you can place your footer information like menu links, contact information, etc -->		
+  <footer role="contentinfo" class="clearfix">
+  </footer>
 
   <!-- JS - Add or remove any of the scripts to suit the functionality you wish to display. 
   ================================================== -->
