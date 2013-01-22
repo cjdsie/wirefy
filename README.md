@@ -29,6 +29,7 @@ For full documentation, our homepage [here](http://getwirefy.com).
 
 ## Changelog
 
+*	v2.0.9 Font Awesome Updated to 3.0 release
 *	v2.0.6 Reorganized and consolidated JS files into the plugin.js
 *   v2.0.5 Several fixes to the Grid and base.css. As well as a new class for Galleries. Added Templates for faster builds. 
 *   v2.0.3 Reduced Image sizes for increased compression overall
