@@ -1,7 +1,7 @@
 /* ============================================================
 Wirefy 
 Author: Chris Da Sie [http://chrisdasie.com]
-Version: 2.0.9
+Version: 2.1.1
 URL:https://github.com/cjdsie/wirefy
 Apache License:v2.0. http://www.apache.org/licenses/LICENSE-2.0
 /* Table of Content
@@ -185,6 +185,23 @@ object, embed, video, iframe, picture {
 }
 }
 
+/* Mixins and Variables
+======================== */
+
+// @start FONT SIZES -------------------- //
+
+    $basefont:16;
+    $baseh1:110;
+    $baseh2:42;
+    $baseh3:26;
+    $baseh4:$basefont;
+    $baseh5:14;
+    $baseh6:12;
+
+@function em($target, $context: $basefont) {
+    @return ($target / $context) * 1em;
+}
+
 /* IE7 */
 /* #Basic Styles
 ================================================== */
@@ -195,7 +212,7 @@ html {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-size: 62.5%;
+  font-size: 100%;
   -webkit-overflow-scrolling: touch;
   -webkit-tap-highlight-color: #f3f5f6;
   -webkit-text-size-adjust: 100%;
@@ -207,10 +224,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 16px;
-  font-size: 1em;
-  font-size: 1.6rem;
-  line-height: 1.5em;
+  font-size: em($basefont);
+  line-height: (24 / $basefont);
   color: #444;
   -webkit-font-smoothing: antialiased;
   /* Fix for webkit rendering */
@@ -256,6 +271,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Georgia","Times New Roman",serif;
   font-weight: bold;
   text-rendering: optimizelegibility;
+  line-height:(24 / $basefont);
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -263,69 +279,49 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 h1 {
-  margin-bottom: 0.75em;
-  font-size: 32px;
-  font-size: 2em;
-  font-size: 3.2rem;
-  line-height: 1.2;
+    font-size:em($baseh1);
+	margin-bottom:em(21, $baseh1);
 }
 
 h2 {
-  margin-bottom: 0.75em;
-  font-size: 24px;
-  font-size: 1.5em;
-  font-size: 2.4rem;
-  line-height: 1.2;
+    font-size:em($baseh2);
+    margin-bottom:em(17, $baseh2);
 }
 
 h3 {
-  margin-bottom: 1em;
-  font-size: 21px;
-  font-size: 1.3125em;
-  font-size: 2.1rem;
-  line-height: 1.3;
+    font-size:em($baseh3);
+    margin-bottom:em(19, $baseh3);
 }
 
 h4 {
-  margin-bottom: 1.5em;
-  font-size: 18px;
-  font-size: 1.125em;
-  font-size: 1.8rem;
-  line-height: 1.25;
+    font-size:em($baseh4);
+    margin-bottom:em(24, $baseh4);
+	 
 }
 
-h5 {
-  font-size: 16px;
-  font-size: 1em;
-  font-size: 1.6rem;
-  margin-bottom: 1.5em;
-}
+ h5 {
+     font-size:em($baseh5);
+     margin-bottom:em(20, $baseh5);
+ }
 
-h6 {
-  margin-bottom: 1.5em;
-  font-size: 14px;
-  font-size: .875em;
-  font-size: 1.4rem;
-  font-weight: normal;
-  text-transform: uppercase;
-}
+ h6 {
+     font-size:em($baseh6);
+     margin-bottom:em(20, $baseh6);
+     text-transform:uppercase;
+ }
 
 .subheader {
   color: #777;
 }
 
-p, ol, ul, dl, address {
-  margin-bottom: 1.5em;
-  font-size: 14px;
-  font-size: .875em;
-  font-size: 1.4rem;
-  line-height: 1.5em;
+p,ol, ul, dl, address {
+  margin-bottom: em(24, $basefont);
+  font-size: em($basefont);
+  line-height: (24 / $basefont);
 }
 
 small {
-  font-size: 14px;
-  font-size: .875em;
-  font-size: 1.4rem;
+  font-size: em(10);
 }
 
 q {
@@ -351,7 +347,7 @@ cite {
 }
 
 dl, dd {
-  margin-bottom: 1.5em;
+  margin-bottom: em(24);
 }
 
 dt {
@@ -399,9 +395,7 @@ mark {
 
 pre, code, kbd, samp {
   font-family: Monaco,Courier New,monospace;
-  font-size: 14px;
-  font-size: .875em;
-  font-size: 1.4rem;
+  font-size: em(14);
   line-height: 1.5em;
 }
 
@@ -413,18 +407,14 @@ pre {
 
 sub {
   position: relative;
-  font-size: 12px;
-  font-size: .75em;
-  font-size: 1.2rem;
+  font-size: em(12);
   line-height: 0;
   vertical-align: baselineheight;
 }
 
 sup {
   position: relative;
-  font-size: 12px;
-  font-size: .75em;
-  font-size: 1.2rem;
+  font-size: em(12);
   line-height: 0;
   vertical-align: baselineheight;
   top: -0.5em;
@@ -435,17 +425,13 @@ sub {
 }
 
 p {
-  margin: 0 0 1.25em 0;
-  word-spacing: 0.125em;
   hyphenate: auto;
   hyphenate-lines: 3;
   img {
     margin: 0;
   }
   &.lead {
-    font-size: 21px;
-    font-size: 1.3125em;
-    font-size: 2.1rem;
+    font-size: em(21);
     line-height: 1.6875em;
     color: #777;
   }
@@ -463,10 +449,6 @@ strong {
   color: #333;
 }
 
-small {
-  font-size: 80%;
-}
-
 del {
   text-decoration: line-through;
 }
@@ -474,17 +456,13 @@ del {
 /* Blockquotes */
 
 blockquote {
-  font-size: 17px;
-  font-size: 1.0625em;
-  font-size: 1.7rem;
-  line-height: 1.5em;
+  font-size: em(16);
+  line-height: 1.5;
   color: #777;
   font-style: italic;
   p {
-    font-size: 17px;
-    font-size: 1.0625em;
-    font-size: 1.7rem;
-    line-height: 1.5em;
+    font-size: em(16);
+    line-height: 1.5;
     color: #777;
     font-style: italic;
   }
@@ -493,9 +471,7 @@ blockquote {
   border-left: 1px solid #ddd;
   cite {
     display: block;
-    font-size: 12px;
-    font-size: .75em;
-    font-size: 1.2rem;
+    font-size: em(12);
     color: #555;
     &:before {
       content: "\2014 \0020";
@@ -1151,9 +1127,7 @@ figure {
   figcaption {
     display: block;
     font-weight: normal;
-    font-size: 14px;
-    font-size: .875em;
-    font-size: 1.4rem;
+    font-size: em(14);
     color: #808080;
   }
 }
@@ -1641,7 +1615,6 @@ input, select, button {
 }
 
 .button {
-  cursor: pointer;
   background: #eee;
   /* Old browsers */
   background: #eeeeee -moz-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
@@ -1664,9 +1637,7 @@ input, select, button {
   border-radius: .1875em;
   color: #444;
   display: inline-block;
-  font-size: 11px;
-  font-size: .6875em;
-  font-size: 1.1rem;
+  font-size: em(12);
   font-weight: bold;
   text-decoration: none;
   text-shadow: 0 1px rgba(255, 255, 255, 0.75);
@@ -1700,9 +1671,7 @@ button {
   border-radius: .1875em;
   color: #444;
   display: inline-block;
-  font-size: 11px;
-  font-size: .6875em;
-  font-size: 1.1rem;
+  font-size: em(12);
   font-weight: bold;
   text-decoration: none;
   text-shadow: 0 1px rgba(255, 255, 255, 0.75);
@@ -1737,9 +1706,7 @@ input {
     border-radius: .1875em;
     color: #444;
     display: inline-block;
-    font-size: 11px;
-    font-size: .6875em;
-    font-size: 1.1rem;
+    font-size: em(12);
     font-weight: bold;
     text-decoration: none;
     text-shadow: 0 1px rgba(255, 255, 255, 0.75);
@@ -1883,9 +1850,7 @@ ul {
         border-width: 1px 1px 0 0;
         margin: 0;
         background: #f5f5f5;
-        font-size: 13px;
-        font-size: .8125em;
-        font-size: 1.3rem;
+        font-size: em(14);
         &.active {
           background: #fff;
           height: 1.8125em;
@@ -1967,9 +1932,8 @@ table {
     padding: .5em;
     vertical-align: top;
     border-top: 1px solid #8c9bab;
-    font-size: 14px;
-    font-size: 1.4rem;
-    line-height: 1.5em;
+    font-size: em(14);
+    line-height: 1.5;
     text-align: left;
   }
   th {
@@ -2057,27 +2021,21 @@ legend {
   width: 100%;
   padding: 0;
   margin-bottom: 1.25em;
-  font-size: 21px;
-  font-size: 1.3125em;
-  font-size: 2.1rem;
-  line-height: 2.5em;
+  font-size: em(21);
+  line-height: 2.5;
   color: #333;
   border: 0;
   border-bottom: 1px solid #e5e5e5;
   small {
-    font-size: 15px;
-    font-size: .9375em;
-    font-size: 1.5rem;
+    font-size: em(14);
     color: #999;
   }
 }
 
 label, input, button, select, textarea {
-  font-size: 14px;
-  font-size: .875em;
-  font-size: 1.4rem;
+  font-size: em(14);
   font-weight: normal;
-  line-height: 1.25em;
+  line-height: 1.25;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
@@ -2091,10 +2049,8 @@ select, textarea {
   height: auto;
   padding: .5em .375em;
   margin-bottom: .5625em;
-  font-size: 14px;
-  font-size: .875em;
-  font-size: 1.4rem;
-  line-height: 1.25em;
+  font-size: em(14);
+  line-height: 1.25;
   color: #555;
   -webkit-border-radius: .1875em;
   -moz-border-radius: .1875em;
@@ -2107,10 +2063,8 @@ input {
     height: auto;
     padding: .5em .375em;
     margin-bottom: .5625em;
-    font-size: 14px;
-    font-size: .875em;
-    font-size: 1.4rem;
-    line-height: 1.25em;
+    font-size: em(14);
+    line-height: 1.25;
     color: #555;
     -webkit-border-radius: .1875em;
     -moz-border-radius: .1875em;
@@ -2123,9 +2077,7 @@ input {
   height: auto;
   padding: .5em .375em;
   margin-bottom: .5625em;
-  font-size: 14px;
-  font-size: .875em;
-  font-size: 1.4rem;
+  font-size: em(14);
   line-height: 1.25em;
   color: #555;
   -webkit-border-radius: .1875em;
@@ -2521,9 +2473,7 @@ input:focus:required:invalid:focus, textarea:focus:required:invalid:focus, selec
   position: relative;
   margin-bottom: 0;
   *margin-left: 0;
-  font-size: 14px;
-  font-size: .875em;
-  font-size: 1.4rem;
+  font-size: em(14);
   vertical-align: top;
   -webkit-border-radius: 0 3px 3px 0;
   -moz-border-radius: 0 3px 3px 0;
@@ -2540,9 +2490,7 @@ input:focus:required:invalid:focus, textarea:focus:required:invalid:focus, selec
   height: auto;
   min-width: 1em;
   padding: .5em .3125em;
-  font-size: 14px;
-  font-size: .875em;
-  font-size: 1.4rem;
+  font-size: em(14);
   font-weight: normal;
   line-height: 1.25em;
   text-align: center;
@@ -2835,9 +2783,7 @@ legend + .control-group {
 
 .large {
 	padding: 14px 24px;
-	font-size: 18px;
-	font-size: 1.125em;
-	font-size: 1.8rem;
+	font-size: em(18);
 	text-align:center;
 }
 
