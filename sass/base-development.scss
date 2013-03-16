@@ -1,7 +1,11 @@
 /* ============================================================
 Wirefy 
 Author: Chris Da Sie [http://chrisdasie.com]
+<<<<<<< HEAD:sass/base-development.scss
 Version: 2.1.1
+=======
+Version: 2.1
+>>>>>>> 5e0e7b6884e3d964433431ae002625da32f0e6ca:sass/base.scss
 URL:https://github.com/cjdsie/wirefy
 Apache License:v2.0. http://www.apache.org/licenses/LICENSE-2.0
 /* Table of Content
@@ -185,6 +189,7 @@ object, embed, video, iframe, picture {
 }
 }
 
+<<<<<<< HEAD:sass/base-development.scss
 /* Mixins and Variables
 ======================== */
 
@@ -203,6 +208,14 @@ object, embed, video, iframe, picture {
 }
 
 /* IE7 */
+=======
+/* IE10 Touch Browsing Default */
+
+canvas {
+    -ms-touch-action: double-tap-zoom;
+}
+
+>>>>>>> 5e0e7b6884e3d964433431ae002625da32f0e6ca:sass/base.scss
 /* #Basic Styles
 ================================================== */
 /* apply a natural box layout model to all elements */
