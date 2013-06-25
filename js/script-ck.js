@@ -41,9 +41,7 @@
     }
   });
 
-*/
-
-/* Other Slideshow Options
+*//* Other Slideshow Options
 
 $(".rslides").responsiveSlides({
   auto: true,             // Boolean: Animate automatically, true or false
@@ -64,19 +62,4 @@ $(".rslides").responsiveSlides({
   after: function(){}     // Function: After callback
 });
 
-*/
-
-
-
-
-
-/* Simple line of code to create a collapsed menu in smaller screen sizes. Originally developed by Jason Weaver http://jasonweaver.name/lab/flexiblenavigation/, FlexNav offers the ability to add submenus to your top-level information for more complex, deeper navigation.*/
-
-$("[role='navigation']").flexNav();
-
-
-/* FitVids is a standard when it comes to resizing videos through Responsive design. It currently supports inputs from YouTube, Vimeo, Blip.tv, Viddler and Kickstarter. FitVid also offers the ability to add your own vendor as well. */
-
-$(".container").fitVids();
-// Custom selector and No-Double-Wrapping Prevention Test
-$(".container").fitVids({ customSelector: "iframe[src^='http://socialcam.com']"});
+*//* Simple line of code to create a collapsed menu in smaller screen sizes. Originally developed by Jason Weaver http://jasonweaver.name/lab/flexiblenavigation/, FlexNav offers the ability to add submenus to your top-level information for more complex, deeper navigation.*/$("[role='navigation']").flexNav();$(".container").fitVids();$(".container").fitVids({customSelector:"iframe[src^='http://socialcam.com']"});

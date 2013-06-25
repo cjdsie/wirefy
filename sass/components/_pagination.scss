@@ -1,0 +1,77 @@
+/************************
+******* Pagination ******
+**** Version: 0.0.1 *****
+*************************/
+
+/* Variables
+================================================== */
+
+  $paging-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  $paging-radius: .1875em;
+
+
+.pagination {
+  height: 2.25em;
+  margin: 1.125em 0;
+  ul {
+    display: inline-block;
+    padding: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    @include vendorize(border-radius, $paging-radius);
+    @include vendorize(box-shadow, $paging-shadow);
+  }
+  li {
+    display: inline;
+  }
+  a {
+    float: left;
+    padding: 0 .625em;
+    line-height: 1.75em;
+    text-decoration: none;
+    border: 1px solid #DDD;
+    border-left-width: 0;
+    &:hover {
+      background-color: #f5f5f5;
+    }
+  }
+  .active a {
+    background-color: #f5f5f5;
+    color: #999999;
+    cursor: default;
+  }
+  .disabled {
+    span {
+      color: #999999;
+      cursor: default;
+      background-color: transparent;
+    }
+    a {
+      color: #999999;
+      cursor: default;
+      background-color: transparent;
+      &:hover {
+        color: #999999;
+        cursor: default;
+        background-color: transparent;
+      }
+    }
+  }
+  li {
+    &:first-child a {
+      border-left-width: 1px;
+      @include border-left-radius($paging-radius);
+    }
+    &:last-child a {
+      @include border-right-radius($paging-radius);
+    }
+  }
+}
+
+.pagination-centered {
+  text-align: center;
+}
+
+.pagination-right {
+  text-align: right;
+}

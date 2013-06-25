@@ -1,0 +1,327 @@
+/*************************
+***** Mixin Library ******
+**** Version: 0.0.1 ******
+*************************/
+
+
+
+/* Box sizing
+========================= */
+
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+     -moz-box-sizing: $box-model; // Firefox <= 19
+          box-sizing: $box-model;
+}
+
+
+// Horizontal centering
+// Quickly center any element within its parent. Requires width or max-width to be set.
+
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Vendor Prefixing 
+========================= */
+
+$prefix-for-webkit:    true !default;
+$prefix-for-mozilla:   true !default;
+$prefix-for-microsoft: true !default;
+$prefix-for-opera:     true !default;
+$prefix-for-spec:      true !default; // required for keyframe mixin
+
+
+@mixin vendorize($property, $value) {
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -ms-#{$property}: $value;
+  -o-#{$property}: $value;
+  #{$property}: $value;
+}
+
+@mixin disable-prefix-for-all() {
+  $prefix-for-webkit:    false;
+  $prefix-for-mozilla:   false;
+  $prefix-for-microsoft: false;
+  $prefix-for-opera:     false;
+  $prefix-for-spec:      false;
+}
+
+/* Image Rendering 
+========================= */
+
+@mixin image-rendering ($mode:optimizeQuality) {
+
+  @if ($mode == optimize-contrast) {
+      image-rendering: -moz-crisp-edges;
+      image-rendering: -o-crisp-edges;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: optimize-contrast;
+  }
+
+  @else {
+      image-rendering: $mode;
+  }
+}
+
+/* Fixes and Resets
+========================= */
+
+* {
+  &:first-child + html {
+    .row, .clearfix {
+      zoom: 1;
+    }
+  }
+  @include vendorize(box-sizing, border-box);
+  &:after, &:before{
+    @include vendorize(box-sizing, border-box);
+  }
+}
+
+/* Breakpoints 
+========================= */
+
+@mixin breakpoint($point, $value: 0) {
+  @if $point == xlarge{
+    @media (min-width: em(1392)) { @content; }
+  }
+  @else if $point == large {
+    @media (min-width: em(1030)) { @content; }
+  }
+  @else if $point == medium {
+    @media (min-width: em(888)) { @content; }
+  }
+  @else if $point == small {
+    @media (min-width: em(600))  { @content; }
+  }
+  @else if $point == xsmall {
+    @media (min-width: em(480))  { @content; }
+  }
+  @else if $point == retina {
+    @media only screen and (-webkit-min-device-pixel-ratio : 1.5),
+	only screen and (min-device-pixel-ratio : 1.5)  { @content; }
+  }
+  @else if $point == xlarge-retina {
+    @media (min-width: em(1392)) and (-webkit-min-device-pixel-ratio : 1.5),
+	only screen and (min-device-pixel-ratio : 1.5) { @content; }
+  }
+  @else if $point == large-retina {
+    @media (min-width: em(1030)) and (-webkit-min-device-pixel-ratio : 1.5),
+	only screen and (min-device-pixel-ratio : 1.5) { @content; }
+  }
+  @else if $point == medium-retina {
+    @media (min-width: em(888)) and (-webkit-min-device-pixel-ratio : 1.5),
+	only screen and (min-device-pixel-ratio : 1.5) { @content; }
+  }
+  @else if $point == small-retina {
+    @media (min-width: em(600)) and (-webkit-min-device-pixel-ratio : 1.5),
+	only screen and (min-device-pixel-ratio : 1.5) { @content; }
+  }
+  @else if $point == xsmall-retina {
+    @media (min-width: em(480)) and (-webkit-min-device-pixel-ratio : 1.5),
+	only screen and (min-device-pixel-ratio : 1.5) { @content; }
+  }
+  @else if $point == hdpi($ratio: 1.3) {
+    @media only screen and (-webkit-min-device-pixel-ratio: $ratio),
+    only screen and (min--moz-device-pixel-ratio: $ratio),
+    only screen and (-o-min-device-pixel-ratio: #{$ratio}/1),
+    only screen and (min-resolution: #{round($ratio*96)}dpi),
+    only screen and (min-resolution: #{$ratio}dppx) { @content; }
+  }
+  @else {
+  	@media ($point: $value) { @content; }
+  }
+}
+
+@mixin between-breakpoints($min, $max) {
+	@media (min-width: $min) and (max-width: $max) {
+		@content;
+	}
+}
+
+/* Retina Displays 
+========================= */
+
+@mixin image-2x($image, $width, $height) {
+  @media (min--moz-device-pixel-ratio: 1.3),
+         (-o-min-device-pixel-ratio: 2.6/2),
+         (-webkit-min-device-pixel-ratio: 1.3),
+         (min-device-pixel-ratio: 1.3),
+         (min-resolution: 1.3dppx) {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url($image);
+    background-size: $width $height;
+  }
+}
+
+
+/* Clearfix Hack 
+========================= */
+
+@mixin clearfix() {
+    & {
+      *zoom: 1;
+    }
+    &:before,
+    &:after {
+      content: "";
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
+}
+
+/* Visually Hidden Focusable
+============================== */
+
+.visuallyhidden.focusable {
+  &:active, &:focus {
+    position: static;
+    clip: auto;
+    height: auto;
+    width: auto;
+    margin: 0;
+    overflow: visible;
+  }
+}
+
+/* Clear Floats 
+========================= */
+@mixin clear() {
+    &:before, &:after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      overflow: hidden;
+    }
+    &:after {
+      clear: both;
+    }
+}
+
+
+/***************************
+**** Component Settings ****
+***************************/
+
+/* Border Radius
+========================= */
+
+@mixin border-radius($radius) {
+  @include vendorize(border-radius, $radius);
+  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+// Single side border-radius
+
+@mixin border-top-radius($radius) {
+  @include vendorize(border-top-right-radius, $radius);
+  @include vendorize(border-top-left-radius, $radius);
+  background-clip: padding-box;
+}
+@mixin border-right-radius($radius) {
+  @include vendorize(border-bottom-right-radius, $radius);
+  @include vendorize(border-top-right-radius, $radius);
+  background-clip: padding-box;
+}
+@mixin border-bottom-radius($radius) {
+  @include vendorize(border-bottom-right-radius, $radius);
+  @include vendorize(border-bottom-left-radius, $radius);
+  background-clip: padding-box;
+}
+@mixin border-left-radius($radius) {
+  @include vendorize(border-bottom-left-radius, $radius);
+  @include vendorize(border-top-left-radius, $radius);
+  background-clip: padding-box;
+}
+
+/* Opacity - with IE8 fallback
+============================== */
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+/* Center-align a block level element
+===================================== */
+
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Text Overflow
+============================== */
+
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Absolute Positioned
+============================== */
+
+@mixin abs-pos ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  position: absolute;
+}
+
+/* Offscreen Text
+============================== */
+
+@mixin linkTextOffscreen() {
+  text-indent: -9999px;
+  overflow: hidden;
+  text-decoration: none;
+  display: block;
+  font-size: 0;
+  text-align: start;
+}
+
+/* :hover, :active, :focus Styles
+============================== */
+
+@mixin hoverActiveFocus($property, $value) {
+  &:hover, &:active, &:focus {
+    #{$property}: $value;
+  }
+}
+
+/* Image Path
+============================== */
+$imagePath:   "../img/" !default;
+
+
+/* Large
+============================== */
+@mixin large {
+  	padding: em(14) em(24);
+	font-size: em(18);
+	text-align:center;
+}
+
+@mixin remove-bottom {
+  margin-bottom: 0;
+}
+
+@mixin half-bottom {
+  margin-bottom: .625em;
+}
+
+@mixing add-bottom {
+  margin-bottom: 1.25em;
+}
+

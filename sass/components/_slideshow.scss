@@ -1,0 +1,290 @@
+/************************
+******* Slideshow *******
+**** Version: 0.0.1 *****
+*************************/
+
+
+/* Slideshow
+================================================== */
+/*! Modified from http://responsiveslides.com v1.54 by @viljamis */
+
+
+/* Variables
+========================= */
+
+ $rslides_tabs: 0 0 1px rgba(255, 255, 255, 0.3), inset 0 0 5px rgba(0, 0, 0, 1);
+ $inset_shadow: inset 0 0 2px 0 rgba(0, 0, 0, 0.3);
+
+
+/* Build
+========================= */
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  li {
+    -webkit-backface-visibility: hidden;
+    @include abs-pos($top: 0, $left:0);
+    display: none;
+    width: 100%;
+    &:first-child {
+      position: relative;
+      display: block;
+      float: left;
+    }
+  }
+  img {
+    display: block;
+    height: auto;
+    float: left;
+    width: 100%;
+    border: 0;
+  }
+}
+
+.rslides {
+  margin: 0 auto em(40);
+}
+
+/* Main SlideShow Themes
+------------------------------------- */
+.rslides_container {
+  margin-bottom: em(50);
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+.centered-btns_nav {
+  z-index: 3;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  @include abs-pos($top: 50%, $left:0, $right: auto);
+  @include linkTextOffscreen();
+  opacity: 0.7;
+  height: em(61);
+  width: em(38);
+  background: transparent url('#{$imagePath}/themes/themes.gif') no-repeat left top;
+  margin-top: em(-45);
+  &:active {
+    opacity: 1.0;
+  }
+  &.next {
+    @include abs-pos($left:auto, $right:0);
+    left: auto;
+    background-position: right top;
+    right: 0;
+  }
+}
+
+.transparent-btns_nav {
+  z-index: 3;
+  @include abs-pos($top: 0, $left:0, $right: auto);
+  @include linkTextOffscreen();
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  display: block;
+  background: #fff;
+  /* Fix for IE6-9 */
+  opacity: 0;
+  filter: alpha(opacity = 1);
+  width: 48%;
+  height: 91%;
+  &.next {
+    @include abs-pos($left:auto, $right: 0);
+  }
+}
+
+.large-btns_nav {
+  z-index: 3;
+  @include abs-pos($top: 0, $left:0, $bottom:0, $right: auto);
+  @include linkTextOffscreen();
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  opacity: 0.6;
+  background: black url('#{$imagePath}/themes/themes.gif') no-repeat left 50%;
+  width: em(38);
+  &:active {
+    opacity: 1.0;
+  }
+  &.next {
+    @include abs-pos($left:auto, $right: 0);
+    background-position: right 50%;
+  }
+}
+
+.centered-btns_nav:focus, .transparent-btns_nav:focus, .large-btns_nav:focus {
+  outline: none;
+}
+
+.centered-btns_tabs, .transparent-btns_tabs, .large-btns_tabs {
+  margin-top: em(10);
+  text-align: center;
+}
+
+.centered-btns_tabs li, .transparent-btns_tabs li, .large-btns_tabs li {
+  display: inline;
+  float: none;
+  _float: left;
+  *float: left;
+  margin-right: em(5);
+}
+
+.centered-btns_tabs a, .transparent-btns_tabs a, .large-btns_tabs a {
+  @include linkTextOffscreen();
+  @include border-radius(em(15));
+  background: #ccc;
+  background: rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  _display: block;
+  *display: block;
+  @include vendorize(box-shadow, $inset_shadow);
+  width: em(9);
+  height: em(9);
+}
+
+.centered-btns_here a, .transparent-btns_here a, .large-btns_here a {
+  background: #222;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Other Theme Options
+---------------------------------- */
+
+#slider2, #slider3 {
+  @include vendorize(box-shadow, none);
+  margin: 0 auto;
+}
+
+.rslides_tabs {
+  list-style: none;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.25);
+  @include vendorize(box-shadow, $rslides_tabs);
+  font-size: em(18);
+  list-style: none;
+  margin: 0 auto em(50);
+  max-width: em(540);
+  padding: em(10) 0;
+  text-align: center;
+  width: 100%;
+  li {
+    display: inline;
+    float: none;
+    margin-right: em(1);
+  }
+  a {
+    width: auto;
+    line-height: em(20);
+    padding: em(9) em(20);
+    height: auto;
+    background: transparent;
+    display: inline;
+  }
+  li:first-child {
+    margin-left: 0;
+  }
+  .rslides_here a {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-weight: bold;
+  }
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer {
+  font-size: em(11);
+}
+
+/* Callback example */
+
+.events {
+  list-style: none;
+}
+
+.callbacks_container {
+  margin-bottom: em(50);
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+.callbacks {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  li {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+  img {
+    display: block;
+    position: relative;
+    z-index: 1;
+    height: auto;
+    width: 100%;
+    border: 0;
+  }
+  .caption {
+    display: block;
+    @include abs-pos($left:0, $right: 0, $bottom: 0);
+    z-index: 2;
+    font-size: em(20);
+    text-shadow: none;
+    color: #fff;
+    background: #000;
+    background: rgba(0, 0, 0, 0.8);
+    padding: em(10) em(20);
+    margin: 0;
+    max-width: none;
+  }
+}
+
+.callbacks_nav {
+  @include abs-pos($top: 52%, $left:0);
+  @include linkTextOffscreen();
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  opacity: 0.7;
+  z-index: 3;
+  height: em(61);
+  width: em(38);
+  background: transparent url('#{$imagePath}/themes/themes.gif') no-repeat left top;
+  margin-top: em(-45);
+  &:active {
+    opacity: 1.0;
+  }
+  &.next {
+    @include abs-pos($left:auto, $right: 0);
+    background-position: right top;
+  }
+  @media (max-width: em(600)) {
+    top: 47%;
+    @include abs-pos($top: 47%);
+  }
+}
+
+#slider3-pager {
+  a {
+    display: inline-block;
+  }
+  img {
+    float: left;
+  }
+  .rslides_here a {
+    background: transparent;
+    box-shadow: 0 0 0 2px #666;
+  }
+  a {
+    padding: 0;
+  }
+}

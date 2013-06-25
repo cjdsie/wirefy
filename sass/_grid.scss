@@ -1,0 +1,126 @@
+/*************************
+****** Grid System *******
+**** Version: 0.0.1 ******
+*************************/
+
+// Example:
+// .grid {
+//   @extend %grid;
+// }
+// .col {
+//   @extend %grid-cell;
+//   @include breakpoint (em(768)) { {
+//     width: grid-span(4);
+//   }
+// }
+
+$columns: 12 !default;
+$column-width: 4em !default;
+$gutter-width: 2.5em !default;
+$support-old-ie: false !default;
+
+%grid {
+  text-align: justify !important;
+  text-justify: distribute-all-lines;
+  font-size: 0 !important;
+
+  & > * {
+    text-align: left;
+    font-size: medium;
+  }
+
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+
+  @if $support-old-ie {
+    .lt-ie8 & {
+      zoom: expression(this.runtimeStyle.zoom="1", this.appendChild( document.createElement("span") ).style.fontSize="0");
+    }
+  }
+}
+
+%grid-cell {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+
+  @if $support-old-ie {
+    .lt-ie8 & {
+      display: inline;
+      zoom: 1;
+    }
+  }
+}
+
+@function grid-span($cols, $total: $columns) {
+  @return ($column-width * $cols  + $gutter-width * ($cols  - 1)) /
+          ($column-width * $total + $gutter-width * ($total - 1)) * 100%;
+}
+
+@function grid-xt($cols, $total: $columns) {
+  @return ($column-width + $gutter-width) * $cols /
+          ($column-width * $total + $gutter-width * ($total - 1)) * 100%;
+}
+
+@mixin grid-push($cols, $total: $columns) {
+  left: grid-xt($cols, $total);
+}
+
+@mixin grid-pull($cols, $total: $columns) {
+  left: grid-xt(-$cols, $total);
+}
+
+@mixin grid-prepend($cols, $total: $columns) {
+  margin-left: grid-xt($cols, $total);
+}
+
+@mixin grid-append($cols, $total: $columns) {
+  margin-right: grid-xt($cols, $total);
+}
+
+
+/* -- FLUID GRID STYLES -- */
+
+#Grid{
+  margin-bottom: 40px;
+  text-align: justify;
+  font-size: 0.1px;
+  li{
+    display: inline-block;
+    width: 23%;
+    padding-top: 23%; /* Used instead of height to give elements fluid, width-based height */
+    margin-bottom: 2.5%;
+  }
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+  .placeholder {
+  padding:0;
+  }
+  @media (max-width: em(800)) {
+    li{
+      width: 31%;
+      padding-top: 31%;
+      margin-bottom: 3%;
+    }
+  }
+  @media (max-width: em(600)) {
+    li{
+      width: 48%;
+      padding-top: 48%;
+      margin-bottom: 4%;
+    }
+  }
+  @media (max-width: em(400)) {
+    li{
+      width:100%;
+      padding-top: 100%;
+      margin-bottom: 5%;
+    }
+  }
+}

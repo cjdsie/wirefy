@@ -1,0 +1,17 @@
+/************************
+******* Breadcrumb ******
+**** Version: 0.0.1 *****
+*************************/
+
+.breadcrumb {
+  padding: .4375em .875em;
+  margin: 0 0 1.125em;
+  list-style: none;
+  li {
+    display: inline-block;
+  }
+  .divider {
+    padding: 0 em(5);
+    color: #999;
+  }
+}

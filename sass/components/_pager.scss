@@ -1,0 +1,44 @@
+/************************
+******   Pager    *******
+**** Version: 0.0.1 *****
+*************************/
+
+
+.pager {
+  padding: 0;
+  margin-bottom: 1.125em;
+  margin-left: 0;
+  text-align: center;
+  list-style: none;
+  @include clearfix();
+  li {
+    display: inline;
+  }
+  a {
+    display: inline-block;
+    padding: 5px 14px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    @include vendorize(border-radius, .9375em);
+    &:hover {
+      text-decoration: none;
+      background-color: #f5f5f5;
+    }
+  }
+  .next a {
+    float: right;
+  }
+  .previous a {
+    float: left;
+  }
+  .disabled a {
+    color: #999999;
+    cursor: default;
+    background-color: #fff;
+    &:hover {
+      color: #999999;
+      cursor: default;
+      background-color: #fff;
+    }
+  }
+}

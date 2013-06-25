@@ -1,0 +1,32 @@
+/* -- FLUID GRID STYLES -- */
+#Grid {
+  margin-bottom: 40px;
+  text-align: justify;
+  font-size: 0.1px; }
+  #Grid li {
+    display: inline-block;
+    width: 23%;
+    padding-top: 23%;
+    /* Used instead of height to give elements fluid, width-based height */
+    margin-bottom: 2.5%; }
+  #Grid::after {
+    content: '';
+    display: inline-block;
+    width: 100%; }
+  #Grid .placeholder {
+    padding: 0; }
+  @media (max-width: em(800)) {
+    #Grid li {
+      width: 31%;
+      padding-top: 31%;
+      margin-bottom: 3%; } }
+  @media (max-width: em(600)) {
+    #Grid li {
+      width: 48%;
+      padding-top: 48%;
+      margin-bottom: 4%; } }
+  @media (max-width: em(400)) {
+    #Grid li {
+      width: 100%;
+      padding-top: 100%;
+      margin-bottom: 5%; } }

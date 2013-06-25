@@ -1,0 +1,108 @@
+/************************
+****** CSS Animation *******
+**** Version: 0.0.1 *****
+*************************/
+
+/* Animations
+========================= */
+
+// http://www.w3.org/TR/css3-animations/#the-animation-name-property-
+// Each of these mixins support comma separated lists of values, which allows different transitions for individual properties to be described in a single style rule. Each value in the list corresponds to the value at that same position in the other properties.
+
+// Official animation shorthand property.
+@mixin animation ($animations...) {
+  @include vendorize(animation, $animations);
+}
+
+// Individual Animation Properties
+@mixin animation-name ($names...) {
+  @include vendorize(animation-name, $names);
+}
+
+
+@mixin animation-duration ($times...) {
+  @include vendorize(animation-duration, $times);
+}
+
+
+@mixin animation-timing-function ($motions...) {
+// ease | linear | ease-in | ease-out | ease-in-out
+  @include vendorize(animation-timing-function, $motions);
+}
+
+
+@mixin animation-iteration-count ($values...) {
+// infinite | <number>
+  @include vendorize(animation-iteration-count, $values);
+}
+
+
+@mixin animation-direction ($directions...) {
+// normal | alternate
+  @include vendorize(animation-direction, $directions);
+}
+
+
+@mixin animation-play-state ($states...) {
+// running | paused
+  @include vendorize(animation-play-state, $states);
+}
+
+
+@mixin animation-delay ($times...) {
+  @include vendorize(animation-delay, $times);
+}
+
+
+@mixin animation-fill-mode ($modes...) {
+// none | forwards | backwards | both
+  @include vendorize(animation-fill-mode, $modes);
+}
+
+
+/* Keyframes
+========================= */
+
+// Adds keyframes blocks for supported prefixes, removing redundant prefixes in the block's content
+@mixin keyframes($name) {
+  $original-prefix-for-webkit:    $prefix-for-webkit;
+  $original-prefix-for-mozilla:   $prefix-for-mozilla;
+  $original-prefix-for-microsoft: $prefix-for-microsoft;
+  $original-prefix-for-opera:     $prefix-for-opera;
+  $original-prefix-for-spec:      $prefix-for-spec;
+
+  @if $original-prefix-for-webkit {
+    @include disable-prefix-for-all();
+    $prefix-for-webkit: true;
+    @-webkit-keyframes #{$name} {
+      @content;
+    }
+  }
+  @if $original-prefix-for-mozilla {
+    @include disable-prefix-for-all();
+    $prefix-for-mozilla: true;
+    @-moz-keyframes #{$name} {
+      @content;
+    }
+  }
+  @if $original-prefix-for-opera {
+    @include disable-prefix-for-all();
+    $prefix-for-opera: true;
+    @-o-keyframes #{$name} {
+      @content;
+    }
+  }
+  @if $original-prefix-for-spec {
+    @include disable-prefix-for-all();
+    $prefix-for-spec: true;
+    @keyframes #{$name} {
+      @content;
+    }
+  }
+
+  $prefix-for-webkit:    $original-prefix-for-webkit;
+  $prefix-for-mozilla:   $original-prefix-for-mozilla;
+  $prefix-for-microsoft: $original-prefix-for-microsoft;
+  $prefix-for-opera:     $original-prefix-for-opera;
+  $prefix-for-spec:      $original-prefix-for-spec;
+}
