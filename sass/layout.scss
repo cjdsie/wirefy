@@ -1,14 +1,14 @@
 /* ============================================================
 
 Wirefy by Chris Da Sie
-Version: 3.0.0
+Version: 3.0.1
 URL: https://github.com/cjdsie/wirefy
 Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 
 /* Import Base partial **Important Do Not Delete**
 ==================================================*/
 
-@import "normalize", "mixins", "typography", "grid", "helpers/color-palette", "components/menu", "components/slideshow", "components/breadcrumbs", "components/pagination", "components/pager", "components/buttons", "components/tabs", "base", "transitions", "animations";
+@import "normalize","variables", "mixins", "typography", "helpers/color-palette", "components/menu", "components/slideshow", "components/breadcrumbs", "components/pagination", "components/pager", "components/buttons", "components/tabs", "grid", "base",  "transitions", "animations";
 
 /* Animations is completely optional and can be removed if not needed */
 

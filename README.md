@@ -18,7 +18,7 @@ Clone the git repo - `git clone git://github.com/cjdsie/wirefy.git` - or [downlo
 ## Features
 
 * Percentage based grid system
-* Three responsive menu options
+* Responsive menu
 * Placeholder images
 * Three options for creating a responsive slideshow
 * A suite of form elements
@@ -29,6 +29,7 @@ For full documentation, our homepage [here](http://getwirefy.com).
 
 ## Changelog
 
+*   v2.2.0 Reworked the entire grid to be more semantic and changed several other CSS files. More to come. 
 *	v2.1.1 Created Base Partial with Modular Scale Typography
 *	v2.0.9 Font Awesome Updated to 3.0 release
 *	v2.0.6 Reorganized and consolidated JS files into the plugin.js

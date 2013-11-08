@@ -41,9 +41,7 @@
     }
   });
 
-*/
-
-/* Other Slideshow Options
+*//* Other Slideshow Options
 
 $(".rslides").responsiveSlides({
   auto: true,             // Boolean: Animate automatically, true or false
@@ -64,13 +62,7 @@ $(".rslides").responsiveSlides({
   after: function(){}     // Function: After callback
 });
 
-*/
-
-
-
-
-
-/* Responsive navigation responsive-nav.js 1.0.23 by @viljamis
+*//* Responsive navigation responsive-nav.js 1.0.23 by @viljamis
 
 var nav = responsiveNav(".nav-collapse", { // Selector
   animate: true, // Boolean: Use CSS3 transitions, true or false
@@ -84,10 +76,8 @@ var nav = responsiveNav(".nav-collapse", { // Selector
   open: function(){}, // Function: Open callback
   close: function(){} // Function: Close callback
 });
-*/
-
-/* FitVids is a standard when it comes to resizing videos through Responsive design. It currently supports inputs from YouTube, Vimeo, Blip.tv, Viddler and Kickstarter. FitVid also offers the ability to add your own vendor as well. 
+*//* FitVids is a standard when it comes to resizing videos through Responsive design. It currently supports inputs from YouTube, Vimeo, Blip.tv, Viddler and Kickstarter. FitVid also offers the ability to add your own vendor as well. 
 
 $(".container").fitVids();
 // Custom selector and No-Double-Wrapping Prevention Test
-$(".container").fitVids({ customSelector: "iframe[src^='http://socialcam.com']"});*/
+$(".container").fitVids({ customSelector: "iframe[src^='http://socialcam.com']"});*/;

@@ -2,3 +2,133 @@
 ******   Menus    *******
 **** Version: 0.0.1 *****
 *************************/
+/*! responsive-nav.js 1.0.23 by @viljamis */
+
+.nav-collapse {
+  ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    list-style: none;
+  }
+  li {
+    width: 100%;
+    display: block;
+  }
+}
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+
+.nav-toggle {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+@media screen and (min-width: 40em) {
+  .js .nav-collapse {
+    position: relative;
+    &.closed {
+      max-height: none;
+    }
+  }
+  .nav-toggle {
+    display: none;
+  }
+}
+
+
+/* ------------------------------------------
+  DEMO STYLES WITH IE SUPPORT
+--------------------------------------------- */
+
+
+.nav-collapse {
+  list-style: none;
+  width: 100%;
+  float: left;
+  ul {
+    list-style: none;
+    width: 100%;
+    float: left;
+  }
+  li {
+    float: left;
+    width: 100%;
+  }
+  a {
+    color: $white;
+    text-decoration: none;
+    width: 100%;
+    background: $orange;
+    border-bottom: 1px solid $white;
+    padding: 0.7em 1em;
+    float: left;
+  }
+  ul ul a {
+    background: $red;
+    padding-left: 2em;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .nav-collapse li {
+    width: 25%;
+    *width: 24.9%;
+    /* IE7 Hack */
+    _width: 19%;
+    /* IE6 Hack */
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .nav-collapse a {
+    margin: 0;
+    padding: 1em;
+    float: left;
+    text-align: center;
+    border-bottom: 0;
+    border-right: 1px solid white;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .nav-collapse ul ul a {
+    display: none;
+  }
+}
+
+.nav-toggle {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 70px;
+  height: 55px;
+  float: right;
+  text-indent: -9999px;
+  overflow: hidden;
+  background: #f4421a url("../menu/hamburger.png") no-repeat 50% 33%;
+}
+
+
+
+
+
