@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- 
 Wirefy by Chris Da Sie
-Version: 2.2.0
+Version: 3.0.0
 URL: https://getwirefy.com
 Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 -->
@@ -19,7 +19,7 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
  <title></title>
  <meta name="description" content="">
- <meta name="author" content="">
+ <meta name="author" content="humans.txt">
  <meta name="keywords" content="">
  
  <!-- Mobile Specific Metas
@@ -34,11 +34,17 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
  <!-- CSS - These are your main CSS files. All base styles can be found in the base.css and any additional styles 
  or overwrites should be used in the layout.css. We have now added support for SCSS. Using CodeKit or a similar preprocessor will help you write and rewrite the SCSS files.  
 ================================================= -->
+ <!-- <link rel="stylesheet" href="css/font-awesome-ie7.min.css"> -->
  <link rel="stylesheet" href="css/layout.css"> <!-- Compiled from layout.scss -->
  
  <!-- Browser Specific Javascript
 ================================================= -->
- <script src="js/vendor/modernizr.js"></script>
+ <script src="js/vendor/modernizr.min.js"></script>
+
+<!-->
+  <script src="js/vendor/selectivizr.min.js">
+  <script src="js/vendor/respond.min.js">
+<![endif]-->
 
  <!-- Favicon and apple-touch-icon.png in the img folder. Include the ones you need.
  ================================================== -->
@@ -89,7 +95,7 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
   ================================================== -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
-  <script src="js/plugins.js"></script>
+  <script src="js/plugins.min.js"></script>
   <script src="js/script.js"></script>
   <script src="js/helper.js"></script>
   

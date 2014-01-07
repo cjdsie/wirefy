@@ -29,6 +29,7 @@ For full documentation, our homepage [here](http://getwirefy.com).
 
 ## Changelog
 
+*   v3.0.0 Rebuilt from the ground up.
 *   v2.2.0 Reworked the entire grid to be more semantic and changed several other CSS files. More to come. 
 *	v2.1.1 Created Base Partial with Modular Scale Typography
 *	v2.0.9 Font Awesome Updated to 3.0 release
@@ -38,7 +39,7 @@ For full documentation, our homepage [here](http://getwirefy.com).
 *	v2.0.2 Added SASS support
 *	v2.0.1 Committed v2.0.1 
 
-##Contributing
+## Contributing
 
 Anyone and everyone is welcome to [contribute](/cjdsie/wirefy/blob/master/CONTRIBUTING.md). Help make Wirefy the best responsive wireframe tool.
 
@@ -51,5 +52,12 @@ Anyone and everyone is welcome to [contribute](/cjdsie/wirefy/blob/master/CONTRI
 
 If you've been using Wirefy, we want to hear from you. We want to make Wirefy even better as an efficient tool in your process. Please send us along any feedback you have.
 
+## ToDo
+
+* Create new Template files
+* Update Documentation site
+* Add bower.json file
+* Change icons from Font Awesome to Dashicons
+* Continue to improve grid and typography
 
 
