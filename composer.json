@@ -1,0 +1,17 @@
+{
+  "name": "cjdsie/wirefy",
+  "description": "Build intuitive, powerful wireframes for smarter web development.",
+  "keywords": ["wireframe", "css", "framework", "ui", "prototype"],
+  "homepage": "http://getwirefy.com",
+  "authors": [
+    {
+      "name": "Chris Da Sie",
+      "email": "cjdsie@gmail.com"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/cjdsie/wirefy/issues"
+  },
+  "license": "MIT"
+  }
+}

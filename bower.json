@@ -1,0 +1,26 @@
+{
+  "name": "Wirefy",
+  "version": "3.0.0",
+  "main": [
+    "./css/wirefy.css",
+    "./js/plugins.min.js"
+    "./js/wirefy.js",
+    "./fonts/fontawesome-webfont.eot",
+    "./fonts/fontawesome-webfont.svg",
+    "./fonts/fontawesome-webfont.ttf",
+    "./fonts/fontawesome-webfont.woff"
+  ],
+  "ignore": [
+    "**/.*",
+    "*.html",
+    "_*",
+    "CNAME",
+    "composer.json",
+    "CONTRIBUTING.md",
+  ],
+  "dependencies": {
+    "jquery": ">= 1.10.2",
+    "modernizr": ">= 2.6.2"
+  },
+  "private": true
+}
