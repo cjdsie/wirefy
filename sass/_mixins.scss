@@ -309,7 +309,7 @@ $imagePath:   "../img/" !default;
   margin-bottom: .625em;
 }
 
-@mixing add-bottom {
+@mixin add-bottom {
   margin-bottom: $spacing;
 }
 

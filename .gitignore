@@ -3,3 +3,7 @@
 .DS_Store
 .DS_Store?
 Thumbs.db
+
+# Below are Grunt generated files so I don't want to include them in the repo
+# They'll get recreated automatically by a user when they run Grunt via the CLI
+node_modules

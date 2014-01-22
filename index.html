@@ -3,7 +3,7 @@
 Wirefy by Chris Da Sie
 Version: 3.0.0
 URL: https://getwirefy.com
-Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+MIT License
 -->
 
 <!-- HTML5 Boilerplate -->
@@ -35,15 +35,17 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
  or overwrites should be used in the layout.css. We have now added support for SCSS. Using CodeKit or a similar preprocessor will help you write and rewrite the SCSS files.  
 ================================================= -->
  <!-- <link rel="stylesheet" href="css/font-awesome-ie7.min.css"> -->
+ <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css">
  <link rel="stylesheet" href="css/wirefy.css"> <!-- Compiled from layout.scss -->
  
  <!-- Browser Specific Javascript
 ================================================= -->
- <script src="js/vendor/modernizr.min.js"></script>
+ <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
 
-<!-->
-  <script src="js/vendor/selectivizr.min.js">
-  <script src="js/vendor/respond.min.js">
+<!--[if lt IE 9 & !IEMobile]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
  <!-- Favicon and apple-touch-icon.png in the img folder. Include the ones you need.
@@ -97,7 +99,6 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
   <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
   <script src="js/plugins.min.js"></script>
   <script src="js/wirefy.js"></script>
-  <script src="js/helper.js"></script>
   
   
   <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
