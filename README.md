@@ -1,13 +1,15 @@
 [Wirefy](http://getwirefy.com)
 =================
 
-Wirefy is a responsive wireframe framework for rapidly experimenting with layouts to create the best user experience and test functional features. 
+# Build intuitive, powerful wireframes for smarter web development
 
-The way designers solve online communication problems has changed thanks to "responsive web design" but we've continued to demonstrate wireframes in a static manner. So instead of downloading hundreds of UI libraries that are static and have no assigned functions. Why not offer a framework that levitates any functional confusions? That's why Wirefy was created. 
+Wirefy was created as a tool to help web designers and developers create fast, manageable wireframes. It helps to speed up the journey between sketches and final deliverables. Like the web, it is in constant iteration. This requires a simple workflow and a well-defined collection of [atomic elements](http://bradfrostweb.com/blog/post/atomic-web-design/) so that new UIs can be quickly pulled together.
 
-To follow the trend of designing in the browser, Wirefy can be used as part of your user experience toolkit to present strategic plans through the use of functional components while staying design agnostic. Rapidly develop and experiment with different flows and layouts to find the best solution to your clients communication problem. Since Wirefy is flexible it can be used for responsive web designs, web apps, or basic device apps. 
+It is our belief that we aren't building pages but rather systems of components. This is why Wirefy has been built to be as flexible and comprehensive as it possible can be.  We are giving you the foundation layer to build on. You can style, add or remove components as you see fit. 
 
-Unlike many of the other boilerplates and frameworks, Wirefy doesn't focus on fancy UI components, but instead stays focused on the things that matter - the users and how they will experience your content on various screens. Get the basic story right and then the design will become that much easier.
+Our goal is to help you make smarter UX decisions by focusing on the content first rather than the subjective design decisions. With a bit of base knowledge of HTML and CSS, you can start building flexible wireframes without the headache of working through countless calculations.
+
+Creating static wireframes can be great but sometimes clients just don't understand how they function or change based on various devices. Building functional wireframes will help you communicate with clients better and work as a foundation for your fluid designs without losing sight of the importance of the content.
 
 
 ## Quick Start
@@ -29,6 +31,7 @@ For full documentation, our homepage [here](http://getwirefy.com).
 
 ## Changelog
 
+*   v3.0.1 Added Grunt functionality for automated tasks.
 *   v3.0.0 Rebuilt from the ground up.
 *   v2.2.0 Reworked the entire grid to be more semantic and changed several other CSS files. More to come. 
 *	v2.1.1 Created Base Partial with Modular Scale Typography
@@ -56,7 +59,6 @@ If you've been using Wirefy, we want to hear from you. We want to make Wirefy ev
 
 * Create new Template files
 * Update Documentation site
-* Add bower.json file
 * Change icons from Font Awesome to Dashicons
 * Continue to improve grid and typography
 
