@@ -33,12 +33,36 @@ grunt.initConfig({
 		      dest: 'img/'
 		    }]
 		  }
+	},
+	cssmin: {
+	  minify: {
+	    expand: true,
+	    cwd: 'css/',
+	    src: ['wirefy.css', '!wirefy.min.css'],
+	    dest: 'css/',
+	    ext: '.min.css'
+	  }
+	},
+	concat: {
+		options: {
+		      separator: ';'
+		    },
+	  js: {
+	    src: [
+	      'js/plugins.min.js',
+	      'js/wirefy.js',
+	      'js/helper.js',
+	    ],
+	    dest: 'js/wirefy.min.js'
+	  }
 	}
 });
 
 grunt.loadNpmTasks('grunt-contrib-sass');
 grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-contrib-imagemin');
-grunt.registerTask('default', ['sass', 'uglify', 'imagemin']);
+grunt.loadNpmTasks('grunt-contrib-cssmin');
+grunt.loadNpmTasks('grunt-contrib-concat');
+grunt.registerTask('default', ['sass', 'uglify', 'imagemin', 'cssmin', 'concat']);
 
 };
