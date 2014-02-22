@@ -4,5 +4,5 @@
   .DS_Store?
   Thumbs.db
 
-  .sass-cache/
-  node_modules/
+.sass-cache/
+node_modules/

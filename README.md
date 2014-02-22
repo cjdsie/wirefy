@@ -30,7 +30,11 @@ Those commands do the following:
 - `npm install` will install the necessary node.js packages to develop on this project
 - `grunt` will run a series of tasks defined in Gruntfile.js, such as concatenating or minifying CSS and JavaScript.
 
-This is the only bit of the Node language will you will need to know to use Wirefy. Everything else is simple HTML, Sass and Javascript 
+This is the only bit of the Node language will you will need to know to use Wirefy. Everything else is simple HTML, Sass and Javascript.
+
+You can also include the `wirefy.min.css` file to the head of any project with CDN. 
+
+`<link rel="stylesheet" src="//cdn.getwirefy.com/wirefy.min.css">` 
 
 
 ## Features
@@ -40,13 +44,14 @@ This is the only bit of the Node language will you will need to know to use Wire
 * Placeholder images
 * Three options for creating a responsive slideshow
 * A suite of form elements
-* Standard typography and the use of Font Awesome for icons
+* Standard typography and the use of Font Awesome or Icomoon for icon fonts
 * Framework includes all base styles in one place
 
 For full documentation, our homepage [here](http://getwirefy.com). 
 
 ## Changelog
 
+*   v3.0.2 Icomoon Font added. Better Partials and added CDN support
 *   v3.0.1 Added Grunt functionality for automated tasks.
 *   v3.0.0 Rebuilt from the ground up.
 *   v2.2.0 Reworked the entire grid to be more semantic and changed several other CSS files. More to come. 
@@ -74,7 +79,6 @@ If you've been using Wirefy, we want to hear from you. We want to make Wirefy ev
 ## ToDo
 
 * Create new Template files
-* Update Documentation site
 * Continue to improve grid and typography
 
 
