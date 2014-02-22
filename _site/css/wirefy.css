@@ -2670,6 +2670,13 @@ nav {
         nav .nav li a.active {
           background: white;
           color: #444; }
+        nav .nav li a [class^="icon-"] {
+          display: none;
+          vertical-align: text-bottom;
+          margin-right: 8px; }
+          @media (min-width: 65em) {
+            nav .nav li a [class^="icon-"] {
+              display: inline; } }
         nav .nav li a .nav-label {
           display: inline-block;
           vertical-align: middle;

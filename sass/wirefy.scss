@@ -150,6 +150,14 @@ nav {
           background: $white;
           color: #444;
         }
+        [class^="icon-"]{
+          display:none;
+          vertical-align: text-bottom;
+          margin-right: 8px;
+          @media(min-width: 65em){
+            display:inline;
+          }
+        }
          .nav-label {
 			  display: inline-block;
 			  vertical-align: middle;
