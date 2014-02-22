@@ -1,0 +1,95 @@
+---
+layout: default
+title: Wirefy | Grid
+description: Every framework relies on a grid system as part of its foundation. Wirefy is no exception. However, most grid systems add classes and additional markup to your code. 
+---
+
+<section>
+	<h2>Grid System</h2>
+	<p>Every framework relies on a grid system as part of its foundation. Wirefy is no exception. However, most grid systems add classes and additional markup to your code. Our grid is completely semantic. Your columns, rows and gutter widths live in your CSS rather than your HTML. The grid is extremely flexible and responsive.</p>
+	<p>The grid defaults to 12 columns at 960 pixels. To customize the columns and gutters override the default variables found in <mark>_grid.scss</mark></p>
+	<pre><code class="language-markup">&lt;article>
+  &lt;p>8/12&lt;/p>
+&lt;/article>
+&lt;aside>
+  &lt;p>4/12&lt;/p> 
+&lt;/aside></code></pre>
+<pre><code class="language-scss">article {
+  @include column(12); 
+  @media(min-width: 55em) { 
+    @include column(8);
+  }
+}
+aside {
+  @include column(12);
+  @media(min-width: 55em) {
+    @include column(4);
+  }
+}</code></pre>
+	<p>The result would look like:</p>
+	<div class="grid_example">
+  		<article class="grid-filler">
+    		<p>8/12</p>
+		</article>
+  		<aside class="grid-filler">
+    		<p>4/12</p>
+   		</aside>
+	</div>
+</section>
+<section>
+	<h3> Nested Columns</h3>
+	<p> Nested columns can be extremely useful to add even more flexibility to your wireframes. By applying the <mark>.row()</mark> mixin to the containing element, you can nest columns within. You should always include the number of grid units of the parent (8, in this case), and then the same number must be passed into the nested columns as the second parameter. Most grid systems do not support this type of fluid nesting.</p>
+  <pre><code class="language-markup">&lt;article>
+&lt;ul>
+  &lt;li>4/8&lt;/li>
+  &lt;li>4/8&lt;/li>
+&lt;/ul>
+&lt;/article>
+&lt;aside>
+  &lt;p>4/12&lt;/p> 
+&lt;/aside></code></pre>
+<pre><code class="language-scss">article {
+  @include column(12); 
+  @media(min-width: 55em) { 
+    @include column(8);
+  }
+  ul{
+	@include row(12, 12);
+	@media(min-width: 55em) {
+	  @include row(8);
+	}
+	li{
+	  @include column(12, 12);
+	  @media(min-width: 55em) {
+        @include column(4,8);
+      }	
+	}
+  }
+}
+...</code></pre>
+	<div class="grid_example">
+		<article class="grid-filler .nested">
+			<ul>
+  				<li><p>4/8</p></li>
+				<li><p>4/8</p></li>
+			</ul>
+		</article>
+		<aside class="grid-filler">
+  		<p>4/12</p>
+ 		</aside>
+	</div>
+</section>
+<section>
+	<h3>Push &amp; Pull</h3>
+	<p>Occasionally, you might need to offset a column. You can do this by including either a <mark>.push()</mark> or <mark>.pull()</mark> attribute to your scss file.</p>
+	<pre><code class="language-scss">article {
+  @include column(6);
+  @include push(2);	
+}
+aside{
+  @include column(2);
+  @include pull(2);	
+}
+	</code></pre>
+	
+	

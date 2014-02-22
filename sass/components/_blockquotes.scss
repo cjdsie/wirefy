@@ -1,0 +1,35 @@
+/************************
+****** Blockquotes *******
+**** Version: 0.0.1 *****
+*************************/
+
+
+blockquote {
+  font-size: inherit;
+  line-height: inherit;
+  color: #777;
+  font-style: italic;
+  p {
+    font-size: inherit;
+    line-height: $line-height;
+    color: #777;
+    font-style: italic;
+  }
+  margin: 0 0 ($base-unit * 3);
+  padding: $base-unit ($base-unit * 2) 0 ($base-unit * 4);
+  border-left: 1px solid #ddd;
+  cite {
+    display: block;
+    font-size: em(12);
+    color: $black-50;
+    &:before {
+      content: "\2014 \0020";
+    }
+    a {
+      color: $black-50;
+      &:visited {
+        color: $black-50;
+      }
+    }
+  }
+}

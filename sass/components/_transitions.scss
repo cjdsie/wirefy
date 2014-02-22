@@ -1,0 +1,51 @@
+// Shorthand mixin. Supports multiple parentheses-deliminated values for each variable.
+// Example: @include transition (all, 2.0s, ease-in-out);
+//          @include transition ((opacity, width), (1.0s, 2.0s), ease-in, (0, 2s));
+//          @include transition ($property:(opacity, width), $delay: (1.5s, 2.5s));
+
+@mixin transition ($properties...) {
+  @if length($properties) >= 1 {
+    @include vendorize(transition, $properties);
+  }
+
+  @else {
+    $properties: all 0.15s ease-out 0;
+    @include vendorize(transition, $properties);
+  }
+}
+
+@mixin transition-property ($properties...) {
+   -webkit-transition-property: transition-property-names($properties, 'webkit');
+      -moz-transition-property: transition-property-names($properties, 'moz');
+           transition-property: transition-property-names($properties, false);
+}
+
+@mixin transition-duration ($times...) {
+  @include vendorize(transition-duration, $times);
+}
+
+@mixin transition-timing-function ($motions...) {
+// ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier()
+  @include vendorize(transition-timing-function, $motions);
+}
+
+@mixin transition-delay ($times...) {
+  @include vendorize(transition-delay, $times);
+}
+
+
+@mixin transform($property: none) {
+//  none | <transform-function>
+  @include prefixer(transform, $property, webkit moz ms o spec);
+}
+
+@mixin transform-origin($axes: 50%) {
+// x-axis - left | center | right  | length | %
+// y-axis - top  | center | bottom | length | %
+// z-axis -                          length
+  @include prefixer(transform-origin, $axes, webkit moz ms o spec);
+}
+
+@mixin transform-style ($style: flat) {
+  @include prefixer(transform-style, $style, webkit moz ms o spec);
+}

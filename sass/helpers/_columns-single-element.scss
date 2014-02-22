@@ -1,0 +1,15 @@
+/*********************************
+* Columns Within Single Elements *
+****     Version: 0.0.1      *****
+**********************************/
+
+// We use this to generate columns via CSS within a single element.
+
+$count: 3 !default;
+$gap: em(20) !default; 
+
+.content-columns($width, $count, $gap) {
+  @include vendorize(column-width, $width);
+  @include vendorize(column-count, $count);
+  @include vendorize(column-gap, $gap);
+}

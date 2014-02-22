@@ -1,0 +1,176 @@
+---
+layout: default
+title: Wirefy | UI Elements
+description: No prototype is complete without ui elements. A collection of those UI elements and how to use them.
+---
+
+<section>
+	<h2>UI Elements</h2>
+	<p>No prototype is complete without ui elements. These can be manipulated to fit your design through their various individual <mark>.scss</mark> files or within the <mark>_base.scss</mark></p>
+	</section>
+	<section class="headings">
+		<h3>Navigation</h3>
+		<p>Wirefy uses the <a href="http://responsive-nav.com">Responsive Nav</a> library by <a href="https://twitter.com/viljamis">Viljami Salminen</a> as it's default mode. However, you can implement any library you want by either connecting it in the footer scripts or adding it to <mark>plugins.js</mark>. You will need to run <mark>Grunt</mark> to rebuild the full javascript file.</p>
+		<h5>HTML</h5>
+		<pre><code class="language-markup">&lt;nav role="navigation" class="nav-collapse">
+  &lt;ul>
+    &lt;>&lt;a href="#">Home&lt;a>&lt;/li> 
+    &lt;>&lt;a href="#">About&lt;a>&lt;/li> 
+    &lt;>&lt;a href="#">Work&lt;a>&lt;/li> 
+    &lt;>&lt;a href="#">Contact&lt;a>&lt;/li> 
+  &lt;/ul> 
+&lt;/nav></code></pre>
+    <p>To see a rendered version of this code, resize your browser window to see how this site changes across different screen sizes.</p>
+	</section>	
+	
+	<section class="headings">
+		<h3>Slideshow</h3>
+		<p>The use of slideshows and galleries can be very important in creating a solid user experience. With the help of <mark>FlexSlider.js</mark> by <a href="http://flexslider.woothemes.com/">Woothemes</a>, you can create a basic slideshow. However, like the menu options, please use what you are comfortable with. The options shown here are just the default built in options.</p>
+		<h5>HTML</h5>
+		<pre><code class="language-markup">&lt;div class="flexslider">
+  &lt;ul class="slides">
+    &lt;>&lt;img src="//cdn.getwirefy.com/placeholder/blank.png">&lt;/li> 
+    &lt;>&lt;img src="//cdn.getwirefy.com/placeholder/blank2.png">&lt;/li> 
+    &lt;>&lt;img src="//cdn.getwirefy.com/placeholder/blank3.png">&lt;/li> 
+  &lt;/ul> 
+&lt;/div></code></pre>
+      <h5>Rendered HTML</h5>
+      	<div class="flexslider">
+<ul class="slides">
+  <li><img src="//cdn.getwirefy.com/placeholder/blank.png"></li> 
+  <li><img src="//cdn.getwirefy.com/placeholder/blank2.png"></li> 
+  <li><img src="//cdn.getwirefy.com/placeholder/blank3.png"></li> 
+</ul> 
+</div>
+	</section>
+	<section class="headings">
+		<h3>Pager</h3>
+		<p>A set of links for simple pagination implementations with light markup and even lighter styles.</p>
+		<div class="code-html">
+		<h5>HTML</h5>
+		<pre><code class="language-markup">&lt;ul class="pager">
+  &lt;li class="previous">&lt;a href="#">&lt;span class="icon-arrow-left2">&lt;/span> Older&lt;/a>&lt;/li>
+  &lt;li class="next">&lt;a href="#">Newer &lt;span class="icon-arrow-right2">&lt;/span>&lt;/a>&lt;/li>
+&lt;/ul></code></pre>
+			</div>
+		<div class="rendered-html">	
+		<h5>Rendered HTML</h5>
+		<ul class="pager">
+		<li class="previous"><a href="#"><span class="icon-arrow-left2"></span> Older</a></li>
+    	<li class="next"><a href="#">Newer <span class="icon-arrow-right2"></span></a></li>
+		</ul>
+		</div>
+	</section>
+	<section class="headings">
+		<h3>Pagination</h3>
+		<p>Simplistic and minimally styled pagination that is easily scalable and provides larger click areas.</p>
+		<div class="code-html">
+		<h5>HTML</h5>
+		<pre><code class="language-markup">&lt;div class="pagination">
+  &lt;ul>
+    &lt;li>&lt;a href="#">Prev&lt;/a>&lt;/li>
+    &lt;li class="active">&lt;a href="#">1&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#">2&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#">3&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#">4&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#">Next&lt;/a>&lt;/li>
+  &lt;/ul>
+&lt;/div></code></pre>
+			</div>
+		<div class="rendered-html">	
+		<h5>Rendered HTML</h5>
+		<div class="pagination">
+		<ul>
+		<li><a href="#">Prev</a></li>
+		<li class="active"><a href="#">1</a></li>
+		<li><a href="#">2</a></li>
+		<li><a href="#">3</a></li>
+		<li><a href="#">4</a></li>
+		<li><a href="#">Next</a></li>
+		</ul>
+		</div>
+		</div>
+	</section>
+	<section class="headings">
+		<h3>Breadcrumbs</h3>
+		<p>Breadcrumbs can be used as a way to show users where they are within an app or a site. They should not be used for primary navigation.</p>
+		<div class="code-html">
+		<h5>HTML</h5>
+		<pre><code class="language-markup">&lt;ul class="breadcrumb">  
+  &lt;li>
+    &lt;a href="#">Home&lt;/a> &lt;span class="divider">/&lt;/span>
+  &lt;/li>
+  &lt;li>
+    &lt;a href="#">Library&lt;/a> &lt;span class="divider">/&lt;/span>
+  &lt;/li>
+  &lt;li class="active">Data&lt;/li>
+&lt;/ul></code></pre>
+			</div>
+		<div class="rendered-html">	
+		<h5>Rendered HTML</h5>
+		<ul class="breadcrumb">  
+		<li>
+		    <a href="#">Home</a> <span class="divider">/</span>
+		  </li>
+		  <li>
+		    <a href="#">Library</a> <span class="divider">/</span>
+		  </li>
+		  <li class="active">Data</li>
+		</ul>
+		</div>
+	</section>
+	<section class="headings">
+		<h3>Tabs</h3>
+        <p>Tabs that have dead simple jQuery that will hook them up to their corresponding content.</p>
+		<h5>HTML</h5>
+		<pre><code class="language-markup">&lt;ul class="tabs">
+  &lt;li><a class="active" href="#simple">Simple&lt;/a>&lt;/li>
+  &lt;li><a href="#lightweight">Light</a></li>
+  &lt;li><a href="#mobileFriendly">Mobile</a></li>
+&lt;/ul>
+&lt;ul class="tabs-content">
+  &lt;li class="active" id="simple">The tabs are clean and simple unordered-list markup and basic CSS.&lt;/li>
+  &lt;li id="lightweight">The tabs are cross-browser, but don't need a ton of hacky CSS or markup.&lt;/li>
+  &lt;li id="mobileFriendly">The tabs work like a charm even on mobile devices. If there are too many they will stack (it's not completely awesome, but still retains functionality).&lt;/li>
+&lt;/ul></code></pre>
+
+		<h5>Rendered HTML</h5>
+		<ul class="tabs">
+			<li><a class="active" href="#simple">Simple</a></li>
+			<li><a href="#lightweight">Light</a></li>
+			<li><a href="#mobileFriendly">Mobile</a></li>
+		</ul>
+		<ul class="tabs-content">
+			<li class="active" id="simple">The tabs are clean and simple unordered-list markup and basic CSS.</li>
+			<li id="lightweight">The tabs are cross-browser, but don't need a ton of hacky CSS or markup.</li>
+			<li id="mobileFriendly">The tabs work like a charm even on mobile devices. If there are too many they will stack (it's not completely awesome, but still retains functionality).</li>
+		</ul>
+	</section>
+	<section class="headings">
+		<h3>Media</h3>
+		<h5>HTML</h5>
+		<pre><code class="language-markup">&lt;figure>
+  &lt;img src="http://bit.ly/1nzAeLT">
+  &lt;figcaption>Camera on a table. Courtesy of &lt;a href="http://unsplash.com">Unsplash&lt;/a>&lt;/figcaption>
+&lt;/figure></code></pre>
+		<h5>Rendered HTML</h5>
+		<figure>
+		<img src="http://bit.ly/1nzAeLT">
+		<figcaption>Camera on a table. Courtesy of <a href="http://unsplash.com">Unsplash</a></figcaption>
+		</figure>
+	</section>
+		<section class="headings">
+			<h3>Video</h3>
+			<h5>HTML</h5>
+			<pre><code class="language-markup">&lt;dl>
+  &lt;dt>Definition Title&lt;/dt>
+  &lt;dd>Defines a description list.&lt;/dd>
+&lt;/dl></code></pre>
+			<h5>Rendered HTML</h5>
+			<div class="vendor">
+			<iframe width="425" height="349" src="http://www.youtube.com/embed/FKWwdQu6_ok" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</section>
+	
+	
+	

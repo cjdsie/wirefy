@@ -1,0 +1,87 @@
+/* Global Variables
+================================================= */
+
+// Wireframe Base Colors. For more color options, se color-palette.scss.
+
+$black-10: darken(#fff, 10%);
+$black-20: darken(#fff, 20%);
+$black-30: darken(#fff, 30%);
+$black-40: darken(#fff, 40%);
+$black-50: darken(#fff, 50%);
+$black-60: darken(#fff, 60%);
+$black-70: darken(#fff, 70%);
+$black-80: darken(#fff, 80%);
+$black-90: darken(#fff, 90%);
+
+// Base Measurement Unit
+$base-unit: 6px;
+
+/* Typography Variables
+========================= */
+
+// The typography scale works in multiples of 6. We
+
+    $basefont:16;
+    $baseh1:60;
+    $baseh2:40;
+    $baseh3:24;
+    $baseh4:18;
+    $baseh5:16;
+    $baseh6:14;
+    $basep: 16;
+
+    $light: 100;
+    $regular: 300;
+    $semi-bold: 400;
+    $heavy: 700;
+    $black: 900;
+
+	$line-height:                 1.5; // establish a consistent line-height equal to 27px
+	$vertical-measure:            1.5em; // establish a vertical distance for margins equal to line-height
+
+
+$body-bg: #fff;
+$body-font-color: $black-80;
+$body-font-family: "Open Sans",sans-serif;
+$body-font-weight: $regular;
+$body-font-style: normal;
+
+// The default font-size is set to 100% of the browser style sheet (usually 16px)
+// for compatibility with browser-based text zoom or user-set defaults.
+$base-font-size: 100% !default;
+
+// Font-smoothing
+$font-smoothing: antialiased;
+
+// Text direction settings
+$text-direction: ltr;
+
+
+//margins & padding
+
+	$spacing: ($base-unit * 2);
+
+
+
+// Custom use example -> $cursor-default-value: url(http://cursors-site.net/path/to/custom/cursor/default.cur),progress;
+
+$cursor-crosshair-value: "crosshair";
+$cursor-default-value: "default";
+$cursor-pointer-value: "pointer";
+$cursor-help-value: "help";
+
+
+
+// Links
+$link-color:       #008cba;
+$link-color-hover: darken($link-color, 15%);
+
+
+/* Vendor Prefixing 
+========================= */
+
+$prefix-for-webkit:    true !default;
+$prefix-for-mozilla:   true !default;
+$prefix-for-microsoft: true !default;
+$prefix-for-opera:     true !default;
+$prefix-for-spec:      true !default; // required for keyframe mixin

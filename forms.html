@@ -1,0 +1,160 @@
+---
+layout: default
+title: Wirefy | Form Elements
+description: Forms are a common use case for any site or app. We've provided several examples and use cases that can be included in your wireframe.
+---
+
+<section>
+	<h2>Forms</h2>
+	<p>Forms are a common use case for any site or app. We've provided several examples and use cases that can be included in your wireframe.</p>
+	</section>
+	<section class="headings">
+		<h3>Buttons</h3>
+		<p>Buttons are intended for action and thus should have appropriate weight. The standard button is given that weight with a little bit of depth and a strong hover. You can either indicate a <mark>button</mark> element or add <mark>a</mark> class of <mark>.button</mark> to any a element.</p>
+		<p>There are several mixin options available in the <mark>_buttons.scss</mark> file.</p>
+		<div class="sub-content">
+		<div class="code-html">
+		<h5>HTML</h5>
+		<pre><code class="language-markup">&lt;button>Click Me&lt;/button>
+&lt;button class="disabled" disabled>Click Me&lt;/button></code></pre>
+			</div>
+		<div class="rendered-html">	
+		<h5>Rendered HTML</h5>
+		<button>Click Me</button>
+		<button class="disabled" disabled>Click Me</button>
+		</div>
+		</div>
+		<div class="sub-content">
+		<h4>&lt;a&gt; with class button</h4>
+		<div class="code-html">
+		<h5>HTML</h5>
+		<pre><code class="language-markup">&lt;a class="button">Click Me&lt;/a>
+&lt;a class="button disabled" disabled>Click Me&lt;/a></code></pre>
+			</div>
+		<div class="rendered-html">	
+		<h5>Rendered HTML</h5>
+		<a class="button">Click Me</a>
+		<a class="button disabled">Click Me</a>
+		</div>
+		</div>
+		<div class="sub-content">
+		<h4>Submit Button</h4>
+		<div class="code-html">
+		<h5>HTML</h5>
+		<pre><code class="language-markup">&lt;input type="submit" class="button">
+&lt;input type="submit" class="button disabled" disabled></code></pre>
+			</div>
+		<div class="rendered-html">	
+		<h5>Rendered HTML</h5>
+		<input type="submit" class="button">
+		<input type="submit" class="button disabled">
+		</div>
+		</div>
+		<div class="sub-content">
+			<h4>Rounded Corners</h4>
+		<div class="code-html">
+		<h5>HTML</h5>
+		<pre><code class="language-markup">&lt;button class="rounded">Click Me&lt;/button>
+&lt;button class="rounded disabled" disabled>Click Me&lt;/button></code></pre>
+			</div>
+		<div class="rendered-html">	
+		<h5>Rendered HTML</h5>
+		<button class="rounded">Click Me</button>
+		<button class="rounded disabled" disabled>Click Me</button>
+		</div>
+		</div>
+	</section>
+		<section class="headings">
+			<h3>Inputs</h3>
+			<p>Most common form control are the text-based input fields. Includes support for all HTML5 types: text, password, datetime, datetime-local, date, month, time, week, number, email, url, search, tel, and color. Please note that not all browsers support of these input types. Check the browser adoption before use. Requires the use of a specified <mark>type=""</mark> at all times.</p>
+			<div class="code-html">
+			<h5>HTML</h5>
+			<pre><code class="language-markup">&lt;form novalidate>
+  &lt;label>Text Label&lt;/label>
+  &lt;input type="text" placeholder="Text goes here">
+  &lt;label>Email Label&lt;/label>
+  &lt;input type="email" placeholder="email@example.com">
+  &lt;label>URL Label&lt;/label>
+  &lt;input type="url" placeholder="http://example.com">
+&lt;/form></code></pre>
+				</div>
+			<div class="rendered-html">	
+			<h5>Rendered HTML</h5>
+			<form>
+			<label>Text Label</label>	
+			<input type="text" placeholder="Text goes here">
+			<label>Email Label</label>	
+			<input type="email" placeholder="email@example.com">
+			<label>URL Label</label>	
+			<input type="url" placeholder="http://example.com">
+			</form>
+			</div>
+		</section>
+
+		<section class="headings">
+			<h3>Checkboxes &amp; Radio Buttons</h3>
+			<p>Checkboxes are for making decisions between various choices.</p>
+			<div class="code-html">
+			<h5>HTML</h5>
+			<pre><code class="language-markup">&lt;form novalidate>
+  &lt;label>Text Label&lt;/label>
+  &lt;input type="checkbox"> Option one
+  &lt;input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+  &lt;input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+&lt;/form></code></pre>
+				</div>
+			<div class="rendered-html">	
+			<h5>Rendered HTML</h5>
+			<form>	
+			<input type="checkbox"> Option one
+			</form>
+			<form>	
+			<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> Yes 
+			<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> No
+			</form>
+			</div>
+		</section>
+			<section class="headings">
+				<h3>Validation states</h3>
+				<p>Showing validation states can help better communicate situations that users will have to deal with like error, warning, info, and success messages. To use, add the appropriate class to the surrounding <mark>.control-group.</mark></p>
+
+				<h5>HTML</h5>
+				<pre><code class="language-markup">&lt;form novalidate>
+	  &lt;label>Text Label&lt;/label>
+	  &lt;input type="checkbox"> Option one
+	  &lt;input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+	  &lt;input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+	&lt;/form></code></pre>
+				<h5>Rendered HTML</h5>
+				<form class="bs-docs-example form-horizontal">
+				            <div class="control-group warning">
+				              <div class="controls">
+				                <input type="text" id="inputWarning" placeholder="Input with warning">
+				                <span class="help-inline">Something may have gone wrong</span>
+				              </div>
+				            </div>
+				            <div class="control-group error">
+				              <div class="controls">
+				                <input type="text" id="inputError" placeholder="Input with error">
+				                <span class="help-inline">Please correct the error</span>
+				              </div>
+				            </div>
+				            <div class="control-group info">
+				              <div class="controls">
+				                <input type="text" id="inputError" placeholder="Input with info">
+				                <span class="help-inline">Username is taken</span>
+				              </div>
+				            </div>
+				            <div class="control-group success">
+				              <div class="controls">
+				                <input type="text" id="inputSuccess" placeholder="Input with success">
+				                <span class="help-inline">Success!</span>
+				              </div>
+				            </div>
+				          </form>
+						
+			
+			</section>
+			
+	
+	

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="292px" height="52px" viewBox="0 0 292 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>Untitled</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="WIREFY-+-Rectangle-2" sketch:type="MSLayerGroup" transform="translate(1.000000, 0.000000)" fill="#F7F7F7">
+            <path d="M17.888,51.36 L20.912,51.36 L35.672,7.584 L50.432,51.36 L53.456,51.36 L71.744,0.6 L67.856,0.6 L52.016,45.456 L37.256,0.456 L34.376,0.456 L19.616,45.456 L3.776,0.6 L-0.4,0.6 L17.888,51.36 Z" id="WIREFY" sketch:type="MSShapeGroup"></path>
+            <path d="M83.336,51 L87.08,51 L87.08,0.6 L83.336,0.6 L83.336,51 Z" id="Path" sketch:type="MSShapeGroup"></path>
+            <path d="M122.810364,26.736 L122.810364,30.1438811 L138.848,51 L143.6,51 L126.968,29.472 C135.464,28.32 141.728,23.496 141.728,15.072 L141.728,14.928 C141.728,11.328 140.288,7.944 137.912,5.568 C134.888,2.544 129.92,0.6 123.728,0.6 L102.56,0.6 L102.56,51 L106.304,51 L106.304,30.12 L106.321228,30.12 L106.321228,30.12 L106.321228,26.736 L106.304,26.736 L106.304,4.056 L123.512,4.056 C132.656,4.056 137.984,8.304 137.984,15.072 L137.984,15.216 C137.984,22.488 131.72,26.736 123.296,26.736 L122.810364,26.736 Z" id="Path" sketch:type="MSShapeGroup"></path>
+            <path d="M154.616,51 L190.832,51 L190.832,47.544 L158.36,47.544 L158.36,27.312 L187.232,27.312 L187.232,23.856 L158.36,23.856 L158.36,4.056 L190.472,4.056 L190.472,0.6 L154.616,0.6 L154.616,51 Z" id="Path" sketch:type="MSShapeGroup"></path>
+            <path d="M202.856,51 L206.6,51 L206.6,28.176 L235.112,28.176 L235.112,24.72 L206.6,24.72 L206.6,4.056 L238.352,4.056 L238.352,0.6 L202.856,0.6 L202.856,51 Z" id="Path" sketch:type="MSShapeGroup"></path>
+            <path d="M266.504,51 L270.248,51 L270.248,30.984 L291.848,0.6 L287.384,0.6 L268.448,27.672 L249.584,0.6 L244.904,0.6 L266.504,31.056 L266.504,51 Z" id="Path" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

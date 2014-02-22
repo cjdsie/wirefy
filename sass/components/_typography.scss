@@ -1,0 +1,358 @@
+/************************
+****** Typography *******
+**** Version: 0.0.1 *****
+*************************/
+
+/* Table of Content
+==================================================
+	1.0 Variables
+	2.0 Functions
+	3.0 Mixins
+	4.0 Base Styles
+	4.0 Google Web Fonts Implementation
+	5.0 Font Awesome Implementation
+	*/
+
+
+/* Functions
+========================= */
+
+@function em($target, $context: $basefont) {
+    @return ($target / $context) * 1em;
+}
+
+/* Mixins
+========================= */
+
+@mixin font-size($sizeValue: 16) {
+  font-size: $sizeValue + px; //fallback for old browsers
+  font-size: em($sizeValue);
+  font-size: (0.125 * $sizeValue) + rem;
+}
+
+@mixin line-height($heightValue: 24) {
+	line-height: $heightValue + px; //fallback for old browsers
+	line-height: (24 / $basefont);
+	line-height: (0.125 * $heightValue) + rem;
+}
+
+/* Google Web Fonts
+================================================== */
+/* Google Web Font Mixin by Ross Penman - http://rosspenman.com/sass-web-fonts
+*/
+
+@mixin web-font($fonts, $variants: (), $subsets: (), $text: '', $effects: (), $secure: false) {
+
+  //The $secure var defaults to false, the $url var is inited to use http
+  $url: "http://fonts.googleapis.com/css?family=";
+
+  //If flagged secure, import fonts using https
+  @if $secure {
+    $url: "https://fonts.googleapis.com/css?family=";
+  }
+
+  $i: 0;
+  
+  // Add the family argument to the URL string.
+  // We can assume that the user will always specify at least one font.
+  @each $font in $fonts {
+    $i: $i + 1;
+  
+    // Add the name of the font.
+    $j: 0;
+    @each $word in $font {
+      $j: $j + 1;
+      $url: $url + $word;
+      
+      // Add a plus symbol between words.
+      @if $j < length($font) {
+        $url: $url + "+";
+      }
+    }
+    
+    // If there is/are font variant(s) for this font, add them.
+    @if $j <= length($variants) {
+      $url: $url + ':';
+    
+      $k: 0;
+      @each $variant in nth($variants, $j) {
+        $k: $k + 1;
+        
+        $url: $url + $variant;
+        
+        // Add a comma between variants.
+        // For some reason length($variant) doesn't work. Weird!
+        @if ($k < length(nth($variants, $j))) {
+          $url: $url + ',';
+        }
+      }
+    }
+    
+    // Add a pipe between words.
+    // It would seem that a pipe isn't a valid URL character in its unescaped form,
+    // but Google reccommend using it anyway.
+    @if $i < length($fonts) {
+      $url: $url + "|";
+    }
+  }
+  
+  // Add the subset argument to the URL string, if it exists.
+  @if length($subsets) > 0 {
+    $url: $url + "&subset=";
+    $i: 0;
+    @each $subset in $subsets {
+      $i: $i + 1;
+      $url: $url + $subset;
+      
+      // Add a comma between subsets.
+      @if $i < length($subsets) {
+        $url: $url + ',';
+      }
+    }
+  }
+  
+  // Add the text argument to the URL string, if it exists.
+  // $text does not actually need to be enclosed in brackets.
+  @if length($text) > 0 and $text != '' {
+    
+    // To save the user the hassle of adding a space character every time they want
+    // to use a web font, we add one automatically.
+    $url: $url + "&text=%20#{$text}";
+  }
+  
+  // Add the effect argument to the URL string, if it exists.
+  @if length($effects) > 0 {
+    $url: $url + "&effect=";
+    $i: 0;
+    @each $effect in $effects {
+      $i: $i + 1;
+    
+      // Add the name of the font.
+      $j: 0;
+      @each $word in $effect {
+        $j: $j + 1;
+        $url: $url + $word;
+        
+        // Add a hyphen between words.
+        // A hyphen can actually be used to seperate words instead of a space,
+        // in which case the words will be counted as one and no extra hyphens will be added.
+        // Again, a string replacement function would make this a lot easier…
+        @if $j < length($effect) {
+          $url: $url + "-";
+        }
+      }
+      
+      // Add a pipe between effects.
+      @if $i < length($effects) {
+        $url: $url + "|";
+      }
+    }
+  }
+  
+  // Finally!
+  @import url(#{$url});
+}
+
+
+/* Base Styles
+========================= */
+
+h1, h2, h3, h4, h5, h6 {
+  color: #181818;
+  @include web-font((Open Sans));
+  font-weight: $semi-bold;
+  text-rendering: optimizelegibility;
+  line-height:(24 / $basefont);
+  margin-top: 0;
+  a{
+    font-weight: inherit;
+  }
+}
+
+h1 {
+  font-size: em($baseh2);
+  font-weight: $light;
+  line-height: 1.2;
+  color: $black-50;
+  margin-bottom:($base-unit * 3 + 2);
+  @include transition(font-size, 0.3s);
+  @media(min-width: 65em){
+    font-size: em($baseh1); 
+  }
+}
+
+h2 {
+  font-size: em($baseh2);
+  margin-bottom:em(17, $baseh2);
+}
+
+h3 {
+  font-size: em($baseh3);
+  margin-bottom:em(19, $baseh3);
+}
+
+h4 {
+  font-size: em($baseh4);
+  margin-bottom:em(24, $baseh4);
+  color: darken($onahau, 60%);
+  font-weight: $heavy;
+
+}
+
+ h5 {
+  font-size: em($baseh5);
+  margin-bottom:em(20, $baseh5);
+  text-transform: uppercase;
+  font-weight: $heavy;
+  color: $black-30;
+ }
+
+ h6 {
+  font-size: em($baseh6);
+  margin-bottom:em(20, $baseh6);
+  text-transform:uppercase;
+ }
+
+.subheader {
+  color: #777;
+}
+
+p {
+  margin: 0 0 $vertical-measure 0; // set bottom margin equal to line-height/vertical measure
+}
+
+ol, ul, dl, address {
+  margin-bottom: em(24, $basefont);
+  font-size: em($basefont);
+  line-height: (24 / $basefont);
+}
+
+small {
+  font-size: em(10);
+}
+
+blockquote {
+  &:before, &:after {
+    content: '';
+    content: none;
+  }
+}
+
+q {
+  quotes: none;
+  &:before, &:after {
+    content: '';
+    content: none;
+  }
+}
+
+cite {
+  font-style: normal;
+}
+
+dl, dd {
+  margin-bottom: em(24);
+}
+
+dt {
+  font-weight: $heavy;
+}
+
+.dl-horizontal {
+  dt {
+    float: left;
+    clear: left;
+    width: 20.25%;
+    text-align: right;
+  }
+  dd {
+    margin-left: 22.78%;
+  }
+}
+
+abbr[title] {
+  border-bottom: 1px dotted #c7ced6;
+  cursor: help;
+}
+
+b, strong {
+  font-weight: $heavy;
+}
+
+dfn {
+  font-style: italic;
+}
+
+ins {
+  background-color: #f3f5f6;
+  color: #000000;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #f3f5f6;
+  color: $black;
+  font-style: italic;
+  font-weight: $semi-bold;
+  padding: 0 .25em;
+}
+
+pre, code, kbd, samp {
+  font-family: Monaco,Courier New,monospace;
+  font-size: em(14);
+  line-height: 1.5;
+}
+
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+sub {
+  position: relative;
+  font-size: em(12);
+  line-height: 0;
+  vertical-align: baselineheight;
+  bottom: -0.25em;
+}
+
+sup {
+  position: relative;
+  font-size: em(12);
+  line-height: 0;
+  vertical-align: baselineheight;
+  top: -0.5em;
+}
+
+p {
+  hyphenate: auto;
+  hyphenate-lines: 3;
+  img {
+    margin-bottom: 0.375em;
+  }
+  &.lead {
+    font-size: em(21);
+    line-height: em(27/$basefont);
+    color: #777;
+  }
+  + p.no-indent {
+    text-indent: 0;
+  }
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+  color: #333;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+

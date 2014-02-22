@@ -1,0 +1,217 @@
+/************************
+******   Menus    *******
+**** Version: 0.0.1 *****
+*************************/
+/*! responsive-nav.js 1.0.25 by @viljamis */
+
+.nav-collapse {
+  ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    list-style: none;
+  }
+  li {
+    width: 100%;
+    display: block;
+  }
+}
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+  @media screen and (min-width: 40em) {
+      position: relative;
+      &.closed {
+        max-height: none;
+      }
+  }
+}
+
+.nav-collapse {
+  &.opened {
+    max-height: 9999px;
+  }
+  &.disable-pointer-events {
+    pointer-events: none !important;
+  }
+}
+
+.nav-toggle {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  @media screen and (min-width: 40em) {
+    display: none;
+  }
+}
+
+
+.nav-collapse {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  list-style: none;
+  width: 100%;
+  float: left;
+  ul {
+    list-style: none;
+    width: 100%;
+    float: left;
+  }
+  li {
+    float: left;
+    width: 100%;
+    @media screen and (min-width: 40em) {
+      width: 25%;
+	  *width: 24.9%;
+	  /* IE7 Hack */
+	  _width: 19%;
+	  /* IE6 Hack */
+    }
+    @media screen and (min-width: 65em) {
+      width: 100%;
+    }
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
+    background: transparent;
+    border-bottom: 1px solid white;
+    padding: 0.7em 1em;
+    float: left;
+    @media screen and (min-width: 40em) {
+      margin: 0;
+      padding: 1em;
+      float: left;
+      text-align: center;
+      border-bottom: 1px solid white;
+      border-right: 1px solid white;
+    }
+    @media screen and (min-width: 65em) {
+      text-align: left;
+      border-bottom: 0;
+    }
+  }
+  ul ul a {
+    background: transparent;
+    padding-left: 2em;
+    @media screen and (min-width: 40em) {
+      display: none; 
+    }
+  }
+}
+
+.nav-toggle {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 70px;
+  height: 55px;
+  float: right;
+  text-indent: -9999px;
+  overflow: hidden;
+  background: #f4421a url("hamburger.gif") no-repeat 50% 33%;
+  @media screen and (-webkit-min-device-pixel-ratio: 1.3), screen and (min--moz-device-pixel-ratio: 1.3), screen and (-o-min-device-pixel-ratio: 2 / 1), screen and (min-device-pixel-ratio: 1.3), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+    background-image: url("hamburger-retina.gif");
+    -webkit-background-size: 100px 100px;
+    -moz-background-size: 100px 100px;
+    -o-background-size: 100px 100px;
+    background-size: 100px 100px;
+  }
+}
+
+#toggle {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: inline-block;
+  @media(min-width: 65em){
+    display: none;
+  }
+}
+
+.menu-toggle {
+  float:right;
+  padding: ($base-unit * 1.8);
+  z-index: 1000;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  position: relative;
+  display:block;
+  @include transition(padding-top 0.6s cubic-bezier(0.7, 0.01, 0.3, 1));
+  h3{
+    display:inline-block;
+    color: $white;
+    text-transform: uppercase;
+    font-weight: $heavy;
+    font-size: em(14);
+  }
+  .patty{
+    width: 24px;
+	height: 4px;
+	margin: 10px 0;
+	background: $white;
+	position: relative;
+	display: inline-block;
+	vertical-align: text-bottom;
+	@include transition (all 0.3s);
+	&:before, &:after {
+	  content: '';
+	  display: block;
+	  width: 24px;
+	  height: 4px;
+	  background: $white;
+	  position: absolute;
+	  z-index: -1;
+	  -webkit-transition: all 0.3s;
+	  -moz-transition: all 0.3s;
+	  -o-transition: all 0.3s;
+	  transition: all 0.3s;
+	}
+	&:before{
+	  top: -8px;
+	}
+	&:after{
+	  top: 8px;
+	}
+  }
+  &.hidden{
+    opacity: 0;
+    visibility: hidden;
+    @include transition(opacity 0.5s, visibility 0s 0.5s);  
+  }
+  &.nothidden{
+    opacity: 1;
+    visibility: visible;
+    @include transition(opacity, 0.5s);
+  }
+}
+
+
+
+
+
+
+
+

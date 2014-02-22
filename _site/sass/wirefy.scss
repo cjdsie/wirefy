@@ -1,0 +1,436 @@
+/* ============================================================
+
+Wirefy by Chris Da Sie
+Version: 3.0.1
+URL: https://github.com/cjdsie/wirefy
+MIT License
+
+/* Import Base partial **Important Do Not Delete**
+==================================================*/
+
+@import "admin/normalize","variables", "mixins", "components/transitions","helpers/color-palette", "components/typography",  "components/menu", "components/slideshow", "components/breadcrumbs","components/blockquotes", "components/forms", "components/tables", "components/tabs", "components/pagination", "components/pager", "components/buttons", "components/tabs", "components/grid", "components/base", "components/animations", "admin/prism";
+
+/* Animations is completely optional and can be removed if not needed */
+
+/* Table of Content
+==================================================
+	1.0 Site Styles
+	2.0 Page Styles
+	  2.1 Header
+	  2.2 Main Content
+	  2.3 Footer
+	*/
+
+/* #Site Styles
+================================================== */
+body{
+  position: relative;
+  height: 100%;
+  overflow: auto;
+}
+
+.ads{
+  position:relative;
+  display: block;
+  border-top: 1px solid #e1e1e1;
+  @include transition(all, 0.2s linear);
+  @media(min-width: 75em) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 350px;
+    border: none;
+  }
+
+}
+
+.bsa_it_ad {
+  border:none !important;
+  @media(min-width: 75em){
+    border: 1px solid #e1e1e1 !important; 
+    background: transparent !important;
+    border-top: 0 !important
+  }
+
+}
+
+
+/* #Page Styles
+================================================== */
+
+.side-navigation{
+  width: 100%;
+  position: relative;
+  display:block;
+  background: $nero;
+  z-index: 100;
+  float: left;
+  margin-bottom: ($base-unit * 4);
+  @media(min-width: 65em){
+    float: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 30%;
+    height: 100%;
+    max-width: em(250);
+  }
+
+}
+
+
+/* Header 
+--------------------------------------------------*/
+
+header {
+    width: 50%;
+    float: left;
+    @media(min-width: 65em){
+      width: em(250);
+      display:block;
+      background: $nero;
+      position: relative;
+    }
+    .brand-icon{
+      margin:0;
+      width: 180px;
+      width: 100%;
+      height: 50px;
+      text-indent: -9999px;
+      @media(min-width: 65em){
+        height: 220px;
+      }
+      display:block;
+      position:relative;
+      background: transparent url('/img/wirefy-logo.svg') no-repeat scroll 8% 50%;
+      @media(min-width: 65em){
+        background-position: 50% 50%; 
+      }
+      background-size: 149px auto;
+  }
+}
+
+nav {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  background: transparent;
+  @media(min-width: 65em){
+    background: #f2f2f2;
+    color: $white;
+    padding: 0 0 ($base-unit * 3);
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: em(250);
+    height: 100%;
+  }
+  .nav{
+    width: 100%;
+    display: block;
+    position:relative;
+    height: 100%;
+    li{
+      line-height: ($base-unit * 8);
+      cursor: pointer;
+      margin:0;
+      a {
+        display:block;
+        width: em(250);
+        width: 100%;
+        padding: ($base-unit + 4) ($base-unit * 4);
+        white-space: nowrap;
+        color: $white;
+        @media(min-width: 65em){
+          color: $black-70;
+        }
+        @include transition(all, 0.2s ease-in-out);
+        &.active{
+          background: $white;
+          color: #444;
+        }
+         .nav-label {
+			  display: inline-block;
+			  vertical-align: middle;
+			  font-weight: 500;
+			  font-size: inherit;
+			  @media(min-width: 65em){
+			    font-size: em(20);
+			  }
+			}
+        @include hoverActiveFocus(color, $green_waterloo);
+      }
+      &:hover, &:active {
+        background: $white;
+      }
+      &.issues{
+        margin-top: 0;
+        @media(min-width: 65em) {
+          margin-top: 10%; 
+          padding: 0 ($base-unit * 5);
+        }
+        a{
+          color: $white;
+          @media(min-width: 40em){
+            border: 0;
+            background: $link-color;
+            color: $white;
+            padding: 0.7em 1em;
+          }
+          @media(min-width: 65em){
+            @include border-radius(75px);
+ 			border: 2px solid $link-color;
+	        padding: 0px;
+	        text-align: center;
+	        font-weight: $heavy;
+	        color: $link-color;
+	        background: transparent;
+          }
+          .nav-label{
+            font-size: em(14);
+            font-weight: $heavy;
+            color: $white;
+            @media(min-width: 65em){
+              color: $link-color;
+            }
+          }
+        }
+        &:hover{
+          background: transparent;
+        }
+      }
+    }
+  }
+}
+
+.social-media {
+  display:none;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  @media(min-width: 65em){
+    display:block;
+  }
+  ul{
+    width: 100%;
+    @include clearfix();
+    margin: 0;
+    li{
+      width: 50%;
+      text-align: center;
+      display:inline-block;
+      position: relative;
+      float:left;
+      @include clearfix();
+      padding: 2%;
+      margin:0;
+      &.twitter{
+        background: #00aced;
+      }
+      &.github{
+        background: #3085d6;
+      }
+      a, a[href*="//"]:not([href*="mysite.com"]){
+        color: $white;
+        font-weight: $heavy;
+      }
+    }
+  }
+}
+
+
+
+/* Main Content 
+--------------------------------------------------*/
+
+main{
+  outline: 0;
+  position: relative;
+  display: block;
+  @include clearfix();
+  @media(min-width: 65em){
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #fff;
+    &.main{
+      left: em(250);
+    }
+  }
+  .wrapper{
+    width: 95%;
+    padding: ($base-unit * 6) 0;
+    display: block;
+    position: relative;
+    @include center-block();
+    @media(min-width: 65em){
+      max-width: 820px;
+      width: 100%;
+      padding: ($base-unit * 9) ($base-unit * 10);
+      margin: 0;
+    }
+    a{
+      @include paragraphlink();
+    }
+  }
+  section{
+    margin-bottom: ($base-unit * 4.5);
+    @include clearfix();
+    .sub-content{
+      @include row();
+    }
+  }
+}
+
+h3{
+  font-weight: $heavy;
+}
+
+.grid_example{
+  @include row();
+  background: $onahau;
+  margin: ($base-unit * 4) 0;
+  article{
+    @include column(12);
+    @media(min-width: 55em){
+      @include column(8);
+    }
+    ul{
+      @include row(12);
+      @media(min-width: 55em){
+        @include row(8);
+      }
+      li{
+        @include column(12,12);
+        @media(min-width: 55em){
+          @include column(4,8);
+        }
+      }
+    }
+  }
+  aside{
+    @include column(12);
+    @media(min-width: 55em) {
+      @include column(4);
+    }
+  }
+  .grid-filler{
+    background: #46bcd2;
+	padding: 24px 0;
+	max-width: inherit;
+	margin-top: 1.2em;
+	margin-bottom: 1.2em;
+	font-weight: bold;
+	color: #fff;
+	text-align: center;
+	p{
+	  margin:0;
+	}
+  }
+}
+
+.headings{
+  .code-html, .rendered-html{
+    @include column(12);
+    @media(min-width: 55em){
+      @include column(6);
+    }
+  }
+}
+
+.icons{
+  @include row();
+  margin-bottom: ($base-unit * 4.5);
+  div{
+    @include column(6);
+    padding: 0;
+    @media(min-width: 55em){
+      @include column(4);
+    }
+  }
+}
+
+button, .button{
+  @include button();
+  &.disabled{
+    @include button-style($black-20, false, true);
+  }
+}
+
+.rounded{
+   @include button-style($primary-color, true, false);
+   &.disabled{
+    @include button-style($black-20, true, true);
+  }
+  }
+
+main .wrapper a.button {
+  color: $white;
+  text-decoration: none;
+}
+
+/* Newsletter
+-------------------------------------------------*/
+#mc_embed_signup {
+  background: #f1f1f1;
+  padding: ($base-unit * 4) ($base-unit * 5) ($base-unit * 3);
+  display: block;
+  position: relative;
+  @include clearfix(); 
+  .newsletter-intro{
+    @include column(12);
+    @media(min-width: 65em){
+      @include column(7);
+      margin-top: ($base-unit);
+    }
+    h5{
+      font-weight: $semi-bold;
+      text-transform: none;
+    }
+  }
+  .mc-field-group {
+    @include column(12);
+    @media(min-width: 65em) {
+      @include column(5);
+    }
+    .email{
+      height: em(36);
+      font-size: em(16);
+      display:block;
+      @include center-block;
+      @media(min-width: 55em){
+        display:inline;
+        margin:0;
+      }
+    }
+    .button {
+      @include button($button-sml);
+      font-size: em(15);
+      margin-bottom: 0;
+      display:block;
+      margin-top: 2%;
+      @include center-block;
+      @media(min-width: 55em){
+        display:inline;
+        margin-top: 0;
+        margin: 0;
+      }
+    }
+  }
+}
+
+
+/* Footer 
+--------------------------------------------------*/
+footer{
+  border-top: 1px solid #e1e1e1;
+  padding: ($base-unit * 3) 0;
+  text-align: center;
+  .container{
+    width: 90%;
+  }
+}
+
