@@ -8,27 +8,37 @@
 
 <url>
   <loc>http://getwirefy.com/</loc>
-  <lastmod>2012-10-10T18:33:15+00:00</lastmod>
+  <lastmod>2014-02-22T12:07:54+00:00</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://getwirefy.com/getting-started.html</loc>
-  <lastmod>2012-10-10T18:33:15+00:00</lastmod>
+  <loc>http://getwirefy.com/grid.html</loc>
+  <lastmod>2014-02-22T12:07:54+00:00</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://getwirefy.com/features.html</loc>
-  <lastmod>2012-10-10T18:33:15+00:00</lastmod>
+  <loc>http://getwirefy.com/typography.html</loc>
+  <lastmod>2014-02-22T12:07:54+00:00</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://getwirefy.com/base-css.html</loc>
-  <lastmod>2012-10-10T18:33:15+00:00</lastmod>
+  <loc>http://getwirefy.com/lists.html</loc>
+  <lastmod>2014-02-22T12:07:54+00:00</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://getwirefy.com/ask-a-question.html</loc>
-  <lastmod>2012-10-10T18:33:15+00:00</lastmod>
+  <loc>http://getwirefy.com/ui-elements.html</loc>
+  <lastmod>2014-02-22T12:07:54+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://getwirefy.com/forms.html</loc>
+  <lastmod>2014-02-22T12:07:54+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://getwirefy.com/tables.html</loc>
+  <lastmod>2014-02-22T12:07:54+00:00</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 </urlset>
