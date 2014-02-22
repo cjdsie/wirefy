@@ -1,0 +1,81 @@
+/* Lists
+--------------------------------------------------*/
+
+ul, ol {
+  margin-bottom: ($base-unit * 3);
+}
+
+ul {
+  list-style: none outside;
+}
+
+ol {
+  list-style: decimal;
+  margin-left: ($base-unit * 3);
+}
+
+ul {
+  &.square, &.circle, &.disc {
+    margin-left: ($base-unit * 3);
+  }
+  &.square {
+    list-style: square outside;
+  }
+  &.circle {
+    list-style: circle outside;
+  }
+  &.disc {
+    list-style: disc outside;
+  }
+  ul, ol {
+    margin: $base-unit 0 $base-unit ($base-unit * 3);
+    font-size: 90%;
+  }
+}
+
+ol {
+  ol, ul {
+    margin: $base-unit 0 $base-unit ($base-unit * 3);
+    font-size: 90%;
+    li{
+
+    }
+  }
+}
+
+ul {
+  ul li, ol li {
+    margin-bottom: $base-unit;
+  }
+}
+
+ol {
+  ol li, ul li {
+    margin-bottom: $base-unit;
+  }
+}
+
+li {
+  line-height: inherit;
+  margin-bottom: ($base-unit * 2);
+}
+
+ul.large li, li p {
+  line-height: inherit;
+}
+
+.list-bordered {
+  list-style-type: none;
+  margin: 0 0 ($base-unit * 3) 0;
+  padding: 0;
+  li {
+    margin-bottom: $base-unit;
+    padding-bottom: $base-unit;
+    border-bottom: 1px dashed #c7ced6;
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom-width: 0;
+    }
+  }
+}	

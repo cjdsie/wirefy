@@ -1,0 +1,46 @@
+/* Images
+--------------------------------------------------*/
+
+img {
+  max-width: 100%;
+  border-width: 0;
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* -- FIGURES -- */
+
+figure {
+  margin-bottom: ($base-unit * 6);
+  img {
+    margin-bottom: ($base-unit * 2);
+  }
+  figcaption {
+    display: block;
+    font-weight: normal;
+    font-size: em(14);
+    color: #808080;
+  }
+}
+
+/* -- VIDEOS & OTHER MEDIA -- */
+
+video{
+	width:100%;
+	}
+	
+iframe, embed, object {
+  max-width: 100%;
+}
+.vendor{
+	padding:2%;
+	background: #d1eed1;
+	margin-bottom:2em;
+	}
+.unsupported {
+	background:#fddfde;
+}

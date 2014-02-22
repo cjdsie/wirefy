@@ -1,0 +1,96 @@
+
+/* HTML Elements
+================================================== */
+/* apply a natural box layout model to all elements */
+
+/* HTML & Body
+--------------------------------------------------*/
+
+*{
+  @include border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: $body-bg; 
+  height: 100%;
+  font-size: $base-font-size;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: $magnolia;
+  @include vendorize(text-size-adjust, $base-font-size);
+}
+
+body {
+  background-color: transparent url('#{$imagePath}/tmp/grid.png');
+  font-size: em($basefont);
+  line-height: (27 / $basefont);
+  color: $body-font-color;
+  -webkit-font-smoothing: $font-smoothing;
+  /* Fix for webkit rendering */
+  @include vendorize(text-size-adjust, $base-font-size);
+}
+
+
+h1,h2,h3,h4,h5,h6,hgroup,
+ul,ol,dd,
+p,figure,
+pre,table,fieldset,hr {
+  margin-bottom: $spacing;
+}
+
+/* Containers
+--------------------------------------------------*/
+
+.container {
+  @include center-block;
+  width: 100%; 
+  max-width: $total-width; 
+  padding: 0;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+}
+
+
+// declare non-grid-related styles for your elements ============================================= /
+section div {
+  padding: ($base-unit * 3) 0;
+}
+
+.hero {
+  height: $vertical-measure * 10;
+  background-color: $black-60;
+}
+
+
+/* Horizontal Rules
+--------------------------------------------------*/
+
+hr {
+  border: solid #ddd;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: .625em 0 1.875em;
+  height: 0;
+}
+
+/* Links
+--------------------------------------------------*/
+
+a {
+  color: $black-70;
+  text-decoration: none;
+  outline: 0;
+  &:visited {
+    color: $black-70;
+    text-decoration: underline;
+    outline: 0;
+  }
+  @include hoverActiveFocus(color, $link-color-hover);
+}
+
+
+

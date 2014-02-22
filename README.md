@@ -14,7 +14,23 @@ Creating static wireframes can be great but sometimes clients just don't underst
 
 ## Quick Start
 
-Clone the git repo - `git clone git://github.com/cjdsie/wirefy.git` - or [download it](https://github.com/cjdsie/wirefy/zipball/master)  
+Clone the git repo - `git clone git://github.com/cjdsie/wirefy.git` - or [download it](https://github.com/cjdsie/wirefy/zipball/master)
+
+
+##Getting started
+
+This framework using Node.js, NPM (Node Package Manager), and Grunt.js to manage the code in this repo. To preview code locally, you'll need to install Node and NPM, then run the following commands from a terminal window, in the repo directory: 
+
+``` bash
+ $ npm install
+ $ grunt
+```
+Those commands do the following:
+
+- `npm install` will install the necessary node.js packages to develop on this project
+- `grunt` will run a series of tasks defined in Gruntfile.js, such as concatenating or minifying CSS and JavaScript.
+
+This is the only bit of the Node language will you will need to know to use Wirefy. Everything else is simple HTML, Sass and Javascript 
 
 
 ## Features
@@ -59,7 +75,6 @@ If you've been using Wirefy, we want to hear from you. We want to make Wirefy ev
 
 * Create new Template files
 * Update Documentation site
-* Change icons from Font Awesome to Dashicons
 * Continue to improve grid and typography
 
 

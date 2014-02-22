@@ -5,12 +5,10 @@ Version: 3.0.1
 URL: https://github.com/cjdsie/wirefy
 MIT License
 
-/* Import Base partial **Important Do Not Delete**
+/* Import Base partial **Important Remove Partials That Aren't Needed**
 ==================================================*/
 
-@import "normalize","variables", "mixins", "typography", "helpers/color-palette", "components/menu", "components/slideshow", "components/breadcrumbs","components/blockquotes", "components/forms", "components/tables", "components/tabs", "components/pagination", "components/pager", "components/buttons", "components/tabs", "grid", "base",  "transitions", "animations";
-
-/* Animations is completely optional and can be removed if not needed */
+@import "components/normalize","variables", "mixins", "components/typography", "helpers/color-palette", "components/menu", "components/slideshow", "components/breadcrumbs","components/blockquotes", "components/forms", "components/tables", "components/tabs", "components/pagination", "components/pager", "components/buttons", "components/tabs", "components/grid", "components/base", "components/lists", "components/media", "components/slideshow", "components/transitions", "components/animations";
 
 /* Table of Content
 ==================================================
