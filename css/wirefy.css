@@ -562,7 +562,7 @@ del {
   pointer-events: none !important; }
 
 .nav-toggle {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -776,7 +776,7 @@ del {
 
 .centered-btns_nav {
   z-index: 3;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
   top: 50%;
   right: auto;
   bottom: auto;
@@ -818,7 +818,7 @@ del {
   display: block;
   font-size: 0;
   text-align: start;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
   display: block;
   background: #fff;
   /* Fix for IE6-9 */
@@ -846,7 +846,7 @@ del {
   display: block;
   font-size: 0;
   text-align: start;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
   opacity: 0.6;
   background: black url("../img//themes/themes.gif") no-repeat left 50%;
   width: 2.375em; }
@@ -1014,7 +1014,7 @@ a {
   display: block;
   font-size: 0;
   text-align: start;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
   opacity: 0.7;
   z-index: 3;
   height: 3.8125em;
@@ -1083,7 +1083,6 @@ a {
   src: url("fonts/flexslider-icon.eot?#iefix") format("embedded-opentype"), url("fonts/flexslider-icon.woff") format("woff"), url("fonts/flexslider-icon.ttf") format("truetype"), url("fonts/flexslider-icon.svg#flexslider-icon") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 /* FlexSlider Necessary Styles
 *********************************/
 .flexslider {
@@ -2570,6 +2569,9 @@ body {
       right: 0;
       width: 350px;
       border: none; } }
+
+.bsa_it_p {
+  display: none !important; }
 
 .bsa_it_ad {
   border: none !important; }
