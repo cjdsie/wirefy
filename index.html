@@ -26,9 +26,8 @@ description: Build intuitive, powerful wireframes for smarter web development
 	</p>
 	<p>This is the only bit of the Node language will you will need to know to use Wirefy. Everything else is simple HTML, Sass and Javascript</p>
 	<h3>Adding Elements</h3>
-	<p>All the element styles are separated into individual <mark>.scss</mark> files. They can be found in the sass folder under components. To include a particular element style into the main .scss file simply import the file into the head of the <mark>wirefy.scss</mark>. For example:
-	<pre>@import "components/buttons", "components/pager"
-	</pre>
+	<p>All the element styles are separated into individual <mark>.scss</mark> files. They can be found in the sass folder categorized by their contribution to the overall build. The folder structure is broken down into base, vendor, framework, themes, helpers and modules. To include a particular element style into the main <mark>wirefy.scss</mark> file simply import the file into the head of the <mark>wirefy.scss</mark>. For example:
+	<pre>@import 'modules/_buttons.scss';</pre>
 	Anytime you add a new element to your wirefy.scss file, you will need to run <code>grunt</code> to compile the new styles.</p>
 	<p>If you would rather have access to all the styles and then build your own CSS or Sass file, we have placed the most current full version on <abbr title="Content Delivery Network">CDN</abbr>. Simply add the linked stylesheet to the head of your file like so:
 		<pre>&lt;link rel="stylesheet" href="//cdn.getwirefy.com/wirefy.css"></pre>
