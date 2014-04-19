@@ -12,7 +12,7 @@ grunt.initConfig({
             options: {
 	            style: 'compressed',                      // Dictionary of render options
                 includePaths: [
-                    'sass/','components/', 'helpers/'
+                    'sass/','base/', 'helpers/', 'framework', 'modules/', 'theme/', 'vendor/'
                 ]
             }
 

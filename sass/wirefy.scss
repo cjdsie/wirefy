@@ -1,36 +1,65 @@
 /* ============================================================
 
 Wirefy by Chris Da Sie
-Version: 3.0.1
+Version: 3.0.3
 URL: https://github.com/cjdsie/wirefy
+Text Domain: Wirefy
 MIT License
 
 /* Import Base partial **Important Remove Partials That Aren't Needed**
 ==================================================*/
 
-@import "components/normalize","variables", "mixins", "components/typography", "helpers/color-palette", "components/menu", "components/slideshow", "components/breadcrumbs","components/blockquotes", "components/forms", "components/tables", "components/tabs", "components/pagination", "components/pager", "components/buttons", "components/tabs", "components/grid", "components/base", "components/lists", "components/media", "components/slideshow", "components/transitions", "components/animations";
 
-/* Table of Content
-==================================================
-	1.0 Site Styles
-	2.0 Page Styles
-	  2.1 Header
-	  2.2 Main Content
-	  2.3 Footer
-	*/
+/* VENDOR - Default fall backs & external .scss files. 
+========================================================================== */
 
-/* #Site Styles
-================================================== */
+@import 'vendor/_normalize.scss';
+
+/* Base - Base variable file along with starting points mixins & placeholders. ========================================================================== */
+
+@import 'base/_variables.scss';
+@import 'base/_mixins.scss';
+@import 'base/_base.scss';
 
 
-/* #Page Styles
-================================================== */
+/* FRAMEWORK - Structure & layout files including the grid function. ========================================================================== */
 
-/* Header 
---------------------------------------------------*/
+@import 'framework/_grid.scss';
+@import 'framework/_typography.scss';
 
-/* Main Content 
---------------------------------------------------*/
 
-/* Footer 
---------------------------------------------------*/
+/* Helpers - Added value to each file. (Optional) 
+========================================================================== */
+
+@import 'helpers/_color-palette.scss';
+@import 'helpers/_font-awesome.scss';
+@import 'helpers/_render-gradients.scss';
+
+
+/* MODULES - Individual site elements. 
+========================================================================== */
+
+@import 'modules/_animations.scss';
+@import 'modules/_transitions.scss';
+@import 'modules/_breadcrumbs.css';
+@import 'modules/_buttons.scss';
+@import 'modules/_blockquotes.scss';
+@import 'modules/_lists.scss';
+@import 'modules/_links.scss';
+@import 'modules/_pager.scss';
+@import 'modules/_pagination.scss';
+@import 'modules/_media.scss';
+@import 'modules/_slideshow.scss';
+@import 'modules/_hr.scss';
+@import 'modules/_forms.scss';
+@import 'modules/_tables.scss';
+@import 'modules/_tabs.scss';
+
+
+/* Theme - Theme styles for each area of the site. 
+========================================================================== */
+
+@import 'theme/_header.scss';
+@import 'theme/_menu.scss';
+@import 'theme/_main.scss';
+@import 'theme/_footer.scss';

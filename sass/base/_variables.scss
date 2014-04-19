@@ -86,3 +86,21 @@ $prefix-for-mozilla:   true !default;
 $prefix-for-microsoft: true !default;
 $prefix-for-opera:     true !default;
 $prefix-for-spec:      true !default; // required for keyframe mixin
+
+
+
+/* Grid Variables
+========================== */
+
+// Defaults which you can freely override
+$column-width: 60px;
+$gutter-width: 20px;
+$columns: 12;
+
+
+// Set $total-width to 100% for a fluid layout
+$total-width: 100%;
+
+// Uncomment these two lines and the star-hack width/margin lines below to enable sub-pixel fix for IE6 & 7. See http://tylertate.com/blog/2012/01/05/subpixel-rounding.html
+// $min-width: 999999;
+// $correction: 0.5 / $min-width * 100;

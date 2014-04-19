@@ -51,6 +51,7 @@ For full documentation, our homepage [here](http://getwirefy.com).
 
 ## Changelog
 
+*   v3.0.3 SASS Partials restructured for easier maintenance and basic JS functions added in.
 *   v3.0.2 Icomoon Font added. Better Partials and added CDN support
 *   v3.0.1 Added Grunt functionality for automated tasks.
 *   v3.0.0 Rebuilt from the ground up.

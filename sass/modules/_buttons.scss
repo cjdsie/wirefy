@@ -1,6 +1,7 @@
 /************************
 *****    Buttons   ******
-**** Version: 0.0.1 *****
+**** Version: 0.0.2 ****
+**** Updated for SASS 3.3.5 *****
 *************************/
 
 
@@ -9,43 +10,43 @@
 //
 
 // We use these to build padding for buttons.
-$button-med: em(12) !default;
-$button-tny: em(7) !default;
-$button-sml: em(9) !default;
-$button-lrg: em(16) !default;
+$button-med: em(12) !global;
+$button-tny: em(7) !global;
+$button-sml: em(9) !global;
+$button-lrg: em(16) !global;
 
 // We use this to control the display property.
-$button-display: inline-block !default;
-$button-margin-bottom: em(20) !default;
+$button-display: inline-block !global;
+$button-margin-bottom: em(20) !global;
 
 // We use these to control button text styles.
-$button-font-family: inherit !default;
-$button-font-color: #fff !default;
-$button-font-color-alt: #333 !default;
-$button-font-med: em(16) !default;
-$button-font-tny: em(11) !default;
-$button-font-sml: em(13) !default;
-$button-font-lrg: em(20) !default;
-$button-font-weight: $semi-bold !default;
-$button-font-align: center !default;
+$button-font-family: inherit !global;
+$button-font-color: #fff !global;
+$button-font-color-alt: #333 !global;
+$button-font-med: em(16) !global;
+$button-font-tny: em(11) !global;
+$button-font-sml: em(13) !global;
+$button-font-lrg: em(20) !global;
+$button-font-weight: $semi-bold !global;
+$button-font-align: center !global;
 
 // We use these to control various hover effects.
-$button-function-factor: 10% !default;
+$button-function-factor: 10% !global;
 
 // We use these to control button border styles.
-$button-border-width: 1px !default;
-$button-border-style: solid !default;
+$button-border-width: 1px !global;
+$button-border-style: solid !global;
 
 // Radius and Rounded
 $global-radius: em(3);
 $global-rounded: em(1000);
 
 // We use this to set the default radius used throughout the core.
-$button-radius: $global-radius !default;
-$button-round: $global-rounded !default;
+$button-radius: $global-radius !global;
+$button-round: $global-rounded !global;
 
 // We use this to set default opacity for disabled buttons.
-$button-disabled-opacity: 0.6 !default;
+$button-disabled-opacity: 0.6 !global;
 
 
 
