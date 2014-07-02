@@ -1,6 +1,6 @@
 /************************
 *****    Buttons   ******
-**** Version: 0.0.2 ****
+**** Version: 0.0.3 ****
 **** Updated for SASS 3.3.5 *****
 *************************/
 
@@ -10,43 +10,43 @@
 //
 
 // We use these to build padding for buttons.
-$button-med: em(12) !global;
-$button-tny: em(7) !global;
-$button-sml: em(9) !global;
-$button-lrg: em(16) !global;
+$button-med: em(12);
+$button-tny: em(7);
+$button-sml: em(9);
+$button-lrg: em(16);
 
 // We use this to control the display property.
-$button-display: inline-block !global;
-$button-margin-bottom: em(20) !global;
+$button-display: inline-block;
+$button-margin-bottom: em(20);
 
 // We use these to control button text styles.
-$button-font-family: inherit !global;
-$button-font-color: #fff !global;
-$button-font-color-alt: #333 !global;
-$button-font-med: em(16) !global;
-$button-font-tny: em(11) !global;
-$button-font-sml: em(13) !global;
-$button-font-lrg: em(20) !global;
-$button-font-weight: $semi-bold !global;
-$button-font-align: center !global;
+$button-font-family: inherit;
+$button-font-color: #fff;
+$button-font-color-alt: #333;
+$button-font-med: em(16);
+$button-font-tny: em(11);
+$button-font-sml: em(13);
+$button-font-lrg: em(20);
+$button-font-weight: $semi-bold;
+$button-font-align: center;
 
 // We use these to control various hover effects.
-$button-function-factor: 10% !global;
+$button-function-factor: 10%;
 
 // We use these to control button border styles.
-$button-border-width: 1px !global;
-$button-border-style: solid !global;
+$button-border-width: 1px;
+$button-border-style: solid;
 
 // Radius and Rounded
 $global-radius: em(3);
 $global-rounded: em(1000);
 
 // We use this to set the default radius used throughout the core.
-$button-radius: $global-radius !global;
-$button-round: $global-rounded !global;
+$button-radius: $global-radius;
+$button-round: $global-rounded;
 
 // We use this to set default opacity for disabled buttons.
-$button-disabled-opacity: 0.6 !global;
+$button-disabled-opacity: 0.6;
 
 
 

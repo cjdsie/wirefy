@@ -19,9 +19,13 @@ Clone the git repo - `git clone git://github.com/cjdsie/wirefy.git` - or [downlo
 
 ##Getting started
 
-This framework using Node.js, NPM (Node Package Manager), and Grunt.js to manage the code in this repo. To preview code locally, you'll need to install Node and NPM, then run the following commands from a terminal window, in the repo directory: 
+This framework using Node.js, NPM (Node Package Manager), and Grunt.js to manage the code in this repo. Please make sure that you have these installed to begin with. In order to get started with Grunt, you must install the Grunt command line interface (CLI) globally `npm install -g grunt-cli`. This will give you the ability to use the grunt development tasks found in the Gruntfile.js file. To preview code locally, you'll need to install Node and NPM, then run the following commands from a terminal window, in the repo directory: 
 
 ``` bash
+ // If Grunt is not installed yet
+ $ npm install -g grunt-cli
+
+ // If Grunt is installed start here
  $ npm install
  $ grunt
 ```
@@ -51,6 +55,7 @@ For full documentation, our homepage [here](http://getwirefy.com).
 
 ## Changelog
 
+*	v3.0.4 Updated README file with Grunt CLI install information and fixed button SASS file for global use across various SASS versions.
 *   v3.0.3 SASS Partials restructured for easier maintenance and basic JS functions added in.
 *   v3.0.2 Icomoon Font added. Better Partials and added CDN support
 *   v3.0.1 Added Grunt functionality for automated tasks.
