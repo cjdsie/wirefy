@@ -1,0 +1,75 @@
+/* IE Support
+================================================== */
+/* To ease the pain of dealing with special values for IE 6 - 10
+*/
+
+// For example:
+// test {
+// /* Internet Explorer 10 */
+//   @include ie10((property: value));
+// }
+
+// Internet Explorer 6
+// ---
+// @param [literal] $value: value for Internet Explorer 6
+@function ie6($value) {
+  @return #{'_' + $value};
+}
+
+@mixin ie6($declarations) {
+  @each $property, $value in $declarations {
+    #{$property}: ie6($value);
+  }
+}
+
+// Internet Explorer 6-7
+// ---
+// @param [literal] $value: value for Internet Explorer 6 and 7
+@function ie7($value) {
+  @return #{'!' + $value};
+}
+
+@mixin ie7($declarations) {
+  @each $property, $value in $declarations {
+    #{$property}: ie7($value);
+  }
+}
+
+// Internet Explorer 6-8
+// ---
+// @param [literal] $value: value for Internet Explorer 6 to 8
+@function ie8($value) {
+  @return #{$value + ' \9'};
+}
+
+@mixin ie8($declarations) {
+  @each $property, $value in $declarations {
+    #{$property}: ie8($value);
+  }
+}
+
+// Internet Explorer 9-10
+// ---
+// @param [literal] $value: value for Internet Explorer 9 and 10
+@function ie9($value) {
+  @return #{$value + '\0'};
+}
+
+@mixin ie9($declarations) {
+  @each $property, $value in $declarations {
+    #{$property}: ie9($value);
+  }
+}
+
+// Internet Explorer 6-10
+// ---
+// @param [literal] $value: value for Internet Explorer 6 to 10
+@function ie10($value) {
+  @return #{$value + '\9'};
+}
+
+@mixin ie10($declarations) {
+  @each $property, $value in $declarations {
+    #{$property}: ie10($value);
+  }
+}

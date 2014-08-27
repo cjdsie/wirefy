@@ -577,6 +577,10 @@ del {
 
 /* Helpers - Added value to each file. (Optional) 
 ========================================================================== */
+/* IE Support
+================================================== */
+/* To ease the pain of dealing with special values for IE 6 - 10
+*/
 /* Color Palette
 ================================================== */
 /* SASS Color Palettes by James Pearson - https://github.com/FearMediocrity/sass-color-palettes
