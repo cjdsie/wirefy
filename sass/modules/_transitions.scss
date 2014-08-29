@@ -6,18 +6,16 @@
 @mixin transition ($properties...) {
   @if length($properties) >= 1 {
     @include vendorize(transition, $properties);
-  }
-
-  @else {
-    $properties: all 0.15s ease-out 0;
+  } @else {
+    $properties: all .15s ease-out 0;
     @include vendorize(transition, $properties);
   }
 }
 
 @mixin transition-property ($properties...) {
-   -webkit-transition-property: transition-property-names($properties, 'webkit');
-      -moz-transition-property: transition-property-names($properties, 'moz');
-           transition-property: transition-property-names($properties, false);
+  -webkit-transition-property: transition-property-names($properties, 'webkit');
+  -moz-transition-property: transition-property-names($properties, 'moz');
+  transition-property: transition-property-names($properties, false);
 }
 
 @mixin transition-duration ($times...) {

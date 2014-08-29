@@ -2,6 +2,18 @@ module.exports = function(grunt) {
 
 grunt.initConfig({
 	pkg: grunt.file.readJSON('package.json'),
+	scsslint: {
+	    allFiles: [
+	        'sass/*.scss', 'sass/base/*.scss', 'sass/helpers/*.scss', 'sass/framework/*.scss', 'sass/modules/*.scss', 'sass/theme/*.scss', 'sass/vendor/*.scss'
+	    ],
+	    options: {
+	        bundleExec: false,
+	        config: '.scss-lint.yml',
+	        reporterOutput: 'scss-lint-report.xml',
+	        colorizeOutput: true,
+	        maxBuffer: 'Infinite'
+	    }
+	},
     sass: {                                 // Task
         dist: {                             // Target
             files: {                        // Dictionary of files
@@ -12,7 +24,7 @@ grunt.initConfig({
             options: {
 	            style: 'compressed',                      // Dictionary of render options
                 includePaths: [
-                    'sass/','base/', 'helpers/', 'framework', 'modules/', 'theme/', 'vendor/'
+                    'sass/','base/', 'helpers/', 'framework/', 'modules/', 'theme/', 'vendor/'
                 ]
             }
 
@@ -58,6 +70,7 @@ grunt.initConfig({
 	}
 });
 
+grunt.loadNpmTasks('grunt-scss-lint');
 grunt.loadNpmTasks('grunt-contrib-sass');
 grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-contrib-imagemin');

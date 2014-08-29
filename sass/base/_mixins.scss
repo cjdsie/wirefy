@@ -4,13 +4,12 @@
 *************************/
 
 
-/* Box sizing
-========================= */
+// Box sizing
 
-@mixin border-box { // border-box mixin
+@mixin border-box {
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 
@@ -45,14 +44,12 @@
 @mixin image-rendering ($mode:optimizeQuality) {
 
   @if ($mode == optimize-contrast) {
-      image-rendering: -moz-crisp-edges;
-      image-rendering: -o-crisp-edges;
-      image-rendering: -webkit-optimize-contrast;
-      image-rendering: optimize-contrast;
-  }
-
-  @else {
-      image-rendering: $mode;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+  } @else {
+    image-rendering: $mode;
   }
 }
 
@@ -61,68 +58,63 @@
 
 * {
   &:first-child + html {
-    .row, .clearfix {
+
+    .row, 
+    .clearfix {
       zoom: 1;
     }
+
   }
+
   @include vendorize(box-sizing, border-box);
-  &:after, &:before{
+
+  &:after, 
+  &:before {
     @include vendorize(box-sizing, border-box);
   }
+
 }
 
 /* Breakpoints 
 ========================= */
 
 @mixin breakpoint($point, $value: 0) {
-  @if $point == xlarge{
+  @if $point == xlarge {
     @media (min-width: em(1392)) { @content; }
-  }
-  @else if $point == large {
-    @media (min-width: em(1030)) { @content; }
-  }
-  @else if $point == medium {
-    @media (min-width: em(888)) { @content; }
-  }
-  @else if $point == small {
-    @media (min-width: em(600))  { @content; }
-  }
-  @else if $point == xsmall {
-    @media (min-width: em(480))  { @content; }
-  }
-  @else if $point == retina {
-    @media only screen and (-webkit-min-device-pixel-ratio : 1.5),
-	only screen and (min-device-pixel-ratio : 1.5)  { @content; }
-  }
-  @else if $point == xlarge-retina {
-    @media (min-width: em(1392)) and (-webkit-min-device-pixel-ratio : 1.5),
-	only screen and (min-device-pixel-ratio : 1.5) { @content; }
-  }
-  @else if $point == large-retina {
-    @media (min-width: em(1030)) and (-webkit-min-device-pixel-ratio : 1.5),
-	only screen and (min-device-pixel-ratio : 1.5) { @content; }
-  }
-  @else if $point == medium-retina {
-    @media (min-width: em(888)) and (-webkit-min-device-pixel-ratio : 1.5),
-	only screen and (min-device-pixel-ratio : 1.5) { @content; }
-  }
-  @else if $point == small-retina {
-    @media (min-width: em(600)) and (-webkit-min-device-pixel-ratio : 1.5),
-	only screen and (min-device-pixel-ratio : 1.5) { @content; }
-  }
-  @else if $point == xsmall-retina {
-    @media (min-width: em(480)) and (-webkit-min-device-pixel-ratio : 1.5),
-	only screen and (min-device-pixel-ratio : 1.5) { @content; }
-  }
-  @else if $point == hdpi($ratio: 1.3) {
-    @media only screen and (-webkit-min-device-pixel-ratio: $ratio),
-    only screen and (min--moz-device-pixel-ratio: $ratio),
-    only screen and (-o-min-device-pixel-ratio: #{$ratio}/1),
-    only screen and (min-resolution: #{round($ratio*96)}dpi),
-    only screen and (min-resolution: #{$ratio}dppx) { @content; }
-  }
-  @else {
-  	@media ($point: $value) { @content; }
+  } @else if $point == large {
+      @media (min-width: em(1030)) { @content; }
+  } @else if $point == medium {
+      @media (min-width: em(888)) { @content; }
+  } @else if $point == small {
+      @media (min-width: em(600))  { @content; }
+  } @else if $point == xsmall {
+      @media (min-width: em(480))  { @content; }
+  } @else if $point == retina {
+      @media only screen and (-webkit-min-device-pixel-ratio : 1.5),
+	  only screen and (min-device-pixel-ratio : 1.5)  { @content; }
+  } @else if $point == xlarge-retina {
+      @media (min-width: em(1392)) and (-webkit-min-device-pixel-ratio : 1.5),
+	  only screen and (min-device-pixel-ratio : 1.5) { @content; }
+  } @else if $point == large-retina {
+      @media (min-width: em(1030)) and (-webkit-min-device-pixel-ratio : 1.5),
+	  only screen and (min-device-pixel-ratio : 1.5) { @content; }
+  } @else if $point == medium-retina {
+      @media (min-width: em(888)) and (-webkit-min-device-pixel-ratio : 1.5),
+	  only screen and (min-device-pixel-ratio : 1.5) { @content; }
+  } @else if $point == small-retina {
+      @media (min-width: em(600)) and (-webkit-min-device-pixel-ratio : 1.5),
+	  only screen and (min-device-pixel-ratio : 1.5) { @content; }
+  } @else if $point == xsmall-retina {
+      @media (min-width: em(480)) and (-webkit-min-device-pixel-ratio : 1.5),
+	  only screen and (min-device-pixel-ratio : 1.5) { @content; }
+  } @else if $point == hdpi($ratio: 1.3) {
+      @media only screen and (-webkit-min-device-pixel-ratio: $ratio),
+      only screen and (min--moz-device-pixel-ratio: $ratio),
+      only screen and (-o-min-device-pixel-ratio: #{$ratio}/1),
+      only screen and (min-resolution: #{round($ratio*96)}dpi),
+      only screen and (min-resolution: #{$ratio}dppx) { @content; }
+  } @else {
+  	  @media ($point: $value) { @content; }
   }
 }
 
@@ -137,10 +129,10 @@
 
 @mixin image-2x($image, $width, $height) {
   @media (min--moz-device-pixel-ratio: 1.3),
-         (-o-min-device-pixel-ratio: 2.6/2),
-         (-webkit-min-device-pixel-ratio: 1.3),
-         (min-device-pixel-ratio: 1.3),
-         (min-resolution: 1.3dppx) {
+  (-o-min-device-pixel-ratio: 2.6/2),
+  (-webkit-min-device-pixel-ratio: 1.3),
+  (min-device-pixel-ratio: 1.3),
+  (min-resolution: 1.3dppx) {
     /* on retina, use image that's scaled by 2 */
     background-image: url($image);
     background-size: $width $height;
@@ -152,24 +144,29 @@
 ========================= */
 
 @mixin clearfix() {
-    & {
-      *zoom: 1;
-    }
-    &:before,
-    &:after {
-      content: "";
-      display: table;
-    }
-    &:after {
-      clear: both;
-    }
+  & {
+    *zoom: 1;
+  }
+
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+
 }
 
 /* Visually Hidden Focusable
 ============================== */
 
 .visuallyhidden.focusable {
-  &:active, &:focus {
+
+  &:active, 
+  &:focus {
     position: static;
     clip: auto;
     height: auto;
@@ -177,20 +174,23 @@
     margin: 0;
     overflow: visible;
   }
+
 }
 
 /* Clear Floats 
 ========================= */
 @mixin clear() {
-    &:before, &:after {
-      content: "\0020";
-      display: block;
-      height: 0;
-      overflow: hidden;
-    }
-    &:after {
-      clear: both;
-    }
+  &:before, &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+
+  &:after {
+    clear: both;
+  }
+
 }
 
 
@@ -282,7 +282,7 @@
 /* :hover, :active, :focus Styles
 ============================== */
 
-@mixin hoverActiveFocus($property, $value) {
+@mixin hoveractivefocus($property, $value) {
   &:hover, &:active, &:focus {
     #{$property}: $value;
   }
@@ -290,15 +290,15 @@
 
 /* Image Path
 ============================== */
-$imagePath:   "../img/" !default;
+$imagePath:   '../img/' !default;
 
 
 /* Large
 ============================== */
 @mixin large {
-  	padding: em(14) em(24);
-	font-size: em(18);
-	text-align:center;
+  padding: em(14) em(24);
+  font-size: em(18);
+  text-align:center;
 }
 
 @mixin remove-bottom {
@@ -327,12 +327,16 @@ $imagePath:   "../img/" !default;
 
 @mixin link-list {
   width: 100%;
+
   li {
     width: auto;
     float: left;
     margin: 0 ($base-unit * 2) 0 0;
+
     &:last-child {
       margin: 0;
-   }
+    }
+
   }
+
 }

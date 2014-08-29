@@ -13,7 +13,18 @@
  * Correct `block` display not defined in IE 8/9.
  */
 
-article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+article, 
+aside, 
+details, 
+figcaption, 
+figure, 
+footer, 
+header, 
+hgroup, 
+main, 
+nav, 
+section, 
+summary {
   display: block;
 }
 
@@ -21,7 +32,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
  * Correct `inline-block` display not defined in IE 8/9.
  */
 
-audio, canvas, video {
+audio, 
+canvas, 
+video {
   display: inline-block;
 }
 
@@ -102,7 +115,7 @@ a {
 
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
+  margin: .67em 0;
 }
 
 /**
@@ -197,11 +210,11 @@ sup {
   line-height: 0;
   position: relative;
   vertical-align: baseline;
-  top: -0.5em;
+  top: -.5em;
 }
 
 sub {
-  bottom: -0.25em;
+  bottom: -.25em;
 }
 
 /* ==========================================================================
@@ -247,7 +260,7 @@ figure {
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
+  padding: .35em .625em .75em;
 }
 
 /**
@@ -268,7 +281,10 @@ legend {
  * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
  */
 
-button, input, select, textarea {
+button, 
+input, 
+select, 
+textarea {
   font-family: inherit;
   /* 1 */
   font-size: 100%;
@@ -282,7 +298,8 @@ button, input, select, textarea {
  * the UA stylesheet.
  */
 
-button, input {
+button, 
+input {
   line-height: normal;
 }
 
@@ -293,7 +310,8 @@ button, input {
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
 
-button, select {
+button, 
+select {
   text-transform: none;
 }
 
@@ -305,7 +323,8 @@ button, select {
  *    `input` and others.
  */
 
-button, html input[type="button"] {
+button, 
+html input[type="button"] {
   -webkit-appearance: button;
   /* 2 */
   cursor: pointer;
@@ -325,6 +344,7 @@ input {
  * Re-set default cursor for disabled elements.
  */
 
-button[disabled], html input[disabled] {
+button[disabled], 
+html input[disabled] {
   cursor: default;
 }

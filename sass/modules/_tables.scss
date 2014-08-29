@@ -6,7 +6,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
   background-color: transparent;
-  th, td {
+
+  th, 
+  td {
     padding: .5em;
     vertical-align: top;
     border-top: 1px solid #8c9bab;
@@ -14,45 +16,64 @@ table {
     line-height: 1.5;
     text-align: left;
   }
+
   th {
     font-weight: bold;
   }
+
   thead th {
     vertical-align: bottom;
   }
+
   colgroup + thead tr:first-child {
-    th, td {
+
+    th, 
+    td {
       border-top: 0;
     }
+
   }
+
   thead:first-child tr:first-child {
-    th, td {
+
+    th, 
+    td {
       border-top: 0;
     }
+
   }
   tbody {
+
     + tbody {
       border-top: 2px solid #8c9bab;
     }
+
     tr {
-      td, th {
-        -webkit-transition: background-color 0.25s 0 linear;
-        -moz-transition: background-color 0.25s 0 linear;
-        -ms-transition: background-color 0.25s 0 linear;
-        -o-transition: background-color 0.25s 0 linear;
-        transition: background-color 0.25s 0 linear;
+
+      td, 
+      th {
+        @include vendorize(transition, background-color .25s linear);
       }
+
       &:hover {
-        td, th {
+
+        td, 
+        th {
           background-color: #a9b4c1;
         }
+
       }
+
     }
+
   }
+
 }
 
 .table-condensed {
-  th, td {
+
+  th, 
+  td {
     padding: .25em .3125em;
   }
 }
@@ -62,21 +83,32 @@ table {
   border-left: 0;
   border-collapse: separate;
   *border-collapse: collapsed;
-  th, td {
+
+  th, 
+  td {
     border-left: 1px solid #8c9bab;
   }
+
   thead:first-child tr:first-child th {
     border-top: 0;
   }
+
   tbody:first-child tr:first-child {
-    th, td {
+
+    th, 
+    td {
       border-top: 0;
     }
+
   }
+
 }
 
 .table-striped tbody tr:nth-child(odd) {
-  td, th {
+
+  td, 
+  th {
     background-color: #c7ced6;
   }
+
 }

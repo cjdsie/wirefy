@@ -18,22 +18,22 @@
 ========================= */
 
 @function em($target, $context: $basefont) {
-    @return ($target / $context) * 1em;
+  @return ($target / $context) * 1em;
 }
 
 /* Mixins
 ========================= */
 
-@mixin font-size($sizeValue: 16) {
-  font-size: $sizeValue + px; //fallback for old browsers
-  font-size: em($sizeValue);
-  font-size: (0.125 * $sizeValue) + rem;
+@mixin font-size($sizevalue: 16) {
+  font-size: $sizevalue + px; //fallback for old browsers
+  font-size: em($sizevalue);
+  font-size: (.125 * $sizevalue) + rem;
 }
 
-@mixin line-height($heightValue: 24) {
-	line-height: $heightValue + px; //fallback for old browsers
-	line-height: (24 / $basefont);
-	line-height: (0.125 * $heightValue) + rem;
+@mixin line-height($heightvalue: 24) {
+  line-height: $heightvalue + px; //fallback for old browsers
+  line-height: (24 / $basefont);
+  line-height: (.125 * $heightvalue) + rem;
 }
 
 /* Google Web Fonts
@@ -44,11 +44,11 @@
 @mixin web-font($fonts, $variants: (), $subsets: (), $text: '', $effects: (), $secure: false) {
 
   //The $secure var defaults to false, the $url var is inited to use http
-  $url: "http://fonts.googleapis.com/css?family=";
+  $url: 'http://fonts.googleapis.com/css?family=';
 
   //If flagged secure, import fonts using https
   @if $secure {
-    $url: "https://fonts.googleapis.com/css?family=";
+    $url: 'https://fonts.googleapis.com/css?family=';
   }
 
   $i: 0;
@@ -66,7 +66,7 @@
       
       // Add a plus symbol between words.
       @if $j < length($font) {
-        $url: $url + "+";
+        $url: $url + '+';
       }
     }
     
@@ -92,13 +92,13 @@
     // It would seem that a pipe isn't a valid URL character in its unescaped form,
     // but Google reccommend using it anyway.
     @if $i < length($fonts) {
-      $url: $url + "|";
+      $url: $url + '|';
     }
   }
   
   // Add the subset argument to the URL string, if it exists.
   @if length($subsets) > 0 {
-    $url: $url + "&subset=";
+    $url: $url + '&subset=';
     $i: 0;
     @each $subset in $subsets {
       $i: $i + 1;
@@ -122,7 +122,7 @@
   
   // Add the effect argument to the URL string, if it exists.
   @if length($effects) > 0 {
-    $url: $url + "&effect=";
+    $url: $url + '&effect=';
     $i: 0;
     @each $effect in $effects {
       $i: $i + 1;
@@ -138,13 +138,13 @@
         // in which case the words will be counted as one and no extra hyphens will be added.
         // Again, a string replacement function would make this a lot easier…
         @if $j < length($effect) {
-          $url: $url + "-";
+          $url: $url + '-';
         }
       }
       
       // Add a pipe between effects.
       @if $i < length($effects) {
-        $url: $url + "|";
+        $url: $url + '|';
       }
     }
   }
@@ -157,15 +157,22 @@
 /* Base Styles
 ========================= */
 
-h1, h2, h3, h4, h5, h6 {
-  color: #181818;
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
   @include web-font((Open Sans));
+  color: #181818;
   font-weight: $semi-bold;
   text-rendering: optimizelegibility;
   line-height:(24 / $basefont);
-  a{
+
+  a {
     font-weight: inherit;
   }
+
 }
 
 h1 {
@@ -185,24 +192,45 @@ h4 {
 	 
 }
 
- h5 {
-  margin-bottom:em(20, $baseh5);
- }
+h5 {
+ margin-bottom:em(20, $baseh5);
+}
 
- h6 {
-  margin-bottom:em(20, $baseh6);
-  text-transform:uppercase;
- }
+h6 {
+ margin-bottom:em(20, $baseh6);
+ text-transform:uppercase;
+}
 
 .subheader {
   color: #777;
 }
 
 p {
-  margin: 0 0 $vertical-measure 0; // set bottom margin equal to line-height/vertical measure
+  margin: 0 0 $vertical-measure; // set bottom margin equal to line-height/vertical measure
+  @include vendorize(word-wrap, break-word);
+  word-break: break-word;
+  @include vendorize(hyphens, auto);
+
+  img {
+    margin-bottom: .375em;
+  }
+
+  &.lead {
+    font-size: em(21);
+    line-height: em(27/$basefont);
+    color: #777;
+  }
+
+  + p.no-indent {
+    text-indent: 0;
+  }
+
 }
 
-ol, ul, dl, address {
+ol, 
+ul, 
+dl, 
+address {
   margin-bottom: em(24, $basefont);
   font-size: em($basefont);
   line-height: (24 / $basefont);
@@ -213,25 +241,30 @@ small {
 }
 
 blockquote {
+
   &:before, &:after {
     content: '';
     content: none;
   }
+
 }
 
 q {
   quotes: none;
+
   &:before, &:after {
     content: '';
     content: none;
   }
+
 }
 
 cite {
   font-style: normal;
 }
 
-dl, dd {
+dl, 
+dd {
   margin-bottom: em(24);
 }
 
@@ -240,15 +273,18 @@ dt {
 }
 
 .dl-horizontal {
+
   dt {
     float: left;
     clear: left;
     width: 20.25%;
     text-align: right;
   }
+
   dd {
     margin-left: 22.78%;
   }
+
 }
 
 abbr[title] {
@@ -256,7 +292,8 @@ abbr[title] {
   cursor: help;
 }
 
-b, strong {
+b, 
+strong {
   font-weight: $heavy;
 }
 
@@ -266,7 +303,7 @@ dfn {
 
 ins {
   background-color: #f3f5f6;
-  color: #000000;
+  color: #000;
   text-decoration: none;
 }
 
@@ -278,7 +315,10 @@ mark {
   padding: 0 .25em;
 }
 
-pre, code, kbd, samp {
+pre, 
+code, 
+kbd, 
+samp {
   font-family: Monaco,Courier New,monospace;
   font-size: em(14);
   line-height: 1.5;
@@ -296,7 +336,7 @@ sub {
   font-size: em(12);
   line-height: 0;
   vertical-align: baselineheight;
-  bottom: -0.25em;
+  bottom: -.25em;
 }
 
 sup {
@@ -304,23 +344,7 @@ sup {
   font-size: em(12);
   line-height: 0;
   vertical-align: baselineheight;
-  top: -0.5em;
-}
-
-p {
-  hyphenate: auto;
-  hyphenate-lines: 3;
-  img {
-    margin-bottom: 0.375em;
-  }
-  &.lead {
-    font-size: em(21);
-    line-height: em(27/$basefont);
-    color: #777;
-  }
-  + p.no-indent {
-    text-indent: 0;
-  }
+  top: -.5em;
 }
 
 em {
@@ -335,5 +359,3 @@ strong {
 del {
   text-decoration: line-through;
 }
-
-

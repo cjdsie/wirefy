@@ -23,23 +23,23 @@ $base-unit: 6px;
 
 // The typography scale works in multiples of 6. We
 
-    $basefont:16;
-    $baseh1:40;
-    $baseh2:26;
-    $baseh3:27;
-    $baseh4:23;
-    $baseh5:18;
-    $baseh6:16;
-    $basep: 16;
+$basefont:16;
+$baseh1:40;
+$baseh2:26;
+$baseh3:27;
+$baseh4:23;
+$baseh5:18;
+$baseh6:16;
+$basep: 16;
 
-    $light: 100;
-    $regular: 300;
-    $semi-bold: 400;
-    $heavy: 700;
-    $black: 900;
+$light: 100;
+$regular: 300;
+$semi-bold: 400;
+$heavy: 700;
+$black: 900;
 
-	$line-height:                 1.5; // establish a consistent line-height equal to 27px
-	$vertical-measure:            1.5em; // establish a vertical distance for margins equal to line-height
+$line-height: 1.5; // establish a consistent line-height equal to 27px
+$vertical-measure: 1.5em; // establish a vertical distance for margins equal to line-height
 
 
 $body-bg: #fff;
@@ -61,31 +61,31 @@ $text-direction: ltr;
 
 //margins & padding
 
-	$spacing: ($base-unit * 2);
+$spacing: ($base-unit * 2);
 
 
 
 // Custom use example -> $cursor-default-value: url(http://cursors-site.net/path/to/custom/cursor/default.cur),progress;
 
-$cursor-crosshair-value: "crosshair";
-$cursor-default-value: "default";
-$cursor-pointer-value: "pointer";
-$cursor-help-value: "help";
+$cursor-crosshair-value: 'crosshair';
+$cursor-default-value: 'default';
+$cursor-pointer-value: 'pointer';
+$cursor-help-value: 'help';
 
 
 // Links
-$link-color:       $black-70;
+$link-color: $black-70;
 $link-color-hover: darken($link-color, 15%);
 
 
 /* Vendor Prefixing 
 ========================= */
 
-$prefix-for-webkit:    true !default;
-$prefix-for-mozilla:   true !default;
+$prefix-for-webkit: true !default;
+$prefix-for-mozilla: true !default;
 $prefix-for-microsoft: true !default;
-$prefix-for-opera:     true !default;
-$prefix-for-spec:      true !default; // required for keyframe mixin
+$prefix-for-opera: true !default;
+$prefix-for-spec: true !default; // required for keyframe mixin
 
 
 

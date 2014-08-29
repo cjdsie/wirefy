@@ -4,11 +4,15 @@
 *************************/
 
 ul {
+
   &.tabs {
     display: block;
-    margin: 0 0 1.25em 0;
+    margin: 0 0 1.25em;
     padding: 0;
     border-bottom: solid 1px #ddd;
+    @include clear();
+    zoom: 1;
+
     li {
       display: block;
       width: auto;
@@ -16,6 +20,7 @@ ul {
       padding: 0;
       float: left;
       margin-bottom: 0;
+
       a {
         display: block;
         text-decoration: none;
@@ -28,6 +33,7 @@ ul {
         margin: 0;
         background: #f5f5f5;
         font-size: em(14);
+
         &.active {
           background: #fff;
           height: 1.8125em;
@@ -36,38 +42,46 @@ ul {
           margin: 0 0 0 -1px;
           color: #111;
           @include border-top-radius(em(2));
+
         }
+
       }
+
       &:first-child a {
+
         &.active {
           margin-left: 0;
         }
-        border-width: 1px 1px 0 1px;
+
+        border-width: 1px 1px 0;
         -moz-border-radius-topleft: em(2);
         -webkit-border-top-left-radius: em(2);
         border-top-left-radius: em(2);
       }
+
       &:last-child a {
         -moz-border-radius-topright: em(2);
         -webkit-border-top-right-radius: em(2);
         border-top-right-radius: em(2);
       }
+
     }
+
   }
+
   &.tabs-content {
     margin: 0;
     display: block;
+
     > li {
       display: none;
+
       &.active {
         display: block;
       }
-    }
-  }
-  &.tabs {
-    @include clear();
-    zoom: 1;
-  }
-}
 
-/* Clearfixing tabs for beautiful stacking */
+    }
+
+  }
+
+}

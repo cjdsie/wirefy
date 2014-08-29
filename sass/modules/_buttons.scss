@@ -46,7 +46,7 @@ $button-radius: $global-radius;
 $button-round: $global-rounded;
 
 // We use this to set default opacity for disabled buttons.
-$button-disabled-opacity: 0.6;
+$button-disabled-opacity: .6;
 
 
 
@@ -95,14 +95,14 @@ $button-disabled-opacity: 0.6;
   @if $full-width {
     // We still need to check if $padding is set.
     @if $padding {
-	  padding-top: $padding;
-	  padding-bottom: $padding + em(1);
+      padding-top: $padding;
+      padding-bottom: $padding + em(1);
     } @else if $padding == false {
-      padding-top:0;
-      padding-bottom:0;
+      padding-top: 0;
+      padding-bottom: 0;
     }
-    padding-right: 0px;
-    padding-left: 0px;
+    padding-right: 0;
+    padding-left: 0;
     width: 100%;
   }
 
@@ -111,8 +111,7 @@ $button-disabled-opacity: 0.6;
     padding-top: $is-input + em(.5);
     padding-bottom: $is-input + em(.5);
     -webkit-appearance: none;
-  }
-  @else if $is-input {
+  } @else if $is-input {
     padding-top: $is-input + em(1);
     padding-bottom: $is-input;
     -webkit-appearance: none;
@@ -130,20 +129,31 @@ $button-disabled-opacity: 0.6;
 
     background-color: $bg;
     border-color: darken($bg, $button-function-factor);
+
     &:hover,
-    &:focus { background-color: darken($bg, $button-function-factor); }
+    &:focus { 
+      background-color: darken($bg, $button-function-factor); 
+    }
 
     // We control the text color for you based on the background color.
     @if $bg-lightness > 70% {
       color: $button-font-color-alt;
+
       &:hover,
-      &:focus { color: $button-font-color-alt; }
-    }
-    @else {
+      &:focus {
+        color: $button-font-color-alt; 
+      }
+
+    } @else {
       color: $button-font-color;
+
       &:hover,
-      &:focus { color: $button-font-color; }
+      &:focus { 
+        color: $button-font-color; 
+      }
+
     }
+
   }
 
   // We can set $disabled:true to create a disabled transparent button.
@@ -154,8 +164,12 @@ $button-disabled-opacity: 0.6;
       -webkit-box-shadow: none;
     }
     box-shadow: none;
+
     &:hover,
-    &:focus { background-color: $bg; }
+    &:focus { 
+      background-color: $bg; 
+    }
+
   }
 
   // We can control how much button radius us used.
