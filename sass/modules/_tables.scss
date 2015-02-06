@@ -42,28 +42,11 @@ table {
     }
 
   }
+
   tbody {
 
     + tbody {
       border-top: 2px solid #8c9bab;
-    }
-
-    tr {
-
-      td, 
-      th {
-        @include vendorize(transition, background-color .25s linear);
-      }
-
-      &:hover {
-
-        td, 
-        th {
-          background-color: #a9b4c1;
-        }
-
-      }
-
     }
 
   }
