@@ -41,7 +41,7 @@
     color: $white;
     text-decoration: none;
     width: 100%;
-    background: $orange;
+    background: $black-10;
     border-bottom: 1px solid $white;
     padding: .7em 1em;
     float: left;
@@ -58,7 +58,7 @@
   }
 
   ul ul a {
-    background: $red;
+    background: $black-20;
     padding-left: 2em;
 
     @media(min-width: 40em) {
