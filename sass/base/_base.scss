@@ -21,11 +21,17 @@ html {
   @include vendorize(text-size-adjust, $base-font-size);
 }
 
+@if $root-font-size != 16 {
+    // So you decided to change that value? Okay pal, you asked for it...
+    html {
+        font-size: $root-font-size * 1px;
+    }
+}
+
 body {
   width: 100%;
   background-color: transparent url('#{$imagePath}/tmp/grid.png');
-  font-size: em($basefont);
-  line-height: (27 / $basefont);
+  @include type-setting(18, 27);
   color: $body-font-color;
   -webkit-font-smoothing: $font-smoothing;
   /* Fix for webkit rendering */

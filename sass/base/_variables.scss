@@ -3,6 +3,7 @@
 
 // Wireframe Base Colors. For more color options, see color-palette.scss.
 
+$white: #fff;
 $black-10: darken(#fff, 10%);
 $black-20: darken(#fff, 20%);
 $black-30: darken(#fff, 30%);
@@ -13,15 +14,16 @@ $black-70: darken(#fff, 70%);
 $black-80: darken(#fff, 80%);
 $black-90: darken(#fff, 90%);
 
-// Base Measurement Unit
-$base-unit: 6px;
-
 
 
 /* Typography Variables
 ========================= */
 
-// The typography scale works in multiples of 6. We
+// The typography scale works in multiples of 6.
+
+// Root Font Size Variable — best to avoid changing unless you like risks.
+// If you're relying on it **relatively** with ems, be careful.
+$root-font-size: 16!default;
 
 $basefont:16;
 $baseh1:40;
@@ -59,9 +61,17 @@ $font-smoothing: antialiased;
 $text-direction: ltr;
 
 
+/* Measurements
+========================= */
+
+// Base Measurement Unit
+$base-unit: 6px;
+
 //margins & padding
 
 $spacing: ($base-unit * 2);
+
+
 
 
 
@@ -115,7 +125,7 @@ $fa-font-size-base:   14px !default;
 $fa-css-prefix:       fa !default;
 $fa-version:          "4.3.0" !default;
 $fa-border-color:     #eee !default;
-$fa-inverse:          $sentinel-white !default;
+$fa-inverse:          $white !default;
 $fa-li-width:         (30em / 14) !default;
 
 $fa-var-adjust: "\f042";

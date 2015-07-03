@@ -371,9 +371,186 @@ $imagePath:   '../img/' !default;
 
 }
 
+/* Type setting
+============================== */
 
-// Font Awesome Mixins
-// --------------------------
+@mixin type-setting($target, $line-height, $context: null) {
+ 
+    // Is the target value unitless?
+    @if unitless($target) {
+ 
+        // Is it relying on a context value?
+        @if $context != null {
+ 
+            // Is the context unitless? If so, write out the target value in ems.
+            @if unitless($context) {
+                font-size: ($target / $context) * 1em;
+            } @else {
+                @error 'Your value for `$context` is not unitless.';
+            }
+        }
+        // Write out the target value in rems.
+        @else {
+            font-size: ($target / $root-font-size) * 1rem;
+        }
+ 
+    } @else {
+        @error 'Your value for `$target` is not unitless.';
+    }
+ 
+    // Line Height should be unitless.
+    @if unitless($line-height) {
+        // Line height should almost always be unitless, just simple math.
+        line-height: ($line-height / $target);
+    } @else {
+        @error 'Your value for `$line-height` is not unitless.';
+    }
+ 
+}
+
+/* Functions
+========================= */
+
+@function em($target, $context: $basefont) {
+  @return ($target / $context) * 1em;
+}
+
+
+/* Font Sizing
+========================= */
+
+@mixin font-size($sizevalue: 16) {
+  font-size: $sizevalue + px; //fallback for old browsers
+  font-size: em($sizevalue);
+  font-size: (.125 * $sizevalue) + rem;
+}
+
+@mixin line-height($heightvalue: 24) {
+  line-height: $heightvalue + px; //fallback for old browsers
+  line-height: (24 / $basefont);
+  line-height: (.125 * $heightvalue) + rem;
+}
+
+/* Google Web Fonts
+================================================== */
+/* Google Web Font Mixin by Ross Penman - http://rosspenman.com/sass-web-fonts
+*/
+
+@mixin web-font($fonts, $variants: (), $subsets: (), $text: '', $effects: (), $secure: false) {
+
+  //The $secure var defaults to false, the $url var is inited to use http
+  $url: 'http://fonts.googleapis.com/css?family=';
+
+  //If flagged secure, import fonts using https
+  @if $secure {
+    $url: 'https://fonts.googleapis.com/css?family=';
+  }
+
+  $i: 0;
+  
+  // Add the family argument to the URL string.
+  // We can assume that the user will always specify at least one font.
+  @each $font in $fonts {
+    $i: $i + 1;
+  
+    // Add the name of the font.
+    $j: 0;
+    @each $word in $font {
+      $j: $j + 1;
+      $url: $url + $word;
+      
+      // Add a plus symbol between words.
+      @if $j < length($font) {
+        $url: $url + '+';
+      }
+    }
+    
+    // If there is/are font variant(s) for this font, add them.
+    @if $j <= length($variants) {
+      $url: $url + ':';
+    
+      $k: 0;
+      @each $variant in nth($variants, $j) {
+        $k: $k + 1;
+        
+        $url: $url + $variant;
+        
+        // Add a comma between variants.
+        // For some reason length($variant) doesn't work. Weird!
+        @if ($k < length(nth($variants, $j))) {
+          $url: $url + ',';
+        }
+      }
+    }
+    
+    // Add a pipe between words.
+    // It would seem that a pipe isn't a valid URL character in its unescaped form,
+    // but Google reccommend using it anyway.
+    @if $i < length($fonts) {
+      $url: $url + '|';
+    }
+  }
+  
+  // Add the subset argument to the URL string, if it exists.
+  @if length($subsets) > 0 {
+    $url: $url + '&subset=';
+    $i: 0;
+    @each $subset in $subsets {
+      $i: $i + 1;
+      $url: $url + $subset;
+      
+      // Add a comma between subsets.
+      @if $i < length($subsets) {
+        $url: $url + ',';
+      }
+    }
+  }
+  
+  // Add the text argument to the URL string, if it exists.
+  // $text does not actually need to be enclosed in brackets.
+  @if length($text) > 0 and $text != '' {
+    
+    // To save the user the hassle of adding a space character every time they want
+    // to use a web font, we add one automatically.
+    $url: $url + "&text=%20#{$text}";
+  }
+  
+  // Add the effect argument to the URL string, if it exists.
+  @if length($effects) > 0 {
+    $url: $url + '&effect=';
+    $i: 0;
+    @each $effect in $effects {
+      $i: $i + 1;
+    
+      // Add the name of the font.
+      $j: 0;
+      @each $word in $effect {
+        $j: $j + 1;
+        $url: $url + $word;
+        
+        // Add a hyphen between words.
+        // A hyphen can actually be used to seperate words instead of a space,
+        // in which case the words will be counted as one and no extra hyphens will be added.
+        // Again, a string replacement function would make this a lot easier…
+        @if $j < length($effect) {
+          $url: $url + '-';
+        }
+      }
+      
+      // Add a pipe between effects.
+      @if $i < length($effects) {
+        $url: $url + '|';
+      }
+    }
+  }
+  
+  // Finally!
+  @import url(#{$url});
+}
+
+
+/* Font Awesome
+============================== */
 
 @mixin fa-icon() {
   display: inline-block;

@@ -55,6 +55,7 @@ For full documentation, our homepage [here](http://getwirefy.com).
 
 ## Changelog
 
+*	v3.0.5 New Typography mixin for rem's added, latest version of Font Awesome updated, config.rb file included for compass integration.
 *	v3.0.4 Updated README file with Grunt CLI install information and fixed button SASS file for global use across various SASS versions.
 *   v3.0.3 SASS Partials restructured for easier maintenance and basic JS functions added in.
 *   v3.0.2 Icomoon Font added. Better Partials and added CDN support
