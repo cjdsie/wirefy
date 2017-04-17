@@ -17,7 +17,7 @@ Creating static wireframes can be great but sometimes clients just don't underst
 Clone the git repo - `git clone git://github.com/cjdsie/wirefy.git` - or [download it](https://github.com/cjdsie/wirefy/zipball/master)
 
 
-##Getting started
+## Getting started
 
 This framework using Node.js, NPM (Node Package Manager), and Grunt.js to manage the code in this repo. Please make sure that you have these installed to begin with. In order to get started with Grunt, you must install the Grunt command line interface (CLI) globally `npm install -g grunt-cli`. This will give you the ability to use the grunt development tasks found in the Gruntfile.js file. To preview code locally, you'll need to install Node and NPM, then run the following commands from a terminal window, in the repo directory: 
 
