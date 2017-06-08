@@ -1,4 +1,4 @@
-#Contributing to Wirefy
+# Contributing to Wirefy
 =================
 ♥ [Wirefy](http://getwirefy.com) and want to get involved?
 We would love that and you've made us blush. First thank you so much. Now there are plenty of ways you can help.
